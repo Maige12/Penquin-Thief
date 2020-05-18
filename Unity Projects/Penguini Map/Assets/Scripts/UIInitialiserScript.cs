@@ -66,7 +66,7 @@ public class UIInitialiserScript : MonoBehaviour
 
     public static GameObject GetPauseMenuObj //GetPauseMenuObj is a GET/SET Method. Used to Initialise Pause Menu UI Object (pauseMenu in Hierarchy)
     {
-        get { return pauseMenuObj; } //Used to get value when of GetPauseMenuObj when GetPauseMenuObj is called
+        get { return pauseMenuObj; } //Used to get value when of pauseMenuObj when GetPauseMenuObj is called
         set {   if(pauseMenuObj == null) //Only SETS if the object is empty
                 {
                     pauseMenuObj = GameObject.FindWithTag("Pause Menu");
@@ -76,7 +76,7 @@ public class UIInitialiserScript : MonoBehaviour
 
     public static GameObject GetPlayerUI //GetPlayerUI is a GET/SET Method. Used to Initialise Player UI Object (playerUI in Hierarchy)
     {
-        get { return playerUI; } //Used to get value when of GetPlayerUI when GetPlayerUI is called
+        get { return playerUI; } //Used to get value when of playerUI when GetPlayerUI is called
         set {   if(playerUI == null) //Only SETS if the object is empty
                 {
                     playerUI = GameObject.FindWithTag("Player UI");
@@ -84,9 +84,9 @@ public class UIInitialiserScript : MonoBehaviour
             } //Sets playerUI to GameObject with specific Tag
     }
 
-    public static GameObject[] GetUsableItems
+    public static GameObject[] GetUsableItems //GetUsableItems is a GET/SET Method. Used to Initialise Player UI Object (usableItem in Hierarchy)
     {
-        get { return usableItems; }
+        get { return usableItems; } //Used to get value when of usableItems when GetPlayerUI is called
         set {   if(usableItems == null) //Only SETS if the object is empty
                 {
                     usableItems = value;
@@ -94,9 +94,9 @@ public class UIInitialiserScript : MonoBehaviour
             } //Sets usableItems Array section to GameObject with specific name in Hierarchy
     }
 
-    public static GameObject[] GetCollectedItems
+    public static GameObject[] GetCollectedItems //GetCollectedItems is a GET/SET Method. Used to Initialise Player UI Object (collectedItems in Hierarchy)
     {
-        get { return collectedItems; }
+        get { return collectedItems; } //Used to get value when of collectedItems when GetPlayerUI is called
         set {   if(collectedItems == null) //Only SETS if the object is empty
                 {
                     collectedItems = value; 
