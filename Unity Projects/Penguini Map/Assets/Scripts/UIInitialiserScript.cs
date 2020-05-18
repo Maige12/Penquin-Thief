@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; //Brought in to control the UI Elements
+using TMPro; //Includes commands for TextMesh Pro
 
 /*
  *  UI Initialiser Script (VER 1, 13-05-2020) 
+ *  
+ *  ATTACH TO 'Canvas' OBJECT IN SCENE HIERARCHY
  *  
  *  NOTE: Make sure all UI Elements are set to Active in the scene so that the GameObject Parameters can be initialised. This Script will handle turning these
  *      objects OFF/leaving them ON once they have all been assigned to their respective GameObjects.
@@ -30,6 +34,29 @@ using UnityEngine;
  *              
  *  Known Bugs:
  *      - N/A
+ *      
+ *  Recommended Canvas/EventSystem Hierarchy:
+ *      Canvas
+ *          playerUI (Tagged 'Player UI')
+ *              usableItems
+ *                  usableItem0
+ *                  usableItem1
+ *                  usableItem2
+ *                  usableItem3
+ *              CollectedItemsUI
+ *                  collectedItems0
+ *                  collectedItems1
+ *                  collectedItems2
+ *                  collectedItems3
+ *          pauseMenu (Tagged 'Pause Menu')
+ *              pauseMenuBackground
+ *                  resumeGameButton
+ *                      Text (TMP)
+ *                  quitGameButton
+ *                      Text (TMP)
+ *      EventSystem
+ *          
+ *  NOTE: Names/Tags used in example Hierarchy are used in Script to find objects, please use this example when naming/tagging objects in a scene
 */
 
 public class UIInitialiserScript : MonoBehaviour
@@ -40,25 +67,41 @@ public class UIInitialiserScript : MonoBehaviour
     public static GameObject GetPauseMenuObj //GetPauseMenuObj is a GET/SET Method. Used to Initialise Pause Menu UI Object (pauseMenu in Hierarchy)
     {
         get { return pauseMenuObj; } //Used to get value when of GetPauseMenuObj when GetPauseMenuObj is called
-        set { pauseMenuObj = GameObject.FindWithTag("Pause Menu"); } //Sets pauseMenuObj to GameObject with specific Tag
+        set {   if(pauseMenuObj == null) //Only SETS if the object is empty
+                {
+                    pauseMenuObj = GameObject.FindWithTag("Pause Menu");
+                }
+            } //Sets pauseMenuObj to GameObject with specific Tag
     }
 
     public static GameObject GetPlayerUI //GetPlayerUI is a GET/SET Method. Used to Initialise Player UI Object (playerUI in Hierarchy)
     {
         get { return playerUI; } //Used to get value when of GetPlayerUI when GetPlayerUI is called
-        set { playerUI = GameObject.FindWithTag("Player UI"); } //Sets playerUI to GameObject with specific Tag
+        set {   if(playerUI == null) //Only SETS if the object is empty
+                {
+                    playerUI = GameObject.FindWithTag("Player UI");
+                }
+            } //Sets playerUI to GameObject with specific Tag
     }
 
     public static GameObject[] GetUsableItems
     {
         get { return usableItems; }
-        set { usableItems = value; }
+        set {   if(usableItems == null) //Only SETS if the object is empty
+                {
+                    usableItems = value;
+                }
+            } //Sets usableItems Array section to GameObject with specific name in Hierarchy
     }
 
     public static GameObject[] GetCollectedItems
     {
         get { return collectedItems; }
-        set { collectedItems = value; }
+        set {   if(collectedItems == null) //Only SETS if the object is empty
+                {
+                    collectedItems = value; 
+                }
+            } //Sets usableItems Array section to GameObject with specific name in Hierarchy
     }
 
     // Start is called before the first frame update
@@ -134,4 +177,5 @@ public class UIInitialiserScript : MonoBehaviour
  *      - https://docs.unity3d.com/ScriptReference/GameObject.SetActive.html
  *      - https://www.w3schools.com/cs/cs_arrays.asp
  *      - https://docs.unity3d.com/ScriptReference/GameObject.Find.html
+ *      - https://stackoverflow.com/questions/40595148/how-to-make-a-property-with-a-if-statement
 */

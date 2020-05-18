@@ -5,6 +5,8 @@ using UnityEngine;
 /*
  *  Pause Menu UI Script (VER 3, 13-05-2020) 
  *  
+ *  ATTACH TO 'pauseMenu' OBJECT IN SCENE HIERARCHY
+ *  
  *  NOTE: Make sure pauseMenu Object (Or Object that this script is attached to) is Active in the scene Hierarchy before starting. Currently theres a bug where the 
  *      if the object is not Active, the Script will not start and will not assign anything to the pauseMenuObj Object Parameter, causing a NULL Reference Value
  *      to be returned.

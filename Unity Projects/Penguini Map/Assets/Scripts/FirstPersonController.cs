@@ -82,6 +82,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+
+            if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.pause == false)
+            {
+                PauseMenuUI.OpenPauseMenu();
+            }
+            else
+                if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.pause == true)
+                {
+                    PauseMenuUI.ContinueGame();
+                }
         }
 
 
