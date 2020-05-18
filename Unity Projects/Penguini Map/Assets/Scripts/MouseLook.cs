@@ -77,10 +77,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (PauseMenuUI.pause == true)
             {
                 m_cursorIsLocked = false;
+                lockCursor = false;
             }
-            else if(Input.GetKeyDown(KeyCode.Escape) || (PauseMenuUI.pause == false))
+            else if(PauseMenuUI.pause == false)
             {
                 m_cursorIsLocked = true;
+                lockCursor = true;
             }
 
             if (m_cursorIsLocked)
@@ -90,7 +92,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else if (!m_cursorIsLocked)
             {
-                Cursor.lockState = CursorLockMode.None;
+                Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
             }
         }
@@ -113,3 +115,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
     }
 }
+
+/*
+ * References:
+ *      - https://docs.unity3d.com/ScriptReference/CursorLockMode.html
+ *      - https://docs.unity3d.com/ScriptReference/Cursor-visible.html
+*/
