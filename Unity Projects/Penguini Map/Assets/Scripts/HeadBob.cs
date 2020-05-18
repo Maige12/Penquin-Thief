@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.Utility;
 
+//STANDARD UNITY ASSET SCRIPT, REPLACE WITH CUSTOM LATER
+
 namespace UnityStandardAssets.Characters.FirstPerson
 {
     public class HeadBob : MonoBehaviour
