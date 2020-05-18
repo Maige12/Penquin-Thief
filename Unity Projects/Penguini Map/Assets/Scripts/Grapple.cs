@@ -7,29 +7,21 @@ public class Grapple : MonoBehaviour
     public GameObject Player;
     public GameObject hook;
     public GameObject grappleHolder;
+    public GameObject hookedObj;
+    public GameObject FirstPersonCharacter;
+    public GameObject HookReset;
 
     public float hookTravelSpeed;
     public float playerTravelSpeed;
-
-
-    public static bool fired;
-    public bool hooked;
-
-    public GameObject hookedObj;
-
-    public GameObject FirstPersonCharacter;
-
-    public GameObject HookReset;
-
-
     public float maxDistance;
     private float currentDistance;
 
+    public static bool fired;
+    public bool hooked;
     private bool grounded;
 
     void Update()
     {
-
         //Using the hook
         if(Input.GetMouseButtonDown(0) && fired == false)
         {
@@ -60,18 +52,14 @@ public class Grapple : MonoBehaviour
                     this.transform.Translate(Vector3.forward * Time.deltaTime * 13f);
                     this.transform.Translate(Vector3.up * Time.deltaTime * 28f);
                 }
-
                 StartCoroutine("Climb");
-            }
-              
-        }       else 
-                {
-                    hook.transform.parent = FirstPersonCharacter.transform;
-                    this.GetComponent<Rigidbody>().useGravity = true;
-                }
-
-
-
+            } 
+        }
+        else 
+        {
+            hook.transform.parent = FirstPersonCharacter.transform;
+            this.GetComponent<Rigidbody>().useGravity = true;
+        }
     }
 
     IEnumerator Climb()
@@ -88,20 +76,19 @@ public class Grapple : MonoBehaviour
         hooked = false;
     }
 
-
     void CheckIfGrounded()
     {
         RaycastHit gHit;
         float distance = 1f;
-
         Vector3 dir = new Vector3(0, -1);
 
         if(Physics.Raycast(transform.position, dir, out gHit, distance))
         {
             grounded = true;
-        } else{
+        }
+        else
+        {
             grounded = false;
         }
-
     }
 }
