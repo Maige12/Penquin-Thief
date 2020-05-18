@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; //Brought in to control the UI Elements
+using TMPro; //Includes commands for TextMesh Pro
 
 /*
  *  UI Initialiser Script (VER 1, 13-05-2020) 
