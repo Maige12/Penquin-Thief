@@ -5,6 +5,8 @@ using UnityEngine;
 /*
  *  Player UI Script (VER 1, 15-05-2020) 
  *  
+ *  ATTACH TO 'playerUI' OBJECT IN SCENE HIERARCHY
+ *  
  *  NOTE: NEED TO ADD SCROLL FUNCTIONALITY
  *  
  *  Description:
