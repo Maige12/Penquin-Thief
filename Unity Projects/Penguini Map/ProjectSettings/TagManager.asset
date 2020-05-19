@@ -7,6 +7,29 @@ TagManager:
   - Player UI
   - Pause Menu
   - Key1
+  - Hook
+  - Key2
+  - Key3
+  - Key4
+  - Key5
+  - Key6
+  - Key7
+  - Key8
+  - Door1
+  - Door2
+  - Door3
+  - Door4
+  - Door5
+  - Door6
+  - Door7
+  - Door8
+  - Item1
+  - Item2
+  - Item3
+  - Item4
+  - Wall
+  - Enemy
+  - Scorepoint
   layers:
   - Default
   - TransparentFX
@@ -17,10 +40,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - Wall
+  - PlayerObject
+  - floor
+  - Enemy
   - 
   - 
   - 

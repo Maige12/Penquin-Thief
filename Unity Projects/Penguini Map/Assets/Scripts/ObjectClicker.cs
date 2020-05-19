@@ -69,7 +69,29 @@ public class ObjectClicker : MonoBehaviour
                         Key5 = 1;
                     }
 
-                    if(hit.collider.tag == "Door1" && Key1 == 1)
+                    if (hit.collider.tag == "Key6")
+                    {
+                        print("You touched the Key5,  nice!");
+                        Destroy(GameObject.FindWithTag("Key6"));
+                        Key5 = 1;
+                    }
+
+                    if (hit.collider.tag == "Key7")
+                    {
+                        print("You touched the Key5,  nice!");
+                        Destroy(GameObject.FindWithTag("Key7"));
+                        Key5 = 1;
+                    }
+
+                    if (hit.collider.tag == "Key8")
+                    {
+                        print("You touched the Key5,  nice!");
+                        Destroy(GameObject.FindWithTag("Key8"));
+                        Key5 = 1;
+                    }
+
+
+                    if (hit.collider.tag == "Door1" && Key1 == 1)
                     {
                         print("You touched the door,  nice!");
                         Destroy(GameObject.FindWithTag("Door1"));
@@ -100,7 +122,25 @@ public class ObjectClicker : MonoBehaviour
                         Destroy(GameObject.FindWithTag("Door5"));
                     }
 
-                    if(hit.collider.tag == "Item1")
+                    if (hit.collider.tag == "Door6" && Key5 == 1)
+                    {
+                        print("You touched the door,  nice!");
+                        Destroy(GameObject.FindWithTag("Door6"));
+                    }
+
+                    if (hit.collider.tag == "Door7" && Key5 == 1)
+                    {
+                        print("You touched the door,  nice!");
+                        Destroy(GameObject.FindWithTag("Door7"));
+                    }
+
+                    if (hit.collider.tag == "Door8" && Key5 == 1)
+                    {
+                        print("You touched the door,  nice!");
+                        Destroy(GameObject.FindWithTag("Door8"));
+                    }
+
+                    if (hit.collider.tag == "Item1")
                     {
                         print("You found an item,  nice!");
                         Destroy(GameObject.FindWithTag("Item1"));
