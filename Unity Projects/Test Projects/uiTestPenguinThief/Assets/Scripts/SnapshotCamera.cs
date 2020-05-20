@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro; //Includes commands for TextMesh Pro
+using System.IO; //Allows Files/Folders to be Created
+using UnityEditor; //Allows access to AssetDatabase.IsValidFolder
 
 [RequireComponent(typeof(Camera))] //Makes sure that the Script can only be used with Camera Objects
 public class SnapshotCamera : MonoBehaviour
@@ -12,6 +14,20 @@ public class SnapshotCamera : MonoBehaviour
 
     void Awake()
     {
+        //UNCOMMENT THIS CODE WHEN TESTING IN EDITOR
+        //COMMENT THIS CODE WHEN CREATING A BUILD (AssetDatabase CAUSES COMPILE ERRORS)
+        //if(!AssetDatabase.IsValidFolder("Screenshots")) //Checks to see if a Screenshots Folder exists
+        //{
+            //var folder = Directory.CreateDirectory("Assets/Screenshots/"); //Creates a Screenshots folder in Assets
+        //}
+
+        //UNCOMMENT THIS CODE WHEN CREATING A BUILD
+        //COMMENT THIS CODE WHEN TESTING IN THE EDITOR
+        if (!System.IO.Directory.Exists(Application.dataPath + "/Screenshots")) //Checks to see if a Screenshots Folder exists
+        {
+            Directory.CreateDirectory(Application.dataPath + "/Screenshots"); //Creates a Screenshots folder in the _Data Folder
+        }
+
         screenCam = GetComponent<Camera>(); //Gets Camera Component from Hierarchy
         if(screenCam.targetTexture == null) //If there is no render texture attached to Camera, this will create default one
         {
@@ -72,4 +88,6 @@ public class SnapshotCamera : MonoBehaviour
  *      - https://docs.unity3d.com/ScriptReference/ImageConversion.EncodeToPNG.html
  *      - https://docs.unity3d.com/ScriptReference/String.html
  *      - https://docs.microsoft.com/en-us/dotnet/api/system.datetime.now?view=netcore-3.1
+ *      - https://docs.microsoft.com/en-us/dotnet/api/system.io?view=dotnet-plat-ext-3.1
+ *      - https://docs.unity3d.com/ScriptReference/AssetDatabase.IsValidFolder.html
 */
