@@ -107,6 +107,9 @@ public class UIInitialiserScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked; //Locks cursor to the centre of the screen
+        Cursor.visible = false; //Hides cursor from view
+
         GetPauseMenuObj = gameObject; //Calls GET/SET Function for GetPauseMenuObj to initialise it
         GetPlayerUI = gameObject; //Calls GET/SET Function for GetPlayerUI to initialise it
 
@@ -178,4 +181,6 @@ public class UIInitialiserScript : MonoBehaviour
  *      - https://www.w3schools.com/cs/cs_arrays.asp
  *      - https://docs.unity3d.com/ScriptReference/GameObject.Find.html
  *      - https://stackoverflow.com/questions/40595148/how-to-make-a-property-with-a-if-statement
+ *      - https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
+ *      - https://docs.unity3d.com/ScriptReference/Cursor-visible.html
 */

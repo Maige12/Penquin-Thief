@@ -77,6 +77,8 @@ public class PauseMenuUI : MonoBehaviour
         //Sets the boolean to true when the menu is open, stopping the player from moving
         UIInitialiserScript.GetPauseMenuObj.SetActive(true); //Sets the Pause Menu object to active so it can be interacted with
         UIInitialiserScript.GetPlayerUI.SetActive(false); //Sets the Player UI to false
+        Cursor.lockState = CursorLockMode.Confined; //Locks cursor to the game view (Cannot move mouse outside of it, only works in BUILD, not EDITOR)
+        Cursor.visible = true; //Shows Cursor
         Debug.Log("pauseMenuObj set to Active");
         Debug.Log("playerUI set to Inactive");
     }
@@ -86,6 +88,8 @@ public class PauseMenuUI : MonoBehaviour
         Debug.Log("Resuming Game");
         UIInitialiserScript.GetPauseMenuObj.SetActive(false); //Sets the Pause Menu to false
         UIInitialiserScript.GetPlayerUI.SetActive(true); //Sets the Player UI to true
+        Cursor.lockState = CursorLockMode.Locked; //Locks Cursor to center of screen
+        Cursor.visible = false; //Hides cursor
         Debug.Log("pauseMenuObj set to Inactive");
         Debug.Log("playerUI set to Active");
         Time.timeScale = 1; //Sets game time back to normal time
@@ -116,4 +120,5 @@ public class PauseMenuUI : MonoBehaviour
  *      - https://docs.unity3d.com/ScriptReference/Application.Quit.html
  *      - https://docs.unity3d.com/ScriptReference/Debug.Log.html
  *      - https://docs.unity3d.com/ScriptReference/GameObject.SetActive.html
+ *      - https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
 */
