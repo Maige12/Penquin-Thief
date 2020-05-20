@@ -66,7 +66,7 @@ public class UIInitialiserScript : MonoBehaviour
 
     public static GameObject GetPauseMenuObj //GetPauseMenuObj is a GET/SET Method. Used to Initialise Pause Menu UI Object (pauseMenu in Hierarchy)
     {
-        get { return pauseMenuObj; } //Used to get value when of pauseMenuObj when GetPauseMenuObj is called
+        get { return pauseMenuObj; } //Used to get value when of GetPauseMenuObj when GetPauseMenuObj is called
         set {   if(pauseMenuObj == null) //Only SETS if the object is empty
                 {
                     pauseMenuObj = GameObject.FindWithTag("Pause Menu");
@@ -76,7 +76,7 @@ public class UIInitialiserScript : MonoBehaviour
 
     public static GameObject GetPlayerUI //GetPlayerUI is a GET/SET Method. Used to Initialise Player UI Object (playerUI in Hierarchy)
     {
-        get { return playerUI; } //Used to get value when of playerUI when GetPlayerUI is called
+        get { return playerUI; } //Used to get value when of GetPlayerUI when GetPlayerUI is called
         set {   if(playerUI == null) //Only SETS if the object is empty
                 {
                     playerUI = GameObject.FindWithTag("Player UI");
@@ -84,9 +84,9 @@ public class UIInitialiserScript : MonoBehaviour
             } //Sets playerUI to GameObject with specific Tag
     }
 
-    public static GameObject[] GetUsableItems //GetUsableItems is a GET/SET Method. Used to Initialise Player UI Object (usableItem in Hierarchy)
+    public static GameObject[] GetUsableItems
     {
-        get { return usableItems; } //Used to get value when of usableItems when GetPlayerUI is called
+        get { return usableItems; }
         set {   if(usableItems == null) //Only SETS if the object is empty
                 {
                     usableItems = value;
@@ -94,9 +94,9 @@ public class UIInitialiserScript : MonoBehaviour
             } //Sets usableItems Array section to GameObject with specific name in Hierarchy
     }
 
-    public static GameObject[] GetCollectedItems //GetCollectedItems is a GET/SET Method. Used to Initialise Player UI Object (collectedItems in Hierarchy)
+    public static GameObject[] GetCollectedItems
     {
-        get { return collectedItems; } //Used to get value when of collectedItems when GetPlayerUI is called
+        get { return collectedItems; }
         set {   if(collectedItems == null) //Only SETS if the object is empty
                 {
                     collectedItems = value; 
@@ -107,6 +107,9 @@ public class UIInitialiserScript : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked; //Locks cursor to the centre of the screen
+        Cursor.visible = false; //Hides cursor from view
+
         GetPauseMenuObj = gameObject; //Calls GET/SET Function for GetPauseMenuObj to initialise it
         GetPlayerUI = gameObject; //Calls GET/SET Function for GetPlayerUI to initialise it
 
@@ -178,4 +181,6 @@ public class UIInitialiserScript : MonoBehaviour
  *      - https://www.w3schools.com/cs/cs_arrays.asp
  *      - https://docs.unity3d.com/ScriptReference/GameObject.Find.html
  *      - https://stackoverflow.com/questions/40595148/how-to-make-a-property-with-a-if-statement
+ *      - https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
+ *      - https://docs.unity3d.com/ScriptReference/Cursor-visible.html
 */
