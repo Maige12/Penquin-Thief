@@ -1121,5 +1121,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2830881311784047454, guid: 747e5644bb27a0e41a8ec165952e224c,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830881311784047454, guid: 747e5644bb27a0e41a8ec165952e224c,
+        type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830881311784047454, guid: 747e5644bb27a0e41a8ec165952e224c,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 747e5644bb27a0e41a8ec165952e224c, type: 3}

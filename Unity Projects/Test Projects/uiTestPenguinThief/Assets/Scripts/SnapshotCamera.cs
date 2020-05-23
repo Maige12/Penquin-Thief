@@ -3,7 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro; //Includes commands for TextMesh Pro
 using System.IO; //Allows Files/Folders to be Created
-using UnityEditor; //Allows access to AssetDatabase.IsValidFolder
+
+/*
+ *  Player UI Script (VER 1, 20-05-2020) 
+ *  
+ *  ATTACH TO A SECONDARY CAMERA (Create a second CAMERA object, remove it's Audio Listener, attach script)
+ *  
+ *  Description:
+ *      - This Script is to be used for debugging purposes. It takes screenshots using the Secondary Camera
+ *      
+ *  NOTE: Since it is not using the primary camera, UI does not get captured. Possibly make revised version.
+ *      - Look into ScreenCapture.CaptureScreenshot (https://docs.unity3d.com/ScriptReference/ScreenCapture.CaptureScreenshot.html)
+ *      
+ *  Known Bugs:
+ *      - Does not capture player UI, could be down to implementation, may need to change.
+ *      
+ *  ADD THIS CODE TO PLAYER CONTROLLER:
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            SnapshotCamera.TakeScreenshot();
+        }
+*/
 
 [RequireComponent(typeof(Camera))] //Makes sure that the Script can only be used with Camera Objects
 public class SnapshotCamera : MonoBehaviour
@@ -14,18 +34,9 @@ public class SnapshotCamera : MonoBehaviour
 
     void Awake()
     {
-        //UNCOMMENT THIS CODE WHEN TESTING IN EDITOR
-        //COMMENT THIS CODE WHEN CREATING A BUILD (AssetDatabase CAUSES COMPILE ERRORS)
-        //if(!AssetDatabase.IsValidFolder("Screenshots")) //Checks to see if a Screenshots Folder exists
-        //{
-            //var folder = Directory.CreateDirectory("Assets/Screenshots/"); //Creates a Screenshots folder in Assets
-        //}
-
-        //UNCOMMENT THIS CODE WHEN CREATING A BUILD
-        //COMMENT THIS CODE WHEN TESTING IN THE EDITOR
         if (!System.IO.Directory.Exists(Application.dataPath + "/Screenshots")) //Checks to see if a Screenshots Folder exists
         {
-            Directory.CreateDirectory(Application.dataPath + "/Screenshots"); //Creates a Screenshots folder in the _Data Folder
+            Directory.CreateDirectory(Application.dataPath + "/Screenshots"); //Creates a Screenshots folder in the _Data Folder (BUILD) or the Assets folder (EDITOR)
         }
 
         screenCam = GetComponent<Camera>(); //Gets Camera Component from Hierarchy
@@ -70,13 +81,6 @@ public class SnapshotCamera : MonoBehaviour
             resWidth,
             resHeight,
             System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss")); //{0} = Path to Location, {1} = Width, {2} = Height, {3} = Current Time
-        /*
-        return string.Format("{0}/Screenshots/screen_{1}x{2}_{3}.png",
-            Application.persistentDataPath,
-            resWidth,
-            resHeight,
-            System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss")); //{0} = Path to Location, {1} = Width, {2} = Height, {3} = Current Time
-        */
     }
 }
 
@@ -89,5 +93,4 @@ public class SnapshotCamera : MonoBehaviour
  *      - https://docs.unity3d.com/ScriptReference/String.html
  *      - https://docs.microsoft.com/en-us/dotnet/api/system.datetime.now?view=netcore-3.1
  *      - https://docs.microsoft.com/en-us/dotnet/api/system.io?view=dotnet-plat-ext-3.1
- *      - https://docs.unity3d.com/ScriptReference/AssetDatabase.IsValidFolder.html
 */

@@ -105,7 +105,7 @@ public class UIInitialiserScript : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked; //Locks cursor to the centre of the screen
         Cursor.visible = false; //Hides cursor from view

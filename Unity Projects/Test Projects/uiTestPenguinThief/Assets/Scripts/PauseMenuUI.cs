@@ -38,7 +38,7 @@ using UnityEngine;
  *              
  *  Known Bugs:
  *      - 14-05-2020 (Darcy Wilson, 32926762):
- *          - When Entering the Pause Menu for the first time, Player's need to press ESC Twice to exit
+ *          - When Entering the Pause Menu for the first time, Player's need to press ESC Twice to exit (ONLY OCCURS IN BUILD VERSION)
  *              - Only happens the first time, does not happen any other time
  *                  - Seems to call the OpenPauseMenu() Function on the initial opening and on the first press, unsure why
  *              - Could possibly be an issue in the Player Controller Script
@@ -64,7 +64,7 @@ public class PauseMenuUI : MonoBehaviour
 {
     public static bool pause; //A Boolean which keeps track if the player has paused the game or not. Value is changed from Player Script (CHANGE TO NAME OF PLAYER CONTROLLER SCRIPT)
 
-    private void Start()
+    private void Awake()
     {
         pause = false; //Sets Pause State to False by Default
     }
