@@ -61,17 +61,29 @@ using TMPro; //Includes commands for TextMesh Pro
 
 public class UIInitialiserScript : MonoBehaviour
 {
-    private static GameObject pauseMenuObj, playerUI; //Private Variables to store UI GameObjects (Cannot be changed outside of Class)
+    private static GameObject pauseMenuObj, endScreenObj, playerUI; //Private Variables to store UI GameObjects (Cannot be changed outside of Class)
     //private static GameObject[] usableItems = new GameObject[4], collectedItems = new GameObject[4]; //Private Array Variables to store UI GameObjects (Cannot be changed outside of Class) (UNCOMMENT WHEN NEW UI SYSTEM IS SET UP)
 
     public static GameObject GetPauseMenuObj //GetPauseMenuObj is a GET/SET Method. Used to Initialise Pause Menu UI Object (pauseMenu in Hierarchy)
     {
-        get { return pauseMenuObj; } //Used to get value when of GetPauseMenuObj when GetPauseMenuObj is called
+        get { return pauseMenuObj; } //Used to get value when GetPauseMenuObj is called
         set {   if(pauseMenuObj == null) //Only SETS if the object is empty
                 {
                     pauseMenuObj = GameObject.FindWithTag("Pause Menu");
                 }
             } //Sets pauseMenuObj to GameObject with specific Tag
+    }
+
+    public static GameObject GetEndScreenObj //GetEndScreenObj is a GET/SET Method. Used to Initialise End Screen UI Object (endScreen in Hierarchy)
+    {
+        get { return endScreenObj; } //Used to get value when GetEndScreenObj is called
+        set
+        {
+            if (endScreenObj == null) //Only SETS if the object is empty
+            {
+                endScreenObj = GameObject.FindWithTag("End Screen");
+            }
+        } //Sets endScreenObj to GameObject with specific Tag
     }
 
     /* UNCOMMENT WHEN NEW UI SYSTEM IS SET UP
@@ -114,6 +126,7 @@ public class UIInitialiserScript : MonoBehaviour
         Cursor.visible = false; //Hides cursor from view
 
         GetPauseMenuObj = gameObject; //Calls GET/SET Function for GetPauseMenuObj to initialise it
+        GetEndScreenObj = gameObject; //Calls GET/SET Function for GetEndScreenObj to initialise it
 
         /* UNCOMMENT WHEN NEW UI SYSTEM IS SET UP
         GetPlayerUI = gameObject; //Calls GET/SET Function for GetPlayerUI to initialise it (UNCOMMENT WHEN NEW UI SYSTEM IS SET UP)
@@ -141,6 +154,18 @@ public class UIInitialiserScript : MonoBehaviour
         }
 
         GetPauseMenuObj.SetActive(false); //Sets GetPauseMenuObj to Inactive (Should be hidden when starting game)
+
+        if (GetEndScreenObj != null) //Checks to see if GameObject is set to NULL
+        {
+            Debug.Log("Object paired to endScreenObj successfully!");
+        }
+        else
+        {
+            Debug.LogError("Unable to find object with Tag 'End Screen'", endScreenObj);
+            Application.Quit(); //Closes the Game
+        }
+
+        GetEndScreenObj.SetActive(false); //Sets GetEndScreenObj to Inactive (Should be hidden when starting game)
 
         /* UNCOMMENT WHEN NEW UI SYSTEM IS SET UP
         if (GetPlayerUI != null) //Checks to see if GameObject is set to NULL
