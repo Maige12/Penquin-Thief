@@ -300,6 +300,9 @@ MonoBehaviour:
   runSpeed: 6
   turnSmoothTime: 0.2
   speedSmoothTime: 0.1
+  gravity: -12
+  jumpHeight: 0.45
+  airControlPercent: 0.4
 --- !u!143 &18916500
 CharacterController:
   m_ObjectHideFlags: 0

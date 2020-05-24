@@ -23,6 +23,10 @@ using UnityEngine;
  *      - 24-05-2020 (2.54pm) (Darcy Wilson, 32926762):
  *          - Added cameraTransform.eulerAngles.y to targetRotation value
  *              - Moves the player in the direction the Camera is facing
+ *      - 24-05-2020 (5.05pm) (Darcy Wilson, 32926762):
+ *          - Added GetModifiedSmoothTime, Move and Jump Functions
+ *          - Added Collision & Jumping functionality
+ *          - Script confirmed to work
  *              
  *  Known Bugs:
  *      - N/A
@@ -34,10 +38,15 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 6.0f; //Player Running Speed
     public float turnSmoothTime = 0.2f; //Approximate number of seconds for SmoothDampAngle to go from current value to target value (TURNING)
     public float speedSmoothTime = 0.1f; //Approximate number of seconds for SmoothDampAngle to go from current value to target value (SPEED)
+    public float gravity = -12.0f; //Gravity Scale
+    public float jumpHeight = 0.45f; //Height at which the player can jump (0.05 Units higher then Basic Create height)
+    [Range(0.0f, 1.0f)] //Clamps value of airControlPercent in a range of 0.0f to 1.0f
+    public float airControlPercent; //A value from 1.0f to 0.0f to control how well the player can control themselves in a jump (Modifies Smooth Time for Character Rotation/Speed)
 
     float turnSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations
     float speedSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations
     float currentSpeed; //Current speed of Player
+    float velocityY; //Starts the player's Velcoity on the Y-Axis
     Transform cameraTransform; //Reference to the Camera Transform
     CharacterController controller; //Gets a reference to the Character Controller Component
 
@@ -46,36 +55,80 @@ public class PlayerController : MonoBehaviour
     {
         //ADD GET COMPONENT FOR ANIMATOR ONCE ANIMATIONS ARE IMPLEMENTED
         cameraTransform = Camera.main.transform; //Sets cameraTransform to the Tarnsform of the Main Camera
-        controller = GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>(); //Gets the Character Controller attached to the Player
     }
 
     // Update is called once per frame
     void Update()
     {
+        //INPUT SECTION
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); //Keyboard Inputs
         Vector2 inputDir = input.normalized; //Takes input Vector2 and turns it into a direction
+        bool running = Input.GetKey(KeyCode.LeftShift); //Will only turn running bool to True if Key is being pressed
 
+        Move(inputDir, running); //Calls the Move fucntion to let the player move (Passes in inputDir and running)
+
+        if (Input.GetKeyDown(KeyCode.Space)) //Checks to see if the Space Key has been pushed down
+        {
+            Jump();
+        }
+
+        //ANIMATION SECTION
+        //ADD ANIMATION CONTROL HERE ONCE ANIMATIONS ARE IMPLEMENTED
+    }
+
+    void Move(Vector2 inputDir, bool running)
+    {
         //Use Trigonometry to find out the direction at which the character is moving (Using the Horizontal (X) and Verticle (Y)
         //inputs to find the direction angle (Theta (Θ)). Opposite = Y, Adjacent = X, Tan Θ = arctan(opposite/adjacent). Facing
         // Forward = 0 Degrees, Facing Right = 90 Degrees, Facing Down = 180 Degrees, Facing Left = 270 Degrees.
 
-        if(inputDir != Vector2.zero) //Only calculates the rotation if inputDir is not 0, 0
+        if (inputDir != Vector2.zero) //Only calculates the rotation if inputDir is not 0, 0
         {
             float targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y; //Target Rotation
 
             //Sets characters rotation (Returns in Radians and is converted to degrees using Mathf.Rad2Deg)
-            transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime); //ref lets SmoothDampAngle modify turnSmoothVelocity
+            transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, GetModifiedSmoothTime(turnSmoothTime)); //ref lets SmoothDampAngle modify turnSmoothVelocity
         }
 
-        bool running = Input.GetKey(KeyCode.LeftShift); //Will only turn running bool to True if Key is being pressed
         float targetSpeed = ((running) ? runSpeed : walkSpeed) * inputDir.magnitude; //Sets targetSpeed to run/walk, multiplies by inputDir magnitude
-        currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime); //Smooths out the current player speed
+        currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, GetModifiedSmoothTime(speedSmoothTime)); //Smooths out the current player speed
 
-        Vector3 velocity = transform.forward * currentSpeed; //Gets the player's Velocity
+        velocityY += Time.deltaTime * gravity; //Calculates the velocityY value using deltaTime and gravity
+
+        Vector3 velocity = (transform.forward * currentSpeed) + (Vector3.up * velocityY); //Gets the player's Velocity and adjusts for Gravity
 
         controller.Move(velocity * Time.deltaTime); //Moves the character controller based on their current velocity and the Time
+        currentSpeed = new Vector2(controller.velocity.x, controller.velocity.z).magnitude; //Updates currentSpeed to what the controllers actual speed is (Stops Velocity if running into object)
 
-        //ADD ANIMATION CONTROL HERE ONCE ANIMATIONS ARE IMPLEMENTED
+        if (controller.isGrounded) //Checks to see if they player is on the ground
+        {
+            velocityY = 0.0f; //Resests the velocityY so player doesn't keep falling
+        }
+    }
+
+    void Jump() //Gives the player the ability to Jump
+    {
+        if(controller.isGrounded) //Checks to see if they player is on the ground
+        {
+            float jumpVelocity = Mathf.Sqrt(-2 * gravity * jumpHeight); //Calculate Jump Velocity (Using Kinematic Equations)
+            velocityY = jumpVelocity; //Makes the velocityY be equal to the Velocity of the Jump
+        }
+    }
+
+    float GetModifiedSmoothTime(float smoothTime)
+    {
+        if (controller.isGrounded) //Checks to see if they player is on the ground
+        {
+            return smoothTime; //Return smoothTime without modification
+        }
+
+        if(airControlPercent == 0.0f) //Checks to see if airControlPercent = 0 (Does this to prevent an error)
+        {
+            return float.MaxValue; //Returns maximum possible value if airControlPercent is 0
+        }
+
+        return smoothTime / airControlPercent; //Returns a modified smoothTime variable with airControlPercent added (If airControlPercent = 1, No Modiifcation)
     }
 }
 
@@ -86,6 +139,8 @@ public class PlayerController : MonoBehaviour
  *          where needed.
  *      - https://youtu.be/sNmeK3qK7oA
  *          - Used to Updatet the Player Controller with 3rd Person Camera functionality
+ *       - https://youtu.be/qITXjT9s9do
+ *          - Used to add Collisions and Jumping to the Character Controller
  *      - https://docs.unity3d.com/ScriptReference/Input.GetAxisRaw.html
  *          - Returns the value of the virtual axis identified by axisName with no smoothing filtering applied. The value will be 
  *          in the range -1...1 for keyboard and joystick input. Since input is not smoothed, keyboard input will always be either 
@@ -119,4 +174,10 @@ public class PlayerController : MonoBehaviour
  *          false.
  *      - https://docs.unity3d.com/ScriptReference/Vector2-magnitude.html
  *          - Returns the length of this vector (Read Only). The length of the vector is square root of (x*x+y*y).
+ *      - https://docs.unity3d.com/ScriptReference/CharacterController-isGrounded.html
+ *          - Was the CharacterController touching the ground during the last move? (Boolean Value)
+ *      - https://www.physicsclassroom.com/class/1DKin/Lesson-6/Kinematic-Equations
+ *          - The kinematic equations are a set of four equations that can be utilized to predict unknown information about an object's 
+ *          motion if other information is known. The equations can be utilized for any motion that can be described as being either a 
+ *          constant velocity motion (an acceleration of 0 m/s/s) or a constant acceleration motion.
 */
