@@ -2,23 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/*
+ *  Player Controller Script (VER 1, 24-05-2020) 
+ *  
+ *  ATTACH TO PLAYER OBJECT IN SCENE HIERARCHY
+ * 
+ *  Description:
+ *      - This script controls the Player's Movements and Key Inputs
+ *          - Running, Walking
+ *      
+ *      Can be activated/deactivated by pressing the 'ESC' key.
+ *      
+ *  Changelog:
+ *      - 24-05-2020 (2.01pm) (Darcy Wilson, 32926762):
+ *          - Created the Script File
+ *          - Added PUBLIC walkSpeed, runSpeed, turnSmoothTime, speedSmoothTime variables
+ *          - Added PRIVATE turnSmoothVelocity, speedSmoothVelocity, currentSpeed, input, inputDir, targetRotation, running, targetSpeed variables
+ *          - Added new information to REFERENCES section (Bottom of Script File)
+ *          - Script confirmed to work
+ *              
+ *  Known Bugs:
+ *      - N/A
+*/
 
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed = 2.0f; //Player Walking Speed
     public float runSpeed = 6.0f; //Player Running Speed
-    public float turnSmoothTime = 0.2f; //Approximate number of seconds for SmoothDampAngle to go from current value to target value
-    public float speedSmoothTime = 0.1f;
+    public float turnSmoothTime = 0.2f; //Approximate number of seconds for SmoothDampAngle to go from current value to target value (TURNING)
+    public float speedSmoothTime = 0.1f; //Approximate number of seconds for SmoothDampAngle to go from current value to target value (SPEED)
 
     float turnSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations
     float speedSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations
     float currentSpeed; //Current speed of Player
+    Transform cameraTransform; //Reference to the Camera Transform
 
     // Start is called before the first frame update
     void Start()
     {
         //ADD GET COMPONENT FOR ANIMATOR ONCE ANIMATIONS ARE IMPLEMENTED
+        cameraTransform = Camera.main.transform; //Sets cameraTransform to the Tarnsform of the Main Camera
     }
 
     // Update is called once per frame
@@ -33,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         if(inputDir != Vector2.zero) //Only calculates the rotation if inputDir is not 0, 0
         {
-            float targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg; //Target Rotation
+            float targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y; //Target Rotation
 
             //Sets characters rotation (Returns in Radians and is converted to degrees using Mathf.Rad2Deg)
             transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime); //ref lets SmoothDampAngle modify turnSmoothVelocity
@@ -54,6 +77,8 @@ public class PlayerController : MonoBehaviour
  *      - https://youtu.be/ZwD1UHNCzOc
  *          - Video used to create this Character Controller. Use this to create a basic controller and add our own custom functions
  *          where needed.
+ *      - https://youtu.be/sNmeK3qK7oA
+ *          - Used to Updatet the Player Controller with 3rd Person Camera functionality
  *      - https://docs.unity3d.com/ScriptReference/Input.GetAxisRaw.html
  *          - Returns the value of the virtual axis identified by axisName with no smoothing filtering applied. The value will be 
  *          in the range -1...1 for keyboard and joystick input. Since input is not smoothed, keyboard input will always be either 
