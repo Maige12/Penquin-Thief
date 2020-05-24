@@ -61,6 +61,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //KEY INPUT SECTION
+        if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.pause == false) //Checks to see if the player has pressed down Escape and if the Pause UI is OFF
+        {
+            PauseMenuUI.OpenPauseMenu(); //Opens the Pause Menu
+        }
+        else
+            if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.pause == true) //Checks to see if the player has pressed down Escape and if the Pause UI is ON
+            {
+                PauseMenuUI.ContinueGame(); //Continues the Game
+            }
+
         //INPUT SECTION
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); //Keyboard Inputs
         Vector2 inputDir = input.normalized; //Takes input Vector2 and turns it into a direction
