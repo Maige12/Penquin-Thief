@@ -20,6 +20,9 @@ using UnityEngine;
  *          - Added PRIVATE turnSmoothVelocity, speedSmoothVelocity, currentSpeed, input, inputDir, targetRotation, running, targetSpeed variables
  *          - Added new information to REFERENCES section (Bottom of Script File)
  *          - Script confirmed to work
+ *      - 24-05-2020 (2.54pm) (Darcy Wilson, 32926762):
+ *          - Added cameraTransform.eulerAngles.y to targetRotation value
+ *              - Moves the player in the direction the Camera is facing
  *              
  *  Known Bugs:
  *      - N/A

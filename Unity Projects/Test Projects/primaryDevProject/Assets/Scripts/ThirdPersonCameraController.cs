@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ThirdPersonCameraController : MonoBehaviour
 {
+    public bool lockCursor; //A boolean to say if the cursor needs to be locked (Enabled/Disabled in Inspector)
     public float mouseSensitivity = 10.0f; //A modifier which adjusts the mouse sensitivity
     public Transform targetObject; //Object which the camera is tied to (Apply to an Empty Object which is a Child of the Target)
     public float targetDistance = 1.0f; //How far the camera should be from the target
@@ -14,6 +15,16 @@ public class ThirdPersonCameraController : MonoBehaviour
     float pitch; //Movement in the Y Direction
     Vector3 rotationSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations
     Vector3 currentRotation; //Current rotation of the camera around the target object
+
+    // Start is called before the first frame update
+    private void Start()
+    {
+        if(lockCursor) //Checks to see if lockCursor is true
+        {
+            Cursor.lockState = CursorLockMode.Locked; //Locks the cursor to the centre of the screen
+            Cursor.visible = false; //Makes the cursor invisible
+        }
+    }
 
     //Called after all of the other Update Methods are run
     void LateUpdate()

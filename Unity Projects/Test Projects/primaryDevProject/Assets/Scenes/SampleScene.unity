@@ -597,7 +597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4d932056d8d834fbd44a43ec9cb60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 10
+  lockCursor: 1
+  mouseSensitivity: 5
   targetObject: {fileID: 18916498}
   targetDistance: 2
   pitchMinMax: {x: -5, y: 85}
