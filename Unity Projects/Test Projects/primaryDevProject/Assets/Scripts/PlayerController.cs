@@ -39,12 +39,14 @@ public class PlayerController : MonoBehaviour
     float speedSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations
     float currentSpeed; //Current speed of Player
     Transform cameraTransform; //Reference to the Camera Transform
+    CharacterController controller; //Gets a reference to the Character Controller Component
 
     // Start is called before the first frame update
     void Start()
     {
         //ADD GET COMPONENT FOR ANIMATOR ONCE ANIMATIONS ARE IMPLEMENTED
         cameraTransform = Camera.main.transform; //Sets cameraTransform to the Tarnsform of the Main Camera
+        controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -69,7 +71,9 @@ public class PlayerController : MonoBehaviour
         float targetSpeed = ((running) ? runSpeed : walkSpeed) * inputDir.magnitude; //Sets targetSpeed to run/walk, multiplies by inputDir magnitude
         currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime); //Smooths out the current player speed
 
-        transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World); //Moving the character
+        Vector3 velocity = transform.forward * currentSpeed; //Gets the player's Velocity
+
+        controller.Move(velocity * Time.deltaTime); //Moves the character controller based on their current velocity and the Time
 
         //ADD ANIMATION CONTROL HERE ONCE ANIMATIONS ARE IMPLEMENTED
     }
