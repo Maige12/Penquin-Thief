@@ -5,7 +5,7 @@ using UnityEngine;
 public class ThirdPersonCameraController : MonoBehaviour
 {
     public bool lockCursor; //A boolean to say if the cursor needs to be locked (Enabled/Disabled in Inspector)
-    public float mouseSensitivity = 10.0f; //A modifier which adjusts the mouse sensitivity
+    public float mouseSensitivity = 5.0f; //A modifier which adjusts the mouse sensitivity
     public Transform targetObject; //Object which the camera is tied to (Apply to an Empty Object which is a Child of the Target)
     public float targetDistance = 1.0f; //How far the camera should be from the target
     public Vector2 pitchMinMax = new Vector2(-5, 85); //A Value used to calmp the Maximum and Minimum Pitch Values. X Value is the Min, Y Value is the Max.
