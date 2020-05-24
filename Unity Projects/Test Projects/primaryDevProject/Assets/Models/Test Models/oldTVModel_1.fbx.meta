@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 089c8609766aa3e46b042c4d800faf50
+guid: c7791dce5a80ee84ab50a7e7f4f2072a
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: testTex
+    second: {fileID: 2100000, guid: 35b8a7d19034b4d47b052787aeb88cc3, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: missingTex_256
+    second: {fileID: 2800000, guid: ba20e2196adaa5541a36847e39bcb0df, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
@@ -65,7 +75,7 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
+    blendShapeNormalImportMode: 0
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
