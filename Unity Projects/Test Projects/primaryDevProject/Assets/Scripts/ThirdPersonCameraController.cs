@@ -10,6 +10,9 @@ public class ThirdPersonCameraController : MonoBehaviour
     public float targetDistance = 2.0f; //How far the camera should be from the target
     public float maxDistance = 2.0f; //Maximum Distance the camera can be from the player
     public float minDistance = 0.8f; //Minimum Distance the camera can be from the player
+    public float cameraSphereRadius = 0.2f;
+    public float cameraSphereOffset = 0.2f;
+    public float minimumCollisionOffset = 0.2f;
     public Transform targetObject; //Object which the camera is tied to (Apply to an Empty Object which is a Child of the Target)
     public Vector2 pitchMinMax = new Vector2(-5, 85); //A Value used to calmp the Maximum and Minimum Pitch Values. X Value is the Min, Y Value is the Max.
 
@@ -30,7 +33,7 @@ public class ThirdPersonCameraController : MonoBehaviour
 
     void Update()
     {
-        CollisionDetection();
+        //CollisionDetection();
     }
 
     //Called after all of the other Update Methods are run
@@ -49,44 +52,39 @@ public class ThirdPersonCameraController : MonoBehaviour
         transform.position = targetObject.position - transform.forward * targetDistance; //Moves the transform position of the Camera to follow the player
     }
 
+    /*
     void CollisionDetection()
     {
         Ray ray = new Ray(transform.position, transform.forward); //Ray used to draw a line from the camera position in the Camera's forward direction
         RaycastHit hitInfo; //A variable which stores information of the raycast collision (RaycastHit is struct, need to use 'out' to have Raycast method assign to hitInfo
-        float rayDist;
+
+        //CURRENTLY BUGGY, DISTANCE KEEPS CHANGING BACK AND FORTH. MAY NEED TO IMPLAMENT A NEW SYSTEM USING COLLIDERS INSTEAD
 
         if(Physics.Raycast(ray, out hitInfo, maxDistance)) //Checks if the ray hit something
         {
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red); //Draws line inside of editor from origin to Hit Point(NOT IN BUILD)
 
-            if(hitInfo.collider.tag != "Player")
+            if(hitInfo.collider.tag != "Player") //If the Raycast doesn't hit the player
             {
-                Debug.Log("Raycast Unsuccessfully Hit Player");
-
-                rayDist = hitInfo.distance;
-
-                if((targetDistance != targetDistance - rayDist) && (targetDistance > minDistance))
+                if((targetDistance != targetDistance - hitInfo.distance) && (targetDistance > minDistance)) //Checks if Distance of the camera to the player
                 {
-                    targetDistance = targetDistance - rayDist;
+                    targetDistance = targetDistance - hitInfo.distance;
                 }
 
-                if(targetDistance < minDistance)
+                if(targetDistance < minDistance) //Checks if Distance of the camera to the player is lower then the minimum
                 {
-                    targetDistance = minDistance;
-
-                    Debug.Log("Camera LESS THAN Minimum Distance");
+                    targetDistance = minDistance; //Changes the distance to the minimum amount
                 }
             }
             else
             {
-                Debug.Log("Raycast Successfully Hit Player");
-
-                targetDistance = maxDistance;
+                targetDistance = maxDistance; //Changes the distance of the camera to the player to the Maximum amount if player is seen again
             }
         }
         else
             Debug.DrawLine(ray.origin, ray.origin + ray.direction * 100.0f, Color.blue); //Draws line inside of editor from origin to direction ray is pointing in (NOT IN BUILD)
     }
+    */
 }
 
 /*
@@ -94,6 +92,8 @@ public class ThirdPersonCameraController : MonoBehaviour
  *      - https://youtu.be/sNmeK3qK7oA
  *          - Video used to create this Third Person Camera Controller. Use this to create a basic controller and add our own custom functions
  *          where needed.
+ *      - https://youtu.be/fFq5So-UB0E
+ *          - Used to implament Raycasting
  *      - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref
  *          - The ref keyword indicates a value that is passed by reference. It is used in four different contexts:
  *              - In a method signature and in a method call, to pass an argument to a method by reference. For more information, see Passing an argument by reference.
