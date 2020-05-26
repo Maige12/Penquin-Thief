@@ -6,9 +6,12 @@ TEST PROJECTS:
 	- ONLY USE THIS FOR ANY IN-PROGRESS FEATURES BEING WORKED ON!
 	- ADD TO THE REPO WHILE YOU ARE WORKING! If we don't have access to your work while your working on it, we don't know whats going on!
 	- Do not work on the Primary Game Project in here, work on features here and then implement them into the Primary Game Project located in the MAIN PROJECT folder!
-	- To make sure that all of the features work together, implement them ONE AT A TIME into the ‘primaryDevProject’ folder!
-		- Make a Build to make sure your newly added feature works in the Editor and Build versions.
-			- DO NOT ADD THE BUILD TO THE REPO, ADD IT TO A FOLDER ON YOUR COMPUTER!
+	- Any features you are working on should go in the:
+		- 'Penquin-Thief -> Unity Projects -> TEST PROJECTS -> FEATURE DEVELOPMENT' Directory
+	- To make sure that all of the features work together, implement them ONE AT A TIME into the: 
+		- 'Penquin-Thief -> Unity Projects -> TEST PROJECTS -> primaryDevProject' Directory
+			- Make a Build to make sure your newly added feature works in the Editor and Build versions.
+				- DO NOT ADD THE BUILD TO THE REPO, ADD IT TO A FOLDER ON YOUR COMPUTER!
 
 MAIN PROJECT:
 	- This folder is where the PRIMARY GAME PROJECT should be put together to be built!
