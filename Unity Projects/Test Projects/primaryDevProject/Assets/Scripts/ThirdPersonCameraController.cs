@@ -2,24 +2,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  3rd Person Controller Script (VER 1, 13-05-2020) 
+ *  
+ *  ATTACH TO 'Main Camera' OBJECT IN SCENE HIERARCHY
+ *  
+ *  Description:
+ *      - This script controls the Movements/Systems of the 3rd Person Camera. This includes things such as:
+ *          - Movement (Pitch/Yaw)
+ *          - Collision Detection
+ *              
+ *  Known Bugs:
+ *      - Camera still 
+ *      
+ *  Recommended Canvas/EventSystem Hierarchy:
+ *      Canvas
+ *          playerUI (Tagged 'Player UI')
+ *              usableItems
+ *                  usableItem0
+ *                  usableItem1
+ *                  usableItem2
+ *                  usableItem3
+ *              CollectedItemsUI
+ *                  collectedItems0
+ *                  collectedItems1
+ *                  collectedItems2
+ *                  collectedItems3
+ *          pauseMenu (Tagged 'Pause Menu')
+ *              pauseMenuBackground
+ *                  resumeGameButton
+ *                      Text (TMP)
+ *                  quitGameButton
+ *                      Text (TMP)
+ *      EventSystem
+ *          
+ *  NOTE: Names/Tags used in example Hierarchy are used in Script to find objects, please use this example when naming/tagging objects in a scene
+*/
+
 public class ThirdPersonCameraController : MonoBehaviour
 {
     public bool lockCursor; //A boolean to say if the cursor needs to be locked (Enabled/Disabled in Inspector)
     public float mouseSensitivity = 5.0f; //A modifier which adjusts the mouse sensitivity
     public float rotationSmoothTime = 0.1f; //Approximate number of seconds for SmoothDampAngle to go from current value to target value (ROTATION)
+    public float cameraSmoothTime = 0.1f;
     public float targetDistance = 2.0f; //How far the camera should be from the target
     public float maxDistance = 2.0f; //Maximum Distance the camera can be from the player
     public float minDistance = 0.8f; //Minimum Distance the camera can be from the player
-    public float cameraSphereRadius = 0.2f;
-    public float cameraSphereOffset = 0.2f;
-    public float minimumCollisionOffset = 0.2f;
     public Transform targetObject; //Object which the camera is tied to (Apply to an Empty Object which is a Child of the Target)
     public Vector2 pitchMinMax = new Vector2(-5, 85); //A Value used to calmp the Maximum and Minimum Pitch Values. X Value is the Min, Y Value is the Max.
+    public LayerMask player;
 
     float yaw; //Movement in the X Direction
     float pitch; //Movement in the Y Direction
+    float cameraSmoothVelocity;
     Vector3 rotationSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations
     Vector3 currentRotation; //Current rotation of the camera around the target object
+    bool objectCollision;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +71,7 @@ public class ThirdPersonCameraController : MonoBehaviour
 
     void Update()
     {
-        //CollisionDetection();
+        CollisionDetection();
     }
 
     //Called after all of the other Update Methods are run
@@ -52,39 +90,40 @@ public class ThirdPersonCameraController : MonoBehaviour
         transform.position = targetObject.position - transform.forward * targetDistance; //Moves the transform position of the Camera to follow the player
     }
 
-    /*
+    void OnCollisionEnter(Collision collision)
+    {
+        objectCollision = true;
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        objectCollision = false;
+    }
+
     void CollisionDetection()
     {
         Ray ray = new Ray(transform.position, transform.forward); //Ray used to draw a line from the camera position in the Camera's forward direction
-        RaycastHit hitInfo; //A variable which stores information of the raycast collision (RaycastHit is struct, need to use 'out' to have Raycast method assign to hitInfo
 
-        //CURRENTLY BUGGY, DISTANCE KEEPS CHANGING BACK AND FORTH. MAY NEED TO IMPLAMENT A NEW SYSTEM USING COLLIDERS INSTEAD
-
-        if(Physics.Raycast(ray, out hitInfo, maxDistance)) //Checks if the ray hit something
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, targetDistance)) //Checks if the ray hit something
         {
-            Debug.DrawLine(ray.origin, hitInfo.point, Color.red); //Draws line inside of editor from origin to Hit Point(NOT IN BUILD)
+            Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
 
-            if(hitInfo.collider.tag != "Player") //If the Raycast doesn't hit the player
+            if (hitInfo.collider.tag != "Player")
             {
-                if((targetDistance != targetDistance - hitInfo.distance) && (targetDistance > minDistance)) //Checks if Distance of the camera to the player
-                {
-                    targetDistance = targetDistance - hitInfo.distance;
-                }
+                Debug.Log(hitInfo.collider.gameObject.name);
 
-                if(targetDistance < minDistance) //Checks if Distance of the camera to the player is lower then the minimum
-                {
-                    targetDistance = minDistance; //Changes the distance to the minimum amount
-                }
+                targetDistance = Mathf.SmoothDamp(targetDistance, targetDistance - (hitInfo.distance / minDistance), ref cameraSmoothVelocity, cameraSmoothTime);
             }
             else
+                if (hitInfo.collider.tag == "Player" && objectCollision == false)
             {
-                targetDistance = maxDistance; //Changes the distance of the camera to the player to the Maximum amount if player is seen again
+                targetDistance = Mathf.SmoothDamp(targetDistance, maxDistance, ref cameraSmoothVelocity, cameraSmoothTime);
             }
         }
         else
-            Debug.DrawLine(ray.origin, ray.origin + ray.direction * 100.0f, Color.blue); //Draws line inside of editor from origin to direction ray is pointing in (NOT IN BUILD)
+            Debug.DrawLine(ray.origin, ray.origin + ray.direction * 100.0f, Color.blue);
     }
-    */
+
 }
 
 /*
@@ -120,4 +159,9 @@ public class ThirdPersonCameraController : MonoBehaviour
  *          - Casts a ray, from point origin, in direction direction, of length maxDistance, against all colliders in the Scene.
  *          - You may optionally provide a LayerMask, to filter out any Colliders you aren't interested in generating collisions with.
  *          - Specifying queryTriggerInteraction allows you to control whether or not Trigger colliders generate a hit, or whether to use the global Physics.queriesHitTriggers setting.
+ *      - https://docs.unity3d.com/ScriptReference/Collider.OnCollisionEnter.html
+ *          - OnCollisionEnter is called when this collider/rigidbody has begun touching another rigidbody/collider. In contrast to OnTriggerEnter, OnCollisionEnter is passed the 
+ *          Collision class and not a Collider. The Collision class contains information, for example, about contact points and impact velocity. Notes: Collision events are only sent 
+ *          if one of the colliders also has a non-kinematic rigidbody attached. Collision events will be sent to disabled MonoBehaviours, to allow enabling Behaviours in response to 
+ *          collisions.
 */
