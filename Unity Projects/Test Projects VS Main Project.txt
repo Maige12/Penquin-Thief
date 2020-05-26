@@ -1,0 +1,18 @@
+This is a short explanation of how you should be using the TEST PROJECTS folder as opposed to the MAIN PROJECT folder.
+
+NOTE: DO NOT ADD BUILDS TO THE REPO, ADD IT TO A FOLDER SOMEWHERE ELSE ON YOUR COMPUTER!
+
+TEST PROJECTS:
+	- ONLY USE THIS FOR ANY IN-PROGRESS FEATURES BEING WORKED ON!
+	- ADD TO THE REPO WHILE YOU ARE WORKING! If we don't have access to your work while your working on it, we don't know whats going on!
+	- Do not work on the Primary Game Project in here, work on features here and then implement them into the Primary Game Project located in the MAIN PROJECT folder!
+	- To make sure that all of the features work together, implement them ONE AT A TIME into the ‘primaryDevProject’ folder!
+		- Make a Build to make sure your newly added feature works in the Editor and Build versions.
+			- DO NOT ADD THE BUILD TO THE REPO, ADD IT TO A FOLDER ON YOUR COMPUTER!
+
+MAIN PROJECT:
+	- This folder is where the PRIMARY GAME PROJECT should be put together to be built!
+		- DO NOT ADD THE BUILD TO THE REPO, ADD IT TO A FOLDER ON YOUR COMPUTER!
+	- Make additions ONE AT A TIME! Finish making your addition and let the next person know you are done so they can add their addition.
+	- After features have been tested in the ‘primaryDevProject’ folder, they should be added to here to be implemented in the final build!
+	- Once you have made all of your additions, let the TEST LEAD (Darcy Wilson) know, and he will send out a mass message to tell everyone to stop making commits till the Build Version is released!
