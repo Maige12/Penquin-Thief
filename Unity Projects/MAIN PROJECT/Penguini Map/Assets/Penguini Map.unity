@@ -7346,6 +7346,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Door1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 227c0ccb87f0401489adf1bb858b5f15, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: 227c0ccb87f0401489adf1bb858b5f15, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -13828,7 +13832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b65a56d22b051184aaafede3fe3c7391, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b65a56d22b051184aaafede3fe3c7391, type: 3}
       propertyPath: m_NavMeshLayer
@@ -17999,7 +18003,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_Name
-      value: FPSController
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_TagString
@@ -21451,10 +21455,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.10453637
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 300
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
