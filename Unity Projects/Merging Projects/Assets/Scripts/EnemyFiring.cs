@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyFiring : MonoBehaviour {
 
-    EnemyControl enemyControl;
+    NightGuardAI enemyControl;
     public GameObject threeDBullet;
     public float firingTime = 2;
     public float originalFiringTime = 2;
@@ -15,7 +15,7 @@ public class EnemyFiring : MonoBehaviour {
     // This is for initialization
     void Start()
     {
-        enemyControl = gameObject.GetComponent<EnemyControl>();
+        enemyControl = gameObject.GetComponent<NightGuardAI>();
     }
 
     // Update is called once per frame

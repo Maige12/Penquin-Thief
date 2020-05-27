@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,14 +6,13 @@ public static class HelperMethods
 {
     public static List<GameObject> GetChildren(this GameObject go)
     {
-        List<GameObject> children = new List<GameObject>(); // temp memory
-                                                            // on the stack
-                                                            // ready to get
-                                                            // all the path points
+        List<GameObject> children = new List<GameObject>(); // temp memory on the stack ready to get all the path points
+
         foreach (Transform tranIterator in go.transform)
         {
             children.Add(tranIterator.gameObject);
         }
+
         return children;
     }
 }
@@ -31,7 +29,6 @@ public class NightGuardAI : MonoBehaviour
     public float fieldOfViewRange;
     public float hearingRange;
 
-
     public bool isPatrolling = true;
     public List<GameObject> myPathPoints;
     public GameObject myPath;
@@ -42,7 +39,7 @@ public class NightGuardAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
         nav = GetComponent<NavMeshAgent>();
 
         //initialise the path points
@@ -58,16 +55,15 @@ public class NightGuardAI : MonoBehaviour
         // Can the player be seen?
         CheckPOV();
 
-
         if (canSeePlayer == true)
         {
-            nav.isStopped = false; 
+            nav.isStopped = false;
             nav.SetDestination(player.position);
             lastKnownPosition = player.position;
         }
         else
         {
-            if (isPatrolling)  
+            if (isPatrolling)
             {
                 //Head to next path point
                 nav.isStopped = false;
@@ -80,23 +76,13 @@ public class NightGuardAI : MonoBehaviour
                 // Is it back at the start? If so, loop
                 if (currentPoint > myPathPoints.Count - 1)
                     currentPoint = 0;
-
-                
-
             }
-
             else
             {
                 nav.isStopped = true; // Same as nav.enabled = false;
             }
-
-           
         }
-
-       
-
     }
-
 
     void CheckPOV()
     {
@@ -104,7 +90,6 @@ public class NightGuardAI : MonoBehaviour
         Vector3 direction = player.position - transform.position;
         //ray to player
         Ray ray = new Ray(transform.position, direction);
-        RaycastHit hit;
         //distance to the player
         float distance = Vector3.Distance(player.position, transform.position);
         //draw a line to the player
@@ -114,25 +99,19 @@ public class NightGuardAI : MonoBehaviour
         {
             if ((Vector3.Angle(ray.direction, transform.forward)) < fieldOfViewRange)
             {
-
-
                 canSeePlayer = true;
             }
         }
-
         else
         {
-           canSeePlayer = false;
+            canSeePlayer = false;
         }
+
         //Can the enemy hear the player?
         if (canSeePlayer == false)
-            {
+        {
             if (Vector3.Distance(transform.position, player.position) < hearingRange)
                 canSeePlayer = true;
-            }
+        }
     }
- 
-
-
-    
 }
