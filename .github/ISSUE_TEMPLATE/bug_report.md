@@ -10,6 +10,9 @@ assignees: ''
 **Describe the bug**
 A clear and concise description of what the bug is.
 
+**Version Found**
+Which labelled version of the game build was this found on?
+
 **To Reproduce**
 Steps to reproduce the behavior:
 1. Go to '...'
