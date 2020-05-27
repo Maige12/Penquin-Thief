@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pause Menu
   - End Screen
+  - Player UI
   layers:
   - Default
   - TransparentFX
