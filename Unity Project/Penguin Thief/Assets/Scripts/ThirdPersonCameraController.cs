@@ -9,34 +9,9 @@ using UnityEngine;
  *  
  *  Description:
  *      - This script controls the Movements/Systems of the 3rd Person Camera. This includes things such as:
- *          - Movement (Pitch/Yaw)
- *          - Collision Detection
- *              
- *  Known Bugs:
- *      - Camera still 
- *      
- *  Recommended Canvas/EventSystem Hierarchy:
- *      Canvas
- *          playerUI (Tagged 'Player UI')
- *              usableItems
- *                  usableItem0
- *                  usableItem1
- *                  usableItem2
- *                  usableItem3
- *              CollectedItemsUI
- *                  collectedItems0
- *                  collectedItems1
- *                  collectedItems2
- *                  collectedItems3
- *          pauseMenu (Tagged 'Pause Menu')
- *              pauseMenuBackground
- *                  resumeGameButton
- *                      Text (TMP)
- *                  quitGameButton
- *                      Text (TMP)
- *      EventSystem
- *          
- *  NOTE: Names/Tags used in example Hierarchy are used in Script to find objects, please use this example when naming/tagging objects in a scene
+ *          - Movement (Pitch (X-Direction) / Yaw (Y-Direction))
+ *          - Camera Collision Detection (Detecting that the camera is colliding with objects and sliding it along the collision of said object)
+ *          - Camera Occlusion (Movving the camera forward to see the player if objects are between the player/camera)
 */
 
 public class ThirdPersonCameraController : MonoBehaviour
