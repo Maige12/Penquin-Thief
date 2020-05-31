@@ -52,6 +52,19 @@ public class NightGuardAI : MonoBehaviour
         myPathPoints = myPath.GetChildren();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            print("GAME OVER");
+
+        }
+
+
+
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -93,8 +106,7 @@ public class NightGuardAI : MonoBehaviour
            
         }
 
-       
-
+     
     }
 
 
