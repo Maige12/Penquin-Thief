@@ -1582,6 +1582,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: playerDummy
       objectReference: {fileID: 0}
+    - target: {fileID: 7826010286906529804, guid: b1f60a3d6194ab340a3d34d76b1cfa1e,
+        type: 3}
+      propertyPath: pitchMinMax.x
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 7826010287513001771, guid: b1f60a3d6194ab340a3d34d76b1cfa1e,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -24,7 +24,7 @@ public class ThirdPersonCameraController : MonoBehaviour
     public float maxDistance = 2.0f; //Maximum Distance the camera can be from the player
     public float minDistance = 0.8f; //Minimum Distance the camera can be from the player
     public Transform targetObject; //Object which the camera is tied to (Apply to an Empty Object which is a Child of the Target)
-    public Vector2 pitchMinMax = new Vector2(-35, 85); //A Value used to calmp the Maximum and Minimum Pitch Values. X Value is the Min, Y Value is the Max.
+    public Vector2 pitchMinMax = new Vector2(-15, 85); //A Value used to calmp the Maximum and Minimum Pitch Values. X Value is the Min, Y Value is the Max.
 
     float yaw; //Movement in the X Direction
     float pitch; //Movement in the Y Direction
@@ -44,7 +44,7 @@ public class ThirdPersonCameraController : MonoBehaviour
 
     void Update()
     {
-        CollisionDetection();
+        targetDistance = OcclusionDetection(); //OcclusionDetection() is run in Update
     }
 
     //Called after all of the other Update Methods are run
@@ -63,7 +63,7 @@ public class ThirdPersonCameraController : MonoBehaviour
         transform.position = targetObject.position - transform.forward * targetDistance; //Moves the transform position of the Camera to follow the player
     }
 
-    void CollisionDetection()
+    float OcclusionDetection() //Detects Collisions
     {
         Ray ray = new Ray(targetObject.transform.position, -transform.forward); //Ray used to draw a line from the camera position in the Camera's forward direction
 
@@ -71,18 +71,21 @@ public class ThirdPersonCameraController : MonoBehaviour
         {
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red); //Draws a Red Line from the player to the Camera (ONLY IN EDITOR)
 
-            if (hitInfo.collider.tag != "Player") //Checks to see if the Collider that the Raycast hit is the player
+            if((hitInfo.collider.tag != "Player") && (hitInfo.distance <= minDistance)) //Checks to see if the Collider that the Raycast hit is the player and that the distance is <= minDistance
+            {
+                return (targetDistance = Mathf.SmoothDamp(targetDistance, minDistance, ref cameraSmoothVelocity, cameraSmoothTime)); //Smooths the Target Distance to the distance of the raycast
+            }
+
+            if ((hitInfo.collider.tag != "Player") && (hitInfo.distance > minDistance)) //Checks to see if the Collider that the Raycast hit is the player and that the distance is > minDistance
             {
                 //Debug.Log(hitInfo.collider.gameObject.name); //Finds the name of the GameObject that the Raycast hit and prints it to the console
 
-                targetDistance = Mathf.SmoothDamp(targetDistance, hitInfo.distance, ref cameraSmoothVelocity, cameraSmoothTime); //Smooths the Target Distance to the distance of the raycast
+                return(targetDistance = Mathf.SmoothDamp(targetDistance, hitInfo.distance, ref cameraSmoothVelocity, cameraSmoothTime)); //Smooths the Target Distance to the distance of the raycast
             }
         }
-        else //Uses the Maximum Distance if no Raycast is made
-        {
-            targetDistance = Mathf.SmoothDamp(targetDistance, maxDistance, ref cameraSmoothVelocity, cameraSmoothTime); //Smooths the target distance to the maximum distance
-            Debug.DrawLine(ray.origin, ray.origin + ray.direction * maxDistance, Color.blue); //Draws a Blue Line from the player to the Camera (ONLY IN EDITOR)
-        }
+
+        Debug.DrawLine(ray.origin, ray.origin + ray.direction * maxDistance, Color.blue); //Draws a Blue Line from the player to the Camera (ONLY IN EDITOR)
+        return (targetDistance = Mathf.SmoothDamp(targetDistance, maxDistance, ref cameraSmoothVelocity, cameraSmoothTime)); //Smooths the target distance to the maximum distance
     }
 
 }
