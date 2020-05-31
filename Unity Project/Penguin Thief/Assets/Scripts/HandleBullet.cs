@@ -12,7 +12,7 @@ public class HandleBullet : MonoBehaviour
         {
             PlayerStats.UpdateHealth(-1); // take one away from health
             Debug.Log("I got hit!!!!");
-           // Debug.Log(PlayerStats.health);
+            // Debug.Log(PlayerStats.health);
             Destroy(gameObject);
         }
         

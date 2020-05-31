@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFiring : MonoBehaviour {
+//PLEASE COMMENT THIS CODE
 
+public class EnemyFiring : MonoBehaviour
+{
     NightGuardAI enemyControl;
     public GameObject threeDBullet;
     public float firingTime = 2;
@@ -21,13 +23,11 @@ public class EnemyFiring : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-    
-
         if (enemyControl.canSeePlayer)
         {
             firingTime -= Time.deltaTime;
+
             if (firingTime <= 0)
-            
             {
                 GameObject clone = Instantiate(threeDBullet, transform.position, transform.rotation);
                 clone.GetComponent<Rigidbody>().AddForce(transform.forward * firingSpeed);

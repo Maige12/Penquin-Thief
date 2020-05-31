@@ -7,6 +7,7 @@ using UnityEngine;
 public class GrappleDetect : MonoBehaviour
 {
     public GameObject player;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Hookable")

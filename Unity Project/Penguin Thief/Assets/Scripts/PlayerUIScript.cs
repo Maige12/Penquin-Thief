@@ -21,8 +21,7 @@ using TMPro; //Includes commands for TextMesh Pro
  *          - Created ChangeUsableItem()
  *              
  *  Known Bugs:
- *      - No Scroll Wheel Functionality
- *      - No Collected Item Functionality
+ *      - N/A
 */
 
 public class PlayerUIScript : MonoBehaviour

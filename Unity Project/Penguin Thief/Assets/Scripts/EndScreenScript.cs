@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class EndScreenScript : MonoBehaviour
 {
     static public bool gameEnd; //A boolean to detect if the game has finished
@@ -20,9 +18,10 @@ public class EndScreenScript : MonoBehaviour
         {
             UIInitialiserScript.GetEndScreenObj.SetActive(true); //Sets the End Screen to True
 
-            if(UIInitialiserScript.GetPauseMenuObj.activeInHierarchy) //Checks if Pasue Menu is Active
+            if(UIInitialiserScript.GetPauseMenuObj.activeInHierarchy || UIInitialiserScript.GetPlayerUI.activeInHierarchy) //Checks if Pasue Menu/Player UI is Active
             {
                 UIInitialiserScript.GetPauseMenuObj.SetActive(false); //Turns off Pause Menu if it's on
+                UIInitialiserScript.GetPlayerUI.SetActive(false); //Sets the Pause Menu object to active so it can be interacted with
             }
 
             EndScreenScript.gameEnd = true;

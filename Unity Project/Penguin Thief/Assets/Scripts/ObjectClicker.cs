@@ -4,8 +4,6 @@ using UnityEngine;
 
 //PLEASE COMMENT THIS CODE
 
-//CLEAN UP CODE LATER
-
 public class ObjectClicker : MonoBehaviour
 {
     public int Score;
