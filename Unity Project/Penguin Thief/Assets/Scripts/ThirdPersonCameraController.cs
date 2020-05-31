@@ -18,21 +18,19 @@ public class ThirdPersonCameraController : MonoBehaviour
 {
     public bool lockCursor; //A boolean to say if the cursor needs to be locked (Enabled/Disabled in Inspector)
     public float mouseSensitivity = 5.0f; //A modifier which adjusts the mouse sensitivity
-    public float rotationSmoothTime = 0.1f; //Approximate number of seconds for SmoothDampAngle to go from current value to target value (ROTATION)
-    public float cameraSmoothTime = 0.1f;
+    public float rotationSmoothTime = 0.1f; //Approximate number of seconds for SmoothDampAngle to go from current value to target value (CAMERA ROTATION)
+    public float cameraSmoothTime = 0.1f; //Approximate number of seconds for SmoothDampAngle to go from current value to target value (CAMERA DISTANCE)
     public float targetDistance = 2.0f; //How far the camera should be from the target
     public float maxDistance = 2.0f; //Maximum Distance the camera can be from the player
     public float minDistance = 0.8f; //Minimum Distance the camera can be from the player
     public Transform targetObject; //Object which the camera is tied to (Apply to an Empty Object which is a Child of the Target)
-    public Vector2 pitchMinMax = new Vector2(-5, 85); //A Value used to calmp the Maximum and Minimum Pitch Values. X Value is the Min, Y Value is the Max.
-    public LayerMask player;
+    public Vector2 pitchMinMax = new Vector2(-35, 85); //A Value used to calmp the Maximum and Minimum Pitch Values. X Value is the Min, Y Value is the Max.
 
     float yaw; //Movement in the X Direction
     float pitch; //Movement in the Y Direction
-    float cameraSmoothVelocity;
-    Vector3 rotationSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations
+    float cameraSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations (Used to smooth distances between Maximum/Current distance and new/Maximum distance)
+    Vector3 rotationSmoothVelocity; //DONT MODIFY OURSELVES, used for SmoothDampAngle calculations (Used to smooth the rotations of the camera around a target)
     Vector3 currentRotation; //Current rotation of the camera around the target object
-    bool objectCollision;
 
     // Start is called before the first frame update
     void Start()
@@ -65,38 +63,26 @@ public class ThirdPersonCameraController : MonoBehaviour
         transform.position = targetObject.position - transform.forward * targetDistance; //Moves the transform position of the Camera to follow the player
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        objectCollision = true;
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        objectCollision = false;
-    }
-
     void CollisionDetection()
     {
-        Ray ray = new Ray(transform.position, transform.forward); //Ray used to draw a line from the camera position in the Camera's forward direction
+        Ray ray = new Ray(targetObject.transform.position, -transform.forward); //Ray used to draw a line from the camera position in the Camera's forward direction
 
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, targetDistance)) //Checks if the ray hit something
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, targetDistance)) //Checks if the ray hit something, if it did the below code will execute
         {
-            Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
+            Debug.DrawLine(ray.origin, hitInfo.point, Color.red); //Draws a Red Line from the player to the Camera (ONLY IN EDITOR)
 
-            if (hitInfo.collider.tag != "Player")
+            if (hitInfo.collider.tag != "Player") //Checks to see if the Collider that the Raycast hit is the player
             {
-                Debug.Log(hitInfo.collider.gameObject.name);
+                //Debug.Log(hitInfo.collider.gameObject.name); //Finds the name of the GameObject that the Raycast hit and prints it to the console
 
-                targetDistance = Mathf.SmoothDamp(targetDistance, targetDistance - (hitInfo.distance / minDistance), ref cameraSmoothVelocity, cameraSmoothTime);
-            }
-            else
-                if (hitInfo.collider.tag == "Player" && objectCollision == false)
-            {
-                targetDistance = Mathf.SmoothDamp(targetDistance, maxDistance, ref cameraSmoothVelocity, cameraSmoothTime);
+                targetDistance = Mathf.SmoothDamp(targetDistance, hitInfo.distance, ref cameraSmoothVelocity, cameraSmoothTime); //Smooths the Target Distance to the distance of the raycast
             }
         }
-        else
-            Debug.DrawLine(ray.origin, ray.origin + ray.direction * 100.0f, Color.blue);
+        else //Uses the Maximum Distance if no Raycast is made
+        {
+            targetDistance = Mathf.SmoothDamp(targetDistance, maxDistance, ref cameraSmoothVelocity, cameraSmoothTime); //Smooths the target distance to the maximum distance
+            Debug.DrawLine(ray.origin, ray.origin + ray.direction * maxDistance, Color.blue); //Draws a Blue Line from the player to the Camera (ONLY IN EDITOR)
+        }
     }
 
 }
