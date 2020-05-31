@@ -44,7 +44,7 @@ public class ThirdPersonCameraController : MonoBehaviour
 
     void Update()
     {
-        targetDistance = OcclusionDetection(); //OcclusionDetection() is run in Update
+        targetDistance = OcclusionDetection(); //OcclusionDetection() is run in Update so that it is calculated before LateUpdate() to get the most accurate targetDistance value
     }
 
     //Called after all of the other Update Methods are run
@@ -87,7 +87,6 @@ public class ThirdPersonCameraController : MonoBehaviour
         Debug.DrawLine(ray.origin, ray.origin + ray.direction * maxDistance, Color.blue); //Draws a Blue Line from the player to the Camera (ONLY IN EDITOR)
         return (targetDistance = Mathf.SmoothDamp(targetDistance, maxDistance, ref cameraSmoothVelocity, cameraSmoothTime)); //Smooths the target distance to the maximum distance
     }
-
 }
 
 /*
