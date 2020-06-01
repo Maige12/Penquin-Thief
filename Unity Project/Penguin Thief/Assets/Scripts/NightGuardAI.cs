@@ -53,12 +53,8 @@ public class NightGuardAI : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            print("GAME OVER");
-
+            Debug.Log("GAME OVER");
         }
-
-
-
     }
 
 
