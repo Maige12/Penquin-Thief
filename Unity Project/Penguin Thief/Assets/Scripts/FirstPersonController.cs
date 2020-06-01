@@ -88,14 +88,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
-            if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.pause == false)
+            if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.canPause == false)
             {
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;
                 PauseMenuUI.OpenPauseMenu();
             }
             else
-                if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.pause == true)
+                if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.canPause == true)
                 {
                     Cursor.lockState = CursorLockMode.Locked;
                     Cursor.visible = false;

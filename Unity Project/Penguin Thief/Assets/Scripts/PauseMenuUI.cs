@@ -62,24 +62,26 @@ using UnityEngine;
 
 public class PauseMenuUI : MonoBehaviour
 {
-    public static bool pause; //A Boolean which keeps track if the player has paused the game or not. Value is changed from Player Script (CHANGE TO NAME OF PLAYER CONTROLLER SCRIPT)
+    public static bool canPause; //A Boolean which keeps track if the player can pause the game or not. Value is changed from PlayerController.cs
 
     private void Awake()
     {
-        pause = false; //Sets Pause State to False by Default
+        canPause = true; //Sets the player's ability to pause to True by Default
     }
 
     static public void OpenPauseMenu() //Turns on the Pause Menu, Freezes Time
     {
         Debug.Log("Pausing Game");
-        pause = true;
+
+        canPause = false; //Stops the player from activating pause again since the Pause Screen is already active
         Time.timeScale = 0; //Freezes time so game freezes
-        //Sets the boolean to true when the menu is open, stopping the player from moving
+
         UIInitialiserScript.GetPauseMenuObj.SetActive(true); //Sets the Pause Menu object to active so it can be interacted with
         UIInitialiserScript.GetPlayerUI.SetActive(false); //Sets the Pause Menu object to active so it can be interacted with
-        //UIInitialiserScript.GetPlayerUI.SetActive(false); //Sets the Player UI to false (UNCOMMENT WHEN NEW UI SYSTEM IS SET UP)
+
         Cursor.lockState = CursorLockMode.Confined; //Locks cursor to the game view (Cannot move mouse outside of it, only works in BUILD, not EDITOR)
         Cursor.visible = true; //Shows Cursor
+
         Debug.Log("pauseMenuObj set to Active");
         Debug.Log("playerUI set to Inactive");
     }
@@ -87,15 +89,18 @@ public class PauseMenuUI : MonoBehaviour
     static public void ContinueGame() //Turns off the Pause Menu, Unfreezes Time
     {
         Debug.Log("Resuming Game");
+
         UIInitialiserScript.GetPauseMenuObj.SetActive(false); //Sets the Pause Menu to false
         UIInitialiserScript.GetPlayerUI.SetActive(true); //Sets the Pause Menu object to active so it can be interacted with
-        //UIInitialiserScript.GetPlayerUI.SetActive(true); //Sets the Player UI to true (UNCOMMENT WHEN NEW UI SYSTEM IS SET UP)
+
         Cursor.lockState = CursorLockMode.Locked; //Locks Cursor to center of screen
         Cursor.visible = false; //Hides cursor
+
         Debug.Log("pauseMenuObj set to Inactive");
         Debug.Log("playerUI set to Active");
+
         Time.timeScale = 1; //Sets game time back to normal time
-        pause = false;
+        canPause = true; //Allows the player to pause again since the pause screen is inactive
     }
 
     public void ContButton() //Used for the OnClick() funtionality in the resumeGameButton Object (Can only use functions with one parameter)

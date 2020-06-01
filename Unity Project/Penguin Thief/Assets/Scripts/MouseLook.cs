@@ -74,12 +74,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void InternalLockUpdate()
         {
-            if (PauseMenuUI.pause == true)
+            if (PauseMenuUI.canPause == true)
             {
                 m_cursorIsLocked = false;
                 lockCursor = false;
             }
-            else if(PauseMenuUI.pause == false)
+            else if(PauseMenuUI.canPause == false)
             {
                 m_cursorIsLocked = true;
                 lockCursor = true;

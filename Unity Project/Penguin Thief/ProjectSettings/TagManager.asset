@@ -3,7 +3,34 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pause Menu
+  - End Screen
+  - Player UI
+  - Key8
+  - Door3
+  - Door5
+  - Key7
+  - Key4
+  - Item1
+  - Key6
+  - Key5
+  - Door4
+  - Scorepoint
+  - Item3
+  - Item2
+  - Item4
+  - Key3
+  - Door6
+  - Door7
+  - Key1
+  - Key2
+  - Door8
+  - Wall
+  - Door1
+  - Enemy
+  - Door2
+  - Game Over
   layers:
   - Default
   - TransparentFX

@@ -62,28 +62,30 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //KEY INPUT SECTION
-        if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.pause == false && EndScreenScript.gameEnd == false) //Checks to see if the player has pressed down Escape and if the Pause UI is OFF
+
+        if(EndScreenScript.gameEnd == false)
         {
-            PauseMenuUI.OpenPauseMenu(); //Opens the Pause Menu
-        }
-        else
-            if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.pause == true && EndScreenScript.gameEnd == false) //Checks to see if the player has pressed down Escape and if the Pause UI is ON
+            if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.canPause == true) //Checks to see if the player has pressed down Escape and if the Pause UI is OFF
             {
-                PauseMenuUI.ContinueGame(); //Continues the Game
+                PauseMenuUI.OpenPauseMenu(); //Opens the Pause Menu
             }
+            else
+                if (Input.GetKeyDown(KeyCode.Escape) && PauseMenuUI.canPause == false) //Checks to see if the player has pressed down Escape and if the Pause UI is ON
+                {
+                    PauseMenuUI.ContinueGame(); //Continues the Game
+                }
+        }
 
         if (Input.GetKeyDown(KeyCode.P)) //USED FOR DEBUGGING PURPOSES ONLY, REMOVE LINE OF CODE ONCE PROPER SYSTEM IS IMPLEMENTED AND HAVE THIS RUN IN EndScreenScript.cs
         {
             UIInitialiserScript.GetEndScreenObj.SetActive(true); //Sets the End Screen to True
-
-            if(UIInitialiserScript.GetPauseMenuObj.activeInHierarchy || UIInitialiserScript.GetPlayerUI.activeInHierarchy) //Checks if Pasue Menu/Player UI is Active
-            {
-                UIInitialiserScript.GetPauseMenuObj.SetActive(false); //Turns off Pause Menu if it's on
-                UIInitialiserScript.GetPlayerUI.SetActive(false); //Sets the Pause Menu object to active so it can be interacted with
-            }
+            UIInitialiserScript.GetPauseMenuObj.SetActive(false); //Turns off Pause Menu if it's on
+            UIInitialiserScript.GetPlayerUI.SetActive(false); //Sets the Pause Menu object to active so it can be interacted with
 
             EndScreenScript.gameEnd = true;
+            PauseMenuUI.canPause = false; //Stops the player from being able to pause
             Time.timeScale = 0; //Freezes time so game freezes
+
             Cursor.lockState = CursorLockMode.Confined; //Locks cursor to the game view (Cannot move mouse outside of it, only works in BUILD, not EDITOR)
             Cursor.visible = true; //Shows Cursor
         }

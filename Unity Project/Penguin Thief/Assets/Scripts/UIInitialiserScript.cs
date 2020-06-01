@@ -61,7 +61,7 @@ using TMPro; //Includes commands for TextMesh Pro
 
 public class UIInitialiserScript : MonoBehaviour
 {
-    private static GameObject pauseMenuObj, endScreenObj, playerUI; //Private Variables to store UI GameObjects (Cannot be changed outside of Class)
+    private static GameObject pauseMenuObj, endScreenObj, playerUI, gameOverScreenObj; //Private Variables to store UI GameObjects (Cannot be changed outside of Class)
 
     public static GameObject GetPauseMenuObj //GetPauseMenuObj is a GET/SET Method. Used to Initialise Pause Menu UI Object (pauseMenu in Hierarchy)
     {
@@ -93,6 +93,18 @@ public class UIInitialiserScript : MonoBehaviour
             } //Sets playerUI to GameObject with specific Tag
     }
 
+    public static GameObject GetGameOverScreen //GetGameOverScreen is a GET/SET Method. Used to Initialise Game Over Object (gameOver in Hierarchy)
+    {
+        get { return gameOverScreenObj; } //Used to get value when of GetGameOverScreen when GetGameOverScreen is called
+        set
+        {
+            if (gameOverScreenObj == null) //Only SETS if the object is empty
+            {
+                gameOverScreenObj = GameObject.FindWithTag("Game Over");
+            }
+        } //Sets gameOverScreenObj to GameObject with specific Tag
+    }
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -101,7 +113,8 @@ public class UIInitialiserScript : MonoBehaviour
 
         GetPauseMenuObj = gameObject; //Calls GET/SET Function for GetPauseMenuObj to initialise it
         GetEndScreenObj = gameObject; //Calls GET/SET Function for GetEndScreenObj to initialise it
-        GetPlayerUI = gameObject; //Calls GET/SET Function for GetPlayerUI to initialise it (UNCOMMENT WHEN NEW UI SYSTEM IS SET UP)
+        GetPlayerUI = gameObject; //Calls GET/SET Function for GetPlayerUI to initialise it
+        GetGameOverScreen = gameObject;
 
         CheckParameters(); //Calls CheckParameters() function to make sure values have been set
     }
@@ -141,6 +154,18 @@ public class UIInitialiserScript : MonoBehaviour
             Debug.LogError("Unable to find object with Tag 'Player UI'", playerUI);
             Application.Quit(); //Closes the Game
         }
+
+        if (GetGameOverScreen != null) //Checks to see if GameObject is set to NULL
+        {
+            Debug.Log("Object paired to gameOver successfully!");
+        }
+        else
+        {
+            Debug.LogError("Unable to find object with Tag 'Game Over'", gameOverScreenObj);
+            Application.Quit(); //Closes the Game
+        }
+
+        GetGameOverScreen.SetActive(false); //Sets GetGameOverScreen to Inactive (Should be hidden when starting game)
     }
 }
 

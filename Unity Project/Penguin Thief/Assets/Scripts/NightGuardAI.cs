@@ -53,7 +53,7 @@ public class NightGuardAI : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("GAME OVER");
+            GameOverScript.OpenGameOver(); //Opens Game Over Screen (Controlled by GameOverScript.cs Script)
         }
     }
 
