@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 7826010286885885890}
   - component: {fileID: 7826010286885885891}
   - component: {fileID: 7826010286885885888}
+  - component: {fileID: 4684657352661657536}
   - component: {fileID: 7826010286885885889}
   - component: {fileID: 1183428246}
   m_Layer: 0
@@ -132,6 +133,21 @@ MonoBehaviour:
   gravity: -12
   jumpHeight: 0.3
   airControlPercent: 0.4
+--- !u!114 &4684657352661657536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7826010286885885902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27722073c92a0914b85b8ef7ca787a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys: 0
+  collectables: 0
+  score: 0
 --- !u!143 &7826010286885885889
 CharacterController:
   m_ObjectHideFlags: 0

@@ -8,15 +8,24 @@ public class ItemCollectScript : MonoBehaviour
     public int collectables; //Player's total collectables collected
     public int score; //Player's total score points
 
-    PlayerUIScript playerUI = new PlayerUIScript(); //Makes an object reference to PlayerUIScript.cs
+    PlayerUIScript playerUI; //Gains access to PlayerUIScript.cs
 
     void Awake()
     {
         keys = 0; //Starts keys at 0
         collectables = 0; //Starts collectables at 0
+
+        if ((playerUI == null) && (GetComponent<PlayerUIScript>() != null))
+        {
+            playerUI = GetComponent<PlayerUIScript>();
+
+            Debug.Log("PlayerUIScript attached to playerUI");
+        }
+        else
+            Debug.Log("Cannot attach PlayerUIScript to playerUI");
     }
 
-    void OnCollisionEnter(Collision collision) //Will only activate when entering collision
+    void OnTriggerEnter(Collider collision) //Will only activate when entering collision
     {
         switch (collision.gameObject.tag) //Checks the collision tag
         {

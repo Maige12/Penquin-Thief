@@ -33,15 +33,10 @@ public class PlayerUIScript : MonoBehaviour
     string[] usableItemNames; //A list of names for the Usable Items
     int itemArrayNumber; //Current Array position player has selected
 
-    ItemCollectScript itemCollect = new ItemCollectScript(); //Makes an object reference to ItemCollectScript.cs
-
     void Awake()
     {
         usableItemNames = new string[] {"Grapple Gun", "Reaching Claw", "Cart", "Screwdriver"}; //Initialising the List of Suable Item names
         itemArrayNumber = -1;
-
-        totalKeys.SetText(itemCollect.keys.ToString()); //Sets the players number of Keys to the starting amount
-        totalCollectables.SetText(itemCollect.collectables.ToString()); //Sets the players number of Keys to the starting amount
 
         currentItemText.text = "No Items";
     }
