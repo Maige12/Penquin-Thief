@@ -37,23 +37,36 @@ using TMPro; //Includes commands for TextMesh Pro
  *      
  *  Recommended Canvas/EventSystem Hierarchy:
  *      Canvas
- *          playerUI (Tagged 'Player UI')
- *              usableItems
- *                  usableItem0
- *                  usableItem1
- *                  usableItem2
- *                  usableItem3
- *              CollectedItemsUI
- *                  collectedItems0
- *                  collectedItems1
- *                  collectedItems2
- *                  collectedItems3
- *          pauseMenu (Tagged 'Pause Menu')
+ *          endScreen (Tagged 'End Screen')
+ *              endScreenBackground
+ *                  congradulations
+ *                  endInstructions
+ *                  qrCode
+ *                  qrDescription
+ *                  quitGameButton
+ *                      Text (TMP)
+ *          pauseMenu (Tagged 'Pause Menu'
  *              pauseMenuBackground
  *                  resumeGameButton
  *                      Text (TMP)
  *                  quitGameButton
  *                      Text (TMP)
+ *          playerUI (Tagged 'Player UI')
+ *              playerUIBackground
+ *                  currentItemBackground
+ *                      title
+ *                      currentItemText
+ *                  collectablesBackground
+ *                      Keys Title
+ *                      Total Keys
+ *                      Collectables Title
+ *                      Total Collectables
+ *          gameOver (Tagged 'Game Over')
+ *              gameOverBackground
+ *                  quitGameButton
+ *                      Text (TMP)
+ *                  GAME OVER
+ *                  Description
  *      EventSystem
  *          
  *  NOTE: Names/Tags used in example Hierarchy are used in Script to find objects, please use this example when naming/tagging objects in a scene

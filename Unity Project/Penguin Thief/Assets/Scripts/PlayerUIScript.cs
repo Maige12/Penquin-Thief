@@ -36,7 +36,7 @@ public class PlayerUIScript : MonoBehaviour
     void Awake()
     {
         usableItemNames = new string[] {"Grapple Gun", "Reaching Claw", "Cart", "Screwdriver"}; //Initialising the List of Suable Item names
-        itemArrayNumber = -1;
+        itemArrayNumber = -1; //Sets the Array to -1 to start with
 
         currentItemText.text = "No Items";
     }
@@ -56,7 +56,7 @@ public class PlayerUIScript : MonoBehaviour
         {
             Debug.Log("Scrolling Up");
 
-            if(itemArrayNumber < 3)
+            if(itemArrayNumber < 3) //Makes sure the player can only scroll up if the value is Lower than 3
             {
                 itemArrayNumber++; //Increases array number
                 currentItemText.text = usableItemNames[itemArrayNumber]; //Changes the TextMeshPro Text to current item selected
@@ -67,7 +67,7 @@ public class PlayerUIScript : MonoBehaviour
         {
             Debug.Log("Scrolling Down");
 
-            if (itemArrayNumber > 0)
+            if (itemArrayNumber > 0) //Makes sure the player can only scroll down if the value is Higher than 0
             {
                 itemArrayNumber--; //Decreases array number
                 currentItemText.text = usableItemNames[itemArrayNumber]; //Changes the TextMeshPro Text to current item selected
@@ -75,12 +75,12 @@ public class PlayerUIScript : MonoBehaviour
         }
     }
 
-    public void UpdateKeys(int newKeys)
+    public void UpdateKeys(int newKeys) //Updates the current key total that the player has (totalKeys ('Total Keys' in Hierarchy))
     {
         totalKeys.SetText(newKeys.ToString()); //Sets the players number of Keys to the current total
     }
 
-    public void UpdateCollectables(int newCollectables)
+    public void UpdateCollectables(int newCollectables) //Updates the current collectables total that the player has (totalCollectables ('Total Collectables' in Hierarchy))
     {
         totalCollectables.SetText(newCollectables.ToString()); //Sets the players number of collectables to the current total
     }
