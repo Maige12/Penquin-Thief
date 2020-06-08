@@ -30,7 +30,9 @@ public class ObjectClicker : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 10.0f))
             {
-                if(hit.transform != null)
+                print(hit.collider.name);
+
+                if (hit.transform != null)
                 {
                     if(hit.collider.tag == "Key1")
                     {
