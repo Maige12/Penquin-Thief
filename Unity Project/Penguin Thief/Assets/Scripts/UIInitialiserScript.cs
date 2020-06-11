@@ -132,6 +132,26 @@ public class UIInitialiserScript : MonoBehaviour
         CheckParameters(); //Calls CheckParameters() function to make sure values have been set
     }
 
+    void Update()
+    {
+        if (FindObjectOfType<ObjectClicker>().Item1sent == 1 && //Checks to see if all objects have been found
+           FindObjectOfType<ObjectClicker>().Item2sent == 1 &&
+           FindObjectOfType<ObjectClicker>().Item3sent == 1 &&
+           FindObjectOfType<ObjectClicker>().Item4sent == 1)
+        {
+            GetEndScreenObj.SetActive(true); //Sets the End Screen to True
+            GetPauseMenuObj.SetActive(false); //Turns off Pause Menu if it's on
+            GetPlayerUI.SetActive(false); //Sets the Pause Menu object to active so it can be interacted with
+
+            EndScreenScript.gameEnd = true;
+            PauseMenuUI.canPause = false; //Stops the player from being able to pause
+            Time.timeScale = 0; //Freezes time so game freezes
+
+            Cursor.lockState = CursorLockMode.Confined; //Locks cursor to the game view (Cannot move mouse outside of it, only works in BUILD, not EDITOR)
+            Cursor.visible = true; //Shows Cursor
+        }
+    }
+
     void CheckParameters() //A Function used to make sure values have been set. If GameObject variables have NULL Value, prints out Error to Log and Exits Game
     {
         if (GetPauseMenuObj != null) //Checks to see if GameObject is set to NULL

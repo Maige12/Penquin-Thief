@@ -11,25 +11,6 @@ public class EndScreenScript : MonoBehaviour
         gameEnd = false; //Set to False by default
     }
 
-    void Update()
-    {
-        /* UNCOMMENT ONCE A SYSTEM FOR DETETCING A FINISH POINT HAS BEEN MADE
-        if (gameEnd == true && PauseMenuUI.pause == false) //Checks to see if the game has finished (gameEnd = true, Game has finished)
-        {
-            UIInitialiserScript.GetEndScreenObj.SetActive(true); //Sets the End Screen to True
-            UIInitialiserScript.GetPauseMenuObj.SetActive(false); //Turns off Pause Menu if it's on
-            UIInitialiserScript.GetPlayerUI.SetActive(false); //Sets the Pause Menu object to active so it can be interacted with
-
-            EndScreenScript.gameEnd = true;
-            PauseMenuUI.canPause = false; //Stops the player from being able to pause
-            Time.timeScale = 0; //Freezes time so game freezes
-
-            Cursor.lockState = CursorLockMode.Confined; //Locks cursor to the game view (Cannot move mouse outside of it, only works in BUILD, not EDITOR)
-            Cursor.visible = true; //Shows Cursor
-        }
-        */
-    }
-
     static public void QuitGame() //Quits the game
     {
         Debug.Log("Quitting the Game");

@@ -75,6 +75,7 @@ public class PauseMenuUI : MonoBehaviour
 
         canPause = false; //Stops the player from activating pause again since the Pause Screen is already active
         Time.timeScale = 0; //Freezes time so game freezes
+        AudioListener.pause = true; //Pauses audio
 
         UIInitialiserScript.GetPauseMenuObj.SetActive(true); //Sets the Pause Menu object to active so it can be interacted with
         UIInitialiserScript.GetPlayerUI.SetActive(false); //Sets the Pause Menu object to active so it can be interacted with
@@ -101,6 +102,7 @@ public class PauseMenuUI : MonoBehaviour
 
         Time.timeScale = 1; //Sets game time back to normal time
         canPause = true; //Allows the player to pause again since the pause screen is inactive
+        AudioListener.pause = false; //Unpauses audio
     }
 
     public void ContButton() //Used for the OnClick() funtionality in the resumeGameButton Object (Can only use functions with one parameter)

@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
                 }
         }
 
+        /*
         if (Input.GetKeyDown(KeyCode.P)) //USED FOR DEBUGGING PURPOSES ONLY, REMOVE LINE OF CODE ONCE PROPER SYSTEM IS IMPLEMENTED AND HAVE THIS RUN IN EndScreenScript.cs
         {
             UIInitialiserScript.GetEndScreenObj.SetActive(true); //Sets the End Screen to True
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.Confined; //Locks cursor to the game view (Cannot move mouse outside of it, only works in BUILD, not EDITOR)
             Cursor.visible = true; //Shows Cursor
-        }
+        }*/
 
         //INPUT SECTION
         Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); //Keyboard Inputs

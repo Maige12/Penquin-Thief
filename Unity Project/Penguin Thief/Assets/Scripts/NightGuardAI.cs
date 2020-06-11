@@ -36,6 +36,8 @@ public class NightGuardAI : MonoBehaviour
     public Vector3 lastKnownPosition;
     public bool hasSeenPlayer = false;
 
+    public bool alertSound; //A Boolean to control whether the Nigh Guard can play his Alert/Unalert sound
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,13 +49,20 @@ public class NightGuardAI : MonoBehaviour
 
         //find path points as children
         myPathPoints = myPath.GetChildren();
+
+        alertSound = true;
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             GameOverScript.OpenGameOver(); //Opens Game Over Screen (Controlled by GameOverScript.cs Script)
+        }
+
+        if(collision.gameObject.layer == 8) //Checks to see if the Night Guard is colliding with Layer 8 (Locked Doors)
+        {
+            Physics.IgnoreCollision(collision.collider, GetComponent<Collider>()); //Stops collision between the Night Guard and Locked Doors
         }
     }
 
@@ -109,6 +118,13 @@ public class NightGuardAI : MonoBehaviour
             if ((Vector3.Angle(ray.direction, transform.forward)) < fieldOfViewRange)
             {
                 canSeePlayer = true;
+
+                if(alertSound == true)
+                {
+                    FindObjectOfType<AudioManager>().Play("Guard Alerted"); //Plays the 'Guard Alerted' SFX
+
+                    alertSound = false;
+                }
             }
         }
         else
@@ -121,6 +137,13 @@ public class NightGuardAI : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, player.position) < hearingRange)
                 canSeePlayer = true;
+
+            if(alertSound == false)
+            {
+                FindObjectOfType<AudioManager>().Play("Guard Unalerted"); //Plays the 'Guard Unalerted' SFX
+
+                alertSound = true;
+            }
         }
     }
 }
