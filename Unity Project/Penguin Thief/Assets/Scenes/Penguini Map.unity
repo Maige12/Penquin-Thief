@@ -15976,7 +15976,7 @@ GameObject:
   - component: {fileID: 1118170473}
   m_Layer: 0
   m_Name: '"Item Drop Off"'
-  m_TagString: Untagged
+  m_TagString: Scorepoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18267,7 +18267,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 46d97efac39053b4d919c1e748fda82a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7813
+      value: 0.968
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 46d97efac39053b4d919c1e748fda82a,
         type: 3}
@@ -18322,7 +18322,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 46d97efac39053b4d919c1e748fda82a,
         type: 3}
       propertyPath: m_Name
-      value: KeySmall_standing_asset (7)
+      value: Key1
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 46d97efac39053b4d919c1e748fda82a,
         type: 3}
@@ -18331,6 +18331,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46d97efac39053b4d919c1e748fda82a, type: 3}
+--- !u!1 &1245197249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7826010286906529800, guid: b1f60a3d6194ab340a3d34d76b1cfa1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1548239232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1245197254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245197249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816459902fe287040b6686c9c8550c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: 0
+  Key1: 0
+  Key2: 0
+  Key3: 0
+  Key4: 0
+  Key5: 0
+  Item1: 0
+  Item1sent: 0
+  Item2: 0
+  Item2sent: 0
+  Item3: 0
+  Item3sent: 0
+  Item4: 0
+  Item4sent: 0
 --- !u!4 &1246729751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2421655416890059484, guid: feb0acd6174f76d45a0820b53fd1541f,
@@ -22097,6 +22129,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 259263335454031185, guid: b1f60a3d6194ab340a3d34d76b1cfa1e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7826010286885885902, guid: b1f60a3d6194ab340a3d34d76b1cfa1e,
         type: 3}
       propertyPath: m_Name

@@ -21,6 +21,11 @@ public class ObjectClicker : MonoBehaviour
     public int Item4 = 0;
     public int Item4sent = 0;
 
+    void OnGUI()
+    {
+    Cursor.lockState = CursorLockMode.Confined;
+    Cursor.visible = true;
+    }
     private void Update()
     {
         if(Input.GetMouseButton(1))
@@ -28,11 +33,12 @@ public class ObjectClicker : MonoBehaviour
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit, 10.0f))
+            if (Physics.Raycast(ray, out hit, 50.0f))
             {
-                print(hit.collider.name);
+                
 
                 if (hit.transform != null)
+                    print(hit.collider.name);
                 {
                     if(hit.collider.tag == "Key1")
                     {
