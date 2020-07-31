@@ -325,7 +325,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9e91a79a396e2b041b5bc0bea59c91fb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9e91a79a396e2b041b5bc0bea59c91fb,
         type: 3}
@@ -4108,6 +4108,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1079065014}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1087522194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4636332726089504442, guid: b872c7952bc0fe74f9a6955fa3008c37,
+    type: 3}
+  m_PrefabInstance: {fileID: 1656057009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1087522198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087522194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816459902fe287040b6686c9c8550c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: 0
+  totalKeys: 0
+  Key1: 0
+  Key2: 0
+  Key3: 0
+  Key4: 0
+  Key5: 0
+  Item1: 0
+  Item1sent: 0
+  Item2: 0
+  Item2sent: 0
+  Item3: 0
+  Item3sent: 0
+  Item4: 0
+  Item4sent: 0
+  totalItems: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1121325753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6171,7 +6208,7 @@ PrefabInstance:
     - target: {fileID: 4636332726418693727, guid: b872c7952bc0fe74f9a6955fa3008c37,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: 4.75
       objectReference: {fileID: 0}
     - target: {fileID: 4636332726418693727, guid: b872c7952bc0fe74f9a6955fa3008c37,
         type: 3}
@@ -6201,7 +6238,7 @@ PrefabInstance:
     - target: {fileID: 4636332726418693727, guid: b872c7952bc0fe74f9a6955fa3008c37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4636332726418693727, guid: b872c7952bc0fe74f9a6955fa3008c37,
         type: 3}
