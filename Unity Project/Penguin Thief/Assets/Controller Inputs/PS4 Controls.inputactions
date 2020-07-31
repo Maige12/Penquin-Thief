@@ -1,0 +1,185 @@
+{
+    "name": "PS4 Controls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "a5d0efd5-1c47-4d52-afa9-10c313b6453c",
+            "actions": [
+                {
+                    "name": "Movement (Jump)",
+                    "type": "Button",
+                    "id": "73846dac-8940-4e5f-8fcc-8f055cef1700",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Movement (Forward)",
+                    "type": "Button",
+                    "id": "76516777-1996-452a-ae2c-21efc2e9823f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Movement (Backward)",
+                    "type": "Button",
+                    "id": "e9fc72ec-a3d6-47d1-a4be-381e20506dc1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Movement (Left)",
+                    "type": "Button",
+                    "id": "81e6401d-50ff-45bd-b847-494fb6e21090",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Movement (Right)",
+                    "type": "Button",
+                    "id": "3e3711b1-1d78-4ef2-9bb1-b871cd7cc2a6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Camera Rotate (Up)",
+                    "type": "Button",
+                    "id": "d074ca54-fe12-47f8-a5c2-1b65413f065c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Camera Rotate (Down)",
+                    "type": "Button",
+                    "id": "00f59a42-c82f-457f-96cf-d4e64bd4f32a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Camera Rotate (Left)",
+                    "type": "Button",
+                    "id": "41959ae6-de79-4b8d-94fc-63f2ca7b5916",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Camera Rotate (Right)",
+                    "type": "Button",
+                    "id": "d8bde551-8b61-454b-9d4d-727acc13d59d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4b5db83b-7eb6-4a1b-b768-1615e8769161",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement (Jump)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6296703c-8e76-44ea-b398-c2ebace1647a",
+                    "path": "<DualShockGamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement (Forward)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf96d4cf-12e7-42ea-82bd-0256485038b7",
+                    "path": "<DualShockGamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement (Backward)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d42afab6-fb01-40da-ae33-9efd6cc53324",
+                    "path": "<DualShockGamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement (Left)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a5270e4d-52d1-425a-8135-db415bef076e",
+                    "path": "<DualShockGamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement (Right)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96d16642-c2b6-4d2b-a027-13d7b7e8e027",
+                    "path": "<DualShockGamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera Rotate (Left)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c969d660-f8e9-400d-848a-efae2fe15b3a",
+                    "path": "<DualShockGamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera Rotate (Right)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "59e09e6e-125c-4a83-890e-62eb311ab262",
+                    "path": "<DualShockGamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera Rotate (Down)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48ea6e48-c609-4b96-a81e-9691c225038f",
+                    "path": "<DualShockGamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera Rotate (Up)",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

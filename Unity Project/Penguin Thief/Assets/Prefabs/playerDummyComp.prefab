@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7826010286885885889}
   - component: {fileID: 1183428246}
   m_Layer: 0
-  m_Name: playerDummy
+  m_Name: playerDummyComp
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,6 +90,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -146,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: 0
+  totalKeys: 0
   Key1: 0
   Key2: 0
   Key3: 0
@@ -159,6 +161,10 @@ MonoBehaviour:
   Item3sent: 0
   Item4: 0
   Item4sent: 0
+  totalItems: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!143 &7826010286885885889
 CharacterController:
   m_ObjectHideFlags: 0
