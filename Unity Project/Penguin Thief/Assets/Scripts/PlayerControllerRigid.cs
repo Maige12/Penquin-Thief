@@ -6,6 +6,8 @@ using UnityEngine;
  *  Player Controller Script (RIGID) (VER 1, 31-07-2020) 
  *  
  *  ATTACH TO PLAYER OBJECT IN SCENE HIERARCHY
+ *  
+ *  NOTE: This is based off of a tutorial from Catlike Coding, please see below references for links.
  * 
  *  Description:
  *      - This script controls the Player's Movements and Key Inputs. This is done through the Rigidbody as opposed to using the Character Controller
@@ -23,11 +25,6 @@ using UnityEngine;
 
 public class PlayerControllerRigid : MonoBehaviour
 {
-    Vector2 playerInput; //Vector2 to read the player input
-
-    Vector3 desiredVelocity; //The desired velocity of the player
-    Vector3 velocity; //The current velocity of the player
-
     [SerializeField, Range(0.0f, 100.0f)] //Clamps the range of the speed from 0 to 100
     float maxSpeed = 10.0f; //The maximum speed that the player can move at
     [SerializeField, Range(0.0f, 100.0f)] //Clamps the range of the acceleration from 0 to 100
@@ -44,6 +41,17 @@ public class PlayerControllerRigid : MonoBehaviour
     float maxSpeedChange; //Amount that the velocity will change per update
     float acceleration; //The player's current acceleration 
     float minGroundDotProduct; //The Dot Product of maxGroundAngle
+    float jumpSpeed; //The speed at which the player can jump
+    float alignedSpeed; //The current speed aligned with the contact normal
+
+    Vector2 playerInput; //Vector2 to read the player input
+    Vector3 desiredVelocity; //The desired velocity of the player
+    Vector3 velocity; //The current velocity of the player
+    Vector3 contactNormal; //The current Normal Vector of the object the player is in contact with
+    Vector3 ProjectOnContactPlane(Vector3 vector) //This is to store a Vector projected along the plane that the player is walking along
+    {
+        return vector - contactNormal * Vector3.Dot(vector, contactNormal); //This returns a Vector which is equal to the current Contactr Normal Vector, multiplied by the dot product of an inputted Vector and Contact Normal
+    }
 
     Rigidbody playerRigid; //The player's Rigidbody component
 
@@ -62,6 +70,23 @@ public class PlayerControllerRigid : MonoBehaviour
         OnValidate(); //Calls the OnValidate() Function
     }
 
+    void AdjustVelocity() //The velocity adjusted for the Vector of the current plane the player is in contact with
+    {
+        Vector3 xAxis = ProjectOnContactPlane(Vector3.right).normalized; //xAxis is qual to the Vector3's Right position (X Direction), which gives the vector aligned with the ground
+        Vector3 zAxis = ProjectOnContactPlane(Vector3.forward).normalized; //zAxis is qual to the Vector3's forward position (Z Direction), which gives the vector aligned with the ground
+
+        float currentX = Vector3.Dot(velocity, xAxis); //Finds the current X Directional Speed by finding the Dot Product of Velocity and xAxis
+        float currentZ = Vector3.Dot(velocity, zAxis); //Finds the current Z Directional Speed by finding the Dot Product of Velocity and ZAxis
+
+        acceleration = onGround ? maxAcceleration : maxAirAcceleration; //Chooses what acceleration to use based on whether the player is on the ground or not
+        maxSpeedChange = acceleration * Time.deltaTime; //How much the velocity should change each update
+
+        float newX = Mathf.MoveTowards(currentX, desiredVelocity.x, maxSpeedChange); //Ensures that the current X velocity is moved to the desired velocity, being constrained to the maximum speed change
+        float newZ = Mathf.MoveTowards(currentZ, desiredVelocity.z, maxSpeedChange); //Ensures that the current X velocity is moved to the desired velocity, being constrained to the maximum speed change
+
+        velocity += xAxis * (newX - currentX) + zAxis * (newZ - currentZ);
+    }
+
     void Update()
     {
         playerInput.x = Input.GetAxis("Horizontal"); //Gets the Input Axis from the player (Horizontal (A, D Keys))
@@ -77,11 +102,17 @@ public class PlayerControllerRigid : MonoBehaviour
     void FixedUpdate()
     {
         velocity = playerRigid.velocity; //Changes the velocity to be equal to that of the Rigidbodies current velocity
-        acceleration = onGround ? maxAcceleration : maxAirAcceleration; //Chooses what acceleration to use based on whether the player is on the ground or not
-        maxSpeedChange = acceleration * Time.deltaTime; //How much the velocity should change each update
 
-        velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeedChange); //Ensures that the current X velocity is moved to the desired velocity, being constrained to the maximum speed change
-        velocity.z = Mathf.MoveTowards(velocity.z, desiredVelocity.z, maxSpeedChange); //Ensures that the current Z velocity is moved to the desired velocity, being constrained to the maximum speed change
+        if (onGround) //Checks to see if the player is on the ground
+        {
+            contactNormal.Normalize(); //Normalizes the contactNormal to make it a proper normal
+        }
+        else
+        {
+            contactNormal = Vector3.up; //If the player isn't touching the ground, the contact normal vector will point up
+        }
+
+        AdjustVelocity(); //Runs the AdjustVelocity() function to adjust the valocity based on different factors
 
         if (desiredJump) //Checks to see if the player wants to jump
         {
@@ -91,7 +122,7 @@ public class PlayerControllerRigid : MonoBehaviour
 
         playerRigid.velocity = velocity; //Changes the Rigidbodies velocity to be equal to that of the now filtered velocity
 
-        onGround = false;
+        ClearState(); //Runs the ClearState function
     }
 
     void OnCollisionEnter(Collision collision) //Checks to see if the player has entered a collider
@@ -104,12 +135,23 @@ public class PlayerControllerRigid : MonoBehaviour
         EvaluateCollision(collision); //Runs the EvaluateCollision Function
     }
 
+    void ClearState() //Clears the onGround parameter and the contactNormal after each Physics Frame
+    {
+        onGround = false;
+        contactNormal = Vector3.zero;
+    }
+
     void EvaluateCollision(Collision collision) //Checks to see the direction of the Normal Vector that is touching the player
     {
         for (int i = 0; i < collision.contactCount; i++) //contactCount finds the total amount of contacts the player is making
         {
             Vector3 normal = collision.GetContact(i).normal; //collision.GetContact gets the contact point at the specified index and adds it to a Vector called normal
-            onGround |= normal.y >= minGroundDotProduct; //If the Y-Component of the Vector is greater than or equal to the minGroundDotProduct, then the player is toucing the ground
+
+            if(normal.y >= minGroundDotProduct) //If the Y-Component of the Vector is greater than or equal to the minGroundDotProduct, then the player is toucing the ground
+            {
+                onGround = true; //The player is on the ground
+                contactNormal += normal; //The Normal Vector of the contact surface is set to the current collision normal (Accumulates the normals of the touching colliders)
+            }
         }
     }
 
@@ -117,17 +159,30 @@ public class PlayerControllerRigid : MonoBehaviour
     {
         if(onGround) //Runs if the player is currently on the ground
         {
-            velocity.y += Mathf.Sqrt(-2.0f * Physics.gravity.y * jumpHeight); //Returns the Square Root of -2, multiplied by gravity, multiplied by the maximum height (Currently matches Earth's gravity)
+            jumpSpeed = Mathf.Sqrt(-2.0f * Physics.gravity.y * jumpHeight); //Returns the Square Root of -2, multiplied by gravity, multiplied by the maximum height (Currently matches Earth's gravity)
+            alignedSpeed = Vector3.Dot(velocity, contactNormal); //Gets the current jump speed aligned with the Normal Vector of the Contact Normal
+
+            if (alignedSpeed > 0.0f) //Checks to see if the Y Velocity is higher then 0
+            {
+                jumpSpeed = Mathf.Max(jumpSpeed - alignedSpeed, 0.0f); //Returns largest of two or more values (Makes sure the modified Jump Speed never becomes a negative)
+            }
+
+            velocity += contactNormal * jumpSpeed; //The Y Velocity is set to the current contact normal scaled by the Jump Speed
         }
     }
 }
 
 /*
  * References:
- *      - https://catlikecoding.com/unity/tutorials/movement/sliding-a-sphere/
- *      - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#logical-or-operator-
- *      - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/conditional-operator
- *      - https://docs.unity3d.com/ScriptReference/Mathf.MoveTowards.html
- *      - https://docs.unity3d.com/ScriptReference/Mathf.Sqrt.html
- *      - https://youtu.be/4Qq7d9elXNA
+ *      Unity Documentation:
+ *          - https://docs.unity3d.com/ScriptReference/Vector3-normalized.html
+ *          - https://docs.unity3d.com/ScriptReference/Mathf.MoveTowards.html
+ *          - https://docs.unity3d.com/ScriptReference/Mathf.Sqrt.html
+ *      Catlike Coding (Primary Tutorial):
+ *          - https://catlikecoding.com/unity/tutorials/movement/sliding-a-sphere/
+ *      C# References:
+ *          - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#logical-or-operator-
+ *          - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/conditional-operator
+ *      Mathematic Terms:
+ *          - https://www.mathsisfun.com/algebra/vectors-dot-product.html
 */
