@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- *  Player Controller Script (RIGID) (VER 1, 31-07-2020) 
+ *  Player Controller Script (RIGID) 
  *  
  *  ATTACH TO PLAYER OBJECT IN SCENE HIERARCHY
  *  
@@ -12,12 +12,6 @@ using UnityEngine;
  *  Description:
  *      - This script controls the Player's Movements and Key Inputs. This is done through the Rigidbody as opposed to using the Character Controller
  *          component for more control.
- *      
- *  Changelog:
- *      - 31-05-2020 (Darcy Wilson, 32926762):
- *          - Created the Script File
- *          - Removed references to Character Controller
- *          - Began working on getting it funtioning
  *              
  *  Known Bugs:
  *      - N/A
