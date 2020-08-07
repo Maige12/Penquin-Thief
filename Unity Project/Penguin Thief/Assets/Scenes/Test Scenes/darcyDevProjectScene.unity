@@ -3669,6 +3669,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focus: {fileID: 1408900087}
   distance: 1.7
+  focusRadius: 1
+  focusCentering: 1
+  rotationSpeed: 90
+  minVerticalAngle: -30
+  maxVerticalAngle: 60
 --- !u!33 &986254568
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6373,7 +6378,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerInputSpace
       value: 
-      objectReference: {fileID: 402916753}
+      objectReference: {fileID: 952008571}
     - target: {fileID: 6958244600729718110, guid: b872c7952bc0fe74f9a6955fa3008c37,
         type: 3}
       propertyPath: jumpHeight

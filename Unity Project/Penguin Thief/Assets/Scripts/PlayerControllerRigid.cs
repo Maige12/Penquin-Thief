@@ -29,6 +29,8 @@ public class PlayerControllerRigid : MonoBehaviour
     float jumpHeight = 2.0f; //The maximum height that the player can jump
     [SerializeField, Range(0.0f, 90.0f)] //Clamps the range of the degrees maximum scalable ramp from 0 to 90
     float maxGroundAngle = 25.0f; //The maximum angle of a slope that the player can jump from (Degrees)
+    [SerializeField] //Allows it to be seen in the inspector
+    Transform playerInputSpace = default; //Teh transform relative to the player's movement
 
     bool desiredJump; //A boolean to detect whether or not the player wants to jump
     bool onGround; //A boolean to check whether the player is on the ground or not
@@ -88,7 +90,24 @@ public class PlayerControllerRigid : MonoBehaviour
 
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
 
-        desiredVelocity = new Vector3(playerInput.x, 0.0f, playerInput.y) * maxSpeed; //Gets the player's position and adds it to the desiredVelocity Vector, multiplied by the Maximum Speed value
+        if (playerInputSpace) //If a Player Input Space is present, run this If Statement
+        {
+            Vector3 forward = playerInputSpace.forward; //The forward vector is equal to the forward vector of the Player Input Space
+
+            forward.y = 0.0f; //The Y direction is not needed so it's set to 0
+            forward.Normalize(); //When normalized, a vector keeps the same direction but its length is 1.0
+
+            Vector3 right = playerInputSpace.right; //The right vector is equal to the right vector of the Player Input Space
+
+            right.y = 0.0f; //The Y direction is not needed so it's set to 0
+            right.Normalize(); //When normalized, a vector keeps the same direction but its length is 1.0
+
+            desiredVelocity = (forward * playerInput.y + right * playerInput.x) * maxSpeed; //The desired velocity is equal to the new forward and right vector, based on the Player Input Space, Player input and speed
+        }
+        else
+            {
+                desiredVelocity = new Vector3(playerInput.x, 0.0f, playerInput.y) * maxSpeed; //Gets the player's position and adds it to the desiredVelocity Vector, multiplied by the Maximum Speed value
+            }
 
         desiredJump |= Input.GetButtonDown("Jump"); //Turns the Boolean to True if the player presses the 'Jump' button
     }
@@ -102,9 +121,9 @@ public class PlayerControllerRigid : MonoBehaviour
             contactNormal.Normalize(); //Normalizes the contactNormal to make it a proper normal
         }
         else
-        {
-            contactNormal = Vector3.up; //If the player isn't touching the ground, the contact normal vector will point up
-        }
+            {
+                contactNormal = Vector3.up; //If the player isn't touching the ground, the contact normal vector will point up
+            }
 
         AdjustVelocity(); //Runs the AdjustVelocity() function to adjust the valocity based on different factors
 
@@ -172,6 +191,8 @@ public class PlayerControllerRigid : MonoBehaviour
  *          - https://docs.unity3d.com/ScriptReference/Vector3-normalized.html
  *          - https://docs.unity3d.com/ScriptReference/Mathf.MoveTowards.html
  *          - https://docs.unity3d.com/ScriptReference/Mathf.Sqrt.html
+ *          - https://docs.unity3d.com/ScriptReference/Transform.TransformDirection.html
+ *          - https://docs.unity3d.com/ScriptReference/Vector3.Normalize.html
  *      Catlike Coding (Primary Tutorial):
  *          - https://catlikecoding.com/unity/tutorials/movement/sliding-a-sphere/
  *      C# References:

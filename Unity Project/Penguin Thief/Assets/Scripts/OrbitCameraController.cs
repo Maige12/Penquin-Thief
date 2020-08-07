@@ -29,16 +29,14 @@ public class OrbitCameraController : MonoBehaviour
     float focusCentering = 0.75f; //The speed at which the camera will center itself abck to the player
     [SerializeField, Range(1.0f, 360.0f)] //Clamps the value from a range of 1 to 360
     float rotationSpeed = 90.0f; //The speed at which the camera rotates around the player (In degrees per-second)
-    [SerializeField, Range(-89f, 89f)] //Clamps the value from a range of -89 to 89
-    float minVerticalAngle = -30f, maxVerticalAngle = 60f; //The minimum and maximum values that the camera can rotate vertically
+    [SerializeField, Range(-89.0f, 89.0f)] //Clamps the value from a range of -89 to 89
+    float minVerticalAngle = -30.0f, maxVerticalAngle = 60f; //The minimum and maximum values that the camera can rotate vertically
 
     Vector2 orbitAngles = new Vector2(45f, 0f); //Vertical (Pitch) angle, Horizontal (Yaw) angle
     Vector3 focusPoint; //The point that the camera will focus on
 
     void Awake()
     {
-        Vector3 focusPoint = focus.position; //The point to focus on is equal to the position of the focus object
-
         Cursor.lockState = CursorLockMode.Locked; //Locks the cursor to the centre of the screen
         Cursor.visible = false; //Makes the cursor invisible
     }
@@ -56,7 +54,19 @@ public class OrbitCameraController : MonoBehaviour
         UpdateFocusPoint(); //Runs the function to adjust the focus point of the camera
         ManualRotation(); //Runs the function to adjust the cameras rotation manually
 
-        Quaternion lookRotation = Quaternion.Euler(orbitAngles); //The current rotation of the camera
+        Quaternion lookRotation; //The current rotation the camera is at from the focus point
+
+        if(ManualRotation()) //If Manual Rotation or Automatic Rotation outputs true, run this if statement, otherwise, run the else section
+        {
+            ConstrainAngles(); //Constrains the angles to their limits
+
+            lookRotation = Quaternion.Euler(orbitAngles); //Sets the current look rotation to the orbit angles
+        }
+        else
+            {
+                lookRotation = transform.localRotation; //Sets the look rotation to the current local rotation
+            }
+
         Vector3 lookDirection = lookRotation * Vector3.forward; //The direction the camera is looking in
         Vector3 lookPosition = focusPoint - lookDirection * distance; //The position that the camera is in, relative to the focus point, the look at direction and the distance
 
@@ -90,29 +100,34 @@ public class OrbitCameraController : MonoBehaviour
         }
     }
 
-    void ManualRotation() //Handles the manual rotation of the camera
+    bool ManualRotation() //Handles the manual rotation of the camera (Outputs a Boolean value)
     {
         Vector2 input = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")); //This Vector2 handles the inputs from
-        const float e = 0.001f;
+        const float e = 0.001f; //The limit for how much  of an input the script can recieve before it starts moving the camera
 
-        if (input.x < -e || input.x > e || input.y < -e || input.y > e)
+        if (input.x < -e || input.x > e || input.y < -e || input.y > e) //Checks to see if the inputs are less than or greater than the limit
         {
-            orbitAngles += rotationSpeed * Time.unscaledDeltaTime * input;
+            orbitAngles += rotationSpeed * Time.unscaledDeltaTime * input; //Makes the orbit angles equal to the speed of the rotation, multiplied by unscaled delta time, multiplied by the player's input
+
+            return true; //Returns true if there is an input
         }
+
+        return false; //Returns false if there isn't an input
     }
 
     void ConstrainAngles() //Constrains the angles at which the player can rotate the camera
     {
-        orbitAngles.x = Mathf.Clamp(orbitAngles.x, minVerticalAngle, maxVerticalAngle);
+        orbitAngles.x = Mathf.Clamp(orbitAngles.x, minVerticalAngle, maxVerticalAngle); //Clamps the given value between the given minimum float and maximum float values
 
-        if (orbitAngles.y < 0f)
+        if (orbitAngles.y < 0.0f) //The horizontal orbit has no range, but this is to ensure it stays within 0 - 360 degrees
         {
-            orbitAngles.y += 360f;
+            orbitAngles.y += 360.0f; //If the angle is less than 0, it will add 360 degrees
         }
-        else if (orbitAngles.y >= 360f)
-        {
-            orbitAngles.y -= 360f;
-        }
+        else
+            if (orbitAngles.y >= 360.0f) //The horizontal orbit has no range, but this is to ensure it stays within 0 - 360 degrees
+            {
+                orbitAngles.y -= 360.0f; //If the angle is more than or equal to 360, it will take 360 degrees
+            }
     }
 }
 
@@ -124,6 +139,11 @@ public class OrbitCameraController : MonoBehaviour
  *          - https://docs.unity3d.com/ScriptReference/Mathf.Min.html
  *          - https://docs.unity3d.com/ScriptReference/Mathf.Pow.html
  *          - https://docs.unity3d.com/ScriptReference/Time-unscaledDeltaTime.html
+ *          - https://docs.unity3d.com/ScriptReference/Mathf.Acos.html
+ *      C# References:
+ *          - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/static
+ *      Mathematic Terms:
+ *          - https://www.mathsisfun.com/geometry/radians.html
  *      Catlike Coding (Primary Tutorial):
  *          - https://catlikecoding.com/unity/tutorials/movement/orbit-camera/
 */
