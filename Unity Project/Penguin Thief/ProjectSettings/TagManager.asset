@@ -33,6 +33,10 @@ TagManager:
   - Game Over
   - Fire
   - Key
+  - Collectable Small
+  - Collectable Large
+  - Deposit
+  - Locked Door
   layers:
   - Default
   - TransparentFX

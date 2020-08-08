@@ -2,66 +2,147 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  Item Collect Script
+ *  
+ *  ATTACH TO PLAYER OBJECT IN SCENE HIERARCHY
+ *  
+ *  Description:
+ *      - This script handles the collection and depositing of items, as well as the unlocking of doors
+ *              
+ *  Known Bugs:
+ *      - N/A
+*/
+
 public class ItemCollectScript : MonoBehaviour
 {
+    [HideInInspector] //Hides the value from the Inspector
     public int keys; //Player's total keys collected
-    public int collectables; //Player's total collectables collected
+    [HideInInspector] //Hides the value from the Inspector
+    public int collectableSmall; //Player's total collectables collected
+    [HideInInspector] //Hides the value from the Inspector
+    public int collectableLarge; //Player's total collectables collected
+    [HideInInspector] //Hides the value from the Inspector
     public int score; //Player's total score points
-
-    PlayerUIScript playerUI; //Gains access to PlayerUIScript.cs
 
     void Awake()
     {
         keys = 0; //Starts keys at 0
-        collectables = 0; //Starts collectables at 0
-
-        if ((playerUI == null) && (GetComponent<PlayerUIScript>() != null))
-        {
-            playerUI = GetComponent<PlayerUIScript>();
-
-            Debug.Log("PlayerUIScript attached to playerUI");
-        }
-        else
-            Debug.Log("Cannot attach PlayerUIScript to playerUI");
+        collectableSmall = 0; //Starts small collectables at 0
+        collectableLarge = 0; //Starts large collectables at 0
+        score = 0; //Starts score at 0
     }
 
-    void OnTriggerEnter(Collider collision) //Will only activate when entering collision
+    void OnCollisionEnter(Collision collision) //Will only activate when entering collision
     {
         switch (collision.gameObject.tag) //Checks the collision tag
         {
             case "Key": //Checks if the tag was 'Key' (Usable Keys)
-                Debug.Log("You collected " + collision.gameObject.name + ", adding key!"); //Prints to the Debug Log which item is collected (Key)
-                keys++; //Adds 1 key to the count
-                playerUI.UpdateKeys(keys);
-                Destroy(collision.gameObject); //Destroys the game object
-                break;
-            case "Collectable": //Checks if the tag was 'Collectable' (Collectable Items)
-                Debug.Log("You collected " + collision.gameObject.name + ", adding collectable!"); //Prints to the Debug Log which item is collected (Collectable)
-                collectables++; //Adds 1 collectable to the count
-                playerUI.UpdateCollectables(collectables);
-                Destroy(collision.gameObject); //Destroys the game object
-                break;
-            case "Deposit":
-                if(collectables != 0) //Checks if the player has items to deposit
+                if(keys < 0) //Checks to see if the current value is less than 0
                 {
-                    Debug.Log("You deposited " + collectables + " items, good job!"); //Prints to the Debug Log how many items were deposited
-                    score = 500 * collectables; //Adds 500 points to score
-                    collectables = 0; //Sets the number of collectables back to 0
-                    playerUI.UpdateCollectables(collectables);
+                    Debug.Log("Error: Value of 'keys' below 0, value equal to " + keys + ", resetting to 0"); //Warns the developer that the value is less than 0
+
+                    keys = 0; //Resets the value if it is less than 0
+                }
+
+                keys++; //Increments the value by 1
+
+                Debug.Log("'keys' value incremented by 1, value is now " + keys); //Outputs the current amount of keys objects to the developer console
+
+                Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
+
+                break;
+            case "Collectable Small": //Checks if the tag was 'Collectable Small' (Collectable Items (Small objects, player can carry as many as they like))
+                if (collectableSmall < 0) //Checks to see if the current value is less than 0
+                {
+                    Debug.Log("Error: Value of 'collectableSmall' below 0, value equal to " + collectableSmall + ", resetting to 0"); //Warns the developer that the value is less than 0
+
+                    collectableSmall = 0; //Resets the value if it is less than 0
+                }
+
+                collectableSmall++; //Increments the value by 1
+
+                Debug.Log("'collectableSmall' value incremented by 1, value is now " + collectableSmall); //Outputs the current amount of collectableSmall objects to the developer console
+
+                Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
+
+                break;
+            case "Collectable Large": //Checks if the tag was 'Collectable Large' (Collectable Items (Large objects, player can only carry one at a time))
+                if((collectableLarge < 0) || (collectableLarge > 1)) //Checks to see if the current value is less than 0
+                {
+                    Debug.Log("Error: Value of 'collectableLarge' outisde of range, value equal to " + collectableLarge + ", resetting to 0"); //Warns the developer that the value is less than 0
+
+                    collectableLarge = 0; //Resets the value if it is less than 0
+                }
+
+                if(collectableLarge == 0) //Checks to see if the current value is equal to 0
+                {
+                    collectableLarge++; //Increments the value by 1
+
+                    Debug.Log("'collectableLarge' value incremented by 1, value is now " + collectableLarge); //Outputs the current amount of collectableLarge objects to the developer console
+
+                    Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
                 }
                 else
-                    Debug.Log("You have " + collectables + " items to deposit, go find some!"); //Prints to the Debug Log if theres no items to collect
+                    {
+                        Debug.Log("The player is already carrying a Large Object and must deposit it"); //Tells the developer that the player is already carrying a large object
+                    }
+
                 break;
-            case "Locked Door":
-                if (keys != 0) //Checks if the player has any keys left
+            case "Locked Door": //Checks if the tag was 'Locked Door' (Locked Doors)
+                if(keys > 0)
                 {
-                    Debug.Log("You unlocked a door"); //Prints to the Debug Log when a door is unlocked
-                    keys--; //Takes one key from the player
-                    playerUI.UpdateKeys(keys);
-                    Destroy(collision.gameObject); //Destroys the game object
+                    Debug.Log("The player has a key, unlocking door"); //Tells the developer that the player is opening a door
+
+                    Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
+
+                    keys--; //Decrements the value by 1
+
+                    Debug.Log("The player has used a key, they now have " + keys + " keys left"); //Tells the developer that the player has used a key and how many keys they have left
                 }
                 else
-                    Debug.Log("You have no keys, go find some!"); //Prints to the Debug Log if the player has no keys
+                    {
+                        Debug.Log("The Player has no keys to open the door"); //Tells the developer that the player has no keys
+                    }
+
+                break;
+        }
+    }
+
+    void OnTriggerEnter(Collider collider) //Runs when the player enters a trigger
+    {
+        switch (collider.gameObject.tag) //Checks the collider tag
+        {
+            case "Deposit": //Checks if the tag was 'Deposit' (Deposit Point)
+                if((collectableSmall > 0) || (collectableLarge > 0)) //If the player has any items to deposit, run this If Statement
+                {
+                    if (collectableSmall > 0)
+                    {
+                        Debug.Log("You have deposited " + collectableSmall + " Small Object(s)"); //Prints the amount of small objects deposited
+
+                        score += 100 * collectableSmall; //Adds to the total score
+
+                        collectableSmall = 0; //Removes all small objects from player inventory
+
+                        Debug.Log("Current Score: " + score); //Prints out the new score
+                    }
+
+                    if (collectableLarge > 0)
+                    {
+                        Debug.Log("You have deposited " + collectableLarge + " Large Object"); //Prints the amount of large objects deposited
+
+                        score += 500; //Adds to the total score
+
+                        collectableLarge = 0; //Removes all small objects from player inventory
+
+                        Debug.Log("Current Score: " + score); //Prints out the new score
+                    }
+                }
+                else
+                    {
+                        Debug.Log("The Player has no items, please collect some"); //Tells the developer that the player has no items to deposit
+                }
+
                 break;
         }
     }
