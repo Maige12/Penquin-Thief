@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Penguini Map.unity
+    path: Assets/Scenes/Deprecated/Penguini Map.unity
     guid: f05ddd9ed93db0b45bc8fa294eefb568
   m_configObjects: {}
