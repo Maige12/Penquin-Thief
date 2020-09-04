@@ -4082,12 +4082,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focus: {fileID: 1408900087}
-  distance: 1.7
+  distance: 3
   focusRadius: 1
   focusCentering: 1
   rotationSpeed: 90
-  minVerticalAngle: -30
+  minVerticalAngle: -10
   maxVerticalAngle: 60
+  invertX: 0
+  invertY: 0
 --- !u!4 &955188235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7057601629397741828, guid: 315903f9407327446bc3a09d1df06b24,
@@ -7212,6 +7214,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4636332726089504439, guid: b872c7952bc0fe74f9a6955fa3008c37,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4636332726089504442, guid: b872c7952bc0fe74f9a6955fa3008c37,
         type: 3}
       propertyPath: m_Name
@@ -7291,7 +7298,12 @@ PrefabInstance:
     - target: {fileID: 6958244600729718110, guid: b872c7952bc0fe74f9a6955fa3008c37,
         type: 3}
       propertyPath: jumpHeight
-      value: 2
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958244600729718110, guid: b872c7952bc0fe74f9a6955fa3008c37,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b872c7952bc0fe74f9a6955fa3008c37, type: 3}

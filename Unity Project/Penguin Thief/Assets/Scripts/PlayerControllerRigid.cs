@@ -20,13 +20,13 @@ using UnityEngine;
 public class PlayerControllerRigid : MonoBehaviour
 {
     [SerializeField, Range(0.0f, 100.0f)] //Clamps the range of the speed from 0 to 100
-    float maxSpeed = 10.0f; //The maximum speed that the player can move at
+    float maxSpeed = 4.0f; //The maximum speed that the player can move at
     [SerializeField, Range(0.0f, 100.0f)] //Clamps the range of the acceleration from 0 to 100
     float maxAcceleration = 10.0f; //The maximum acceleration that the player can achieve
     [SerializeField, Range(0.0f, 100.0f)] //Clamps the range of the air acceleration from 0 to 100
     float maxAirAcceleration = 1.0f; //The maximum amount of control that the player has in the air
     [SerializeField, Range(0.0f, 10.0f)] //Clamps the range of the players Jump Height from 0 to 10
-    float jumpHeight = 2.0f; //The maximum height that the player can jump
+    float jumpHeight = 0.6f; //The maximum height that the player can jump
     [SerializeField, Range(0.0f, 90.0f)] //Clamps the range of the degrees maximum scalable ramp from 0 to 90
     float maxGroundAngle = 25.0f; //The maximum angle of a slope that the player can jump from (Degrees)
     [SerializeField] //Allows it to be seen in the inspector
@@ -39,6 +39,9 @@ public class PlayerControllerRigid : MonoBehaviour
     float minGroundDotProduct; //The Dot Product of maxGroundAngle
     float jumpSpeed; //The speed at which the player can jump
     float alignedSpeed; //The current speed aligned with the contact normal
+    float dynFriction; //The Dynamic Friction of the Physics Material
+    float statFriction; //The Static Friction of the Physics Material
+    Collider col; //The player's collider
 
     Vector2 playerInput; //Vector2 to read the player input
     Vector3 desiredVelocity; //The desired velocity of the player
@@ -59,6 +62,10 @@ public class PlayerControllerRigid : MonoBehaviour
     void Awake()
     {
         playerRigid = GetComponent<Rigidbody>(); //Finds the Rigidbody Component attached to the player
+        col = GetComponent<Collider>(); //Finds the collider attached to the GameObject
+
+        dynFriction = col.material.dynamicFriction; //Sets dynFriction to be equal to the current Dynamic Friction Value
+        statFriction = col.material.staticFriction; //Sets statFriction to be equal to the current Static Friction Value
 
         playerInput.x = 0.0f; //Left/Right (X) Movement
         playerInput.y = 0.0f; //Forward/Back (Y) Movement
@@ -89,6 +96,13 @@ public class PlayerControllerRigid : MonoBehaviour
         playerInput.y = Input.GetAxis("Vertical"); //Gets the Input Axis from the player (Vertical (W, S Keys))
 
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
+
+        if(Input.GetKey(KeyCode.LeftShift)) //Checks to see if the player is holding Left SHift (Run)
+        {
+            maxSpeed = 6.0f; //Changes the Maximum Speed to 6.0f (Run Speed)
+        }
+        else
+            maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
 
         if (playerInputSpace) //If a Player Input Space is present, run this If Statement
         {
@@ -200,4 +214,8 @@ public class PlayerControllerRigid : MonoBehaviour
  *          - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/conditional-operator
  *      Mathematic Terms:
  *          - https://www.mathsisfun.com/algebra/vectors-dot-product.html
+ *      Static and Dynamic Friction:
+ *          - https://youtu.be/hdKY20z71hs
+ *          - https://answers.unity.com/questions/1485212/how-do-i-change-a-physics-material-through-a-scrip.html
+ *          - https://www.youtube.com/watch?v=uQ6fGtdERlY
 */

@@ -22,7 +22,7 @@ public class OrbitCameraController : MonoBehaviour
     [SerializeField] //Allows it to show up in the inspector
     Transform focus = default; //The object that the camera will focus on
     [SerializeField, Range(1f, 20f)] //Clamps the camera distance to the player from 1 to 20
-    float distance = 5.0f; //The distance the camera can be from the player
+    float distance = 3.0f; //The distance the camera can be from the player
     [SerializeField, Min(0.0f)] //Clamps the value so it cannot go below 0
     float focusRadius = 1.0f; //The radius in which the camera will start moving if its focus point differs from the radius
     [SerializeField, Range(0.0f, 1.0f)] //Clamps the value from a range of 0 to 1
@@ -30,7 +30,12 @@ public class OrbitCameraController : MonoBehaviour
     [SerializeField, Range(1.0f, 360.0f)] //Clamps the value from a range of 1 to 360
     float rotationSpeed = 90.0f; //The speed at which the camera rotates around the player (In degrees per-second)
     [SerializeField, Range(-89.0f, 89.0f)] //Clamps the value from a range of -89 to 89
-    float minVerticalAngle = -30.0f, maxVerticalAngle = 60f; //The minimum and maximum values that the camera can rotate vertically
+    float minVerticalAngle = -10.0f, maxVerticalAngle = 60f; //The minimum and maximum values that the camera can rotate vertically
+
+    [SerializeField]
+    bool invertX; //Inverts the X Axis of lookRotation
+    [SerializeField]
+    bool invertY; //Inverts the Y Axis of lookRotation
 
     Vector2 orbitAngles = new Vector2(45f, 0f); //Vertical (Pitch) angle, Horizontal (Yaw) angle
     Vector3 focusPoint; //The point that the camera will focus on
@@ -39,6 +44,9 @@ public class OrbitCameraController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked; //Locks the cursor to the centre of the screen
         Cursor.visible = false; //Makes the cursor invisible
+
+        invertX = false; //Sets the Invert value to False (Default State of camera's X-Rotation)
+        invertY = false; //Sets the Invert value to False (Default State of camera's Y-Rotation)
     }
 
     void OnValidate() //This function is called when the script is loaded or a value is changed in the Inspector (Called in the editor only).
@@ -60,7 +68,7 @@ public class OrbitCameraController : MonoBehaviour
         {
             ConstrainAngles(); //Constrains the angles to their limits
 
-            lookRotation = Quaternion.Euler(orbitAngles); //Sets the current look rotation to the orbit angles
+            lookRotation = Quaternion.Euler(orbitAngles.x, orbitAngles.y, 0); //Sets the current look rotation to the orbit angles
         }
         else
             {
@@ -102,7 +110,18 @@ public class OrbitCameraController : MonoBehaviour
 
     bool ManualRotation() //Handles the manual rotation of the camera (Outputs a Boolean value)
     {
-        Vector2 input = new Vector2(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")); //This Vector2 handles the inputs from
+        Vector2 input = new Vector2(-Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X")); //This Vector2 handles the inputs from the player (Default)
+
+        if(invertX == true) //Checks to see if the player wishes to invert the X-Axis
+        {
+            input.y = -Input.GetAxis("Mouse X"); //This Vector2 handles the inputs from the player (Invert X)
+        }
+
+        if (invertY == true) //Checks to see if the player wishes to invert the Y-Axis
+        {
+            input.x = Input.GetAxis("Mouse Y"); //This Vector2 handles the inputs from the player (Invert Y)
+        }
+
         const float e = 0.001f; //The limit for how much  of an input the script can recieve before it starts moving the camera
 
         if (input.x < -e || input.x > e || input.y < -e || input.y > e) //Checks to see if the inputs are less than or greater than the limit
