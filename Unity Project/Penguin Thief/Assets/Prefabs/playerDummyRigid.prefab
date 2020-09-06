@@ -126,10 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e02adc9dad1cd004188e271b27c020c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
+  maxSpeed: 4
   maxAcceleration: 10
   maxAirAcceleration: 1
-  jumpHeight: 2
+  jumpHeight: 0.5
   maxGroundAngle: 25
   playerInputSpace: {fileID: 0}
   targetTime: 0

@@ -26,7 +26,7 @@ public class PlayerControllerRigid : MonoBehaviour
     [SerializeField, Range(0.0f, 100.0f)] //Clamps the range of the air acceleration from 0 to 100
     float maxAirAcceleration = 1.0f; //The maximum amount of control that the player has in the air
     [SerializeField, Range(0.0f, 10.0f)] //Clamps the range of the players Jump Height from 0 to 10
-    float jumpHeight = 0.6f; //The maximum height that the player can jump
+    float jumpHeight = 0.5f; //The maximum height that the player can jump
     [SerializeField, Range(0.0f, 90.0f)] //Clamps the range of the degrees maximum scalable ramp from 0 to 90
     float maxGroundAngle = 25.0f; //The maximum angle of a slope that the player can jump from (Degrees)
     [SerializeField] //Allows it to be seen in the inspector
@@ -127,8 +127,11 @@ public class PlayerControllerRigid : MonoBehaviour
         {
             maxSpeed = 6.0f; //Changes the Maximum Speed to 6.0f (Run Speed)
         }
-        else if(slideActive != true)
-            maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
+        else 
+            if(slideActive != true)
+            {
+                maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
+            }
 
         if (playerInputSpace) //If a Player Input Space is present, run this If Statement
         {
