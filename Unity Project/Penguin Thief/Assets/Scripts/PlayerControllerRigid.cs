@@ -99,8 +99,8 @@ public class PlayerControllerRigid : MonoBehaviour
 
         if(targetTime <= 0.0f)
         {
-        slideActive = false;
-        maxSpeed = 4.0f;
+            slideActive = false;
+            maxSpeed = 4.0f;
         } 
 
         if(slideActive != true)
@@ -108,24 +108,18 @@ public class PlayerControllerRigid : MonoBehaviour
             playerInput.x = Input.GetAxis("Horizontal"); //Gets the Input Axis from the player (Horizontal (A, D Keys))
             playerInput.y = Input.GetAxis("Vertical"); //Gets the Input Axis from the player (Vertical (W, S Keys))
         }
+
         if(onGround == true && Input.GetKeyDown(KeyCode.LeftControl)) //Checks to see if the player is on the ground to initiate the slide && Checks to see if the player is holding down the left control button
         {   
-            if(slideActive != true && velocity.z > 0.0f) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
+            if((slideActive != true) && (velocity.z > 0.0f)) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
             {
-                
                 targetTime = 5.0f; //sets the target time, which will stop the slide at the end of the duration
                 velocity.z = 15.0f; //sets the max speed high, initiating the slide
-                maxSpeed = 15.0f;
+                maxSpeed = 10.0f;
+
                 slideActive = true; //sets slide active to true, which stops the player from stacking slides              
-
-
-
             }    
-
         }
-
-        
-        
 
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
 
