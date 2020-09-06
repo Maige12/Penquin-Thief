@@ -34,6 +34,8 @@ public class PlayerControllerRigid : MonoBehaviour
 
     bool desiredJump; //A boolean to detect whether or not the player wants to jump
     bool onGround; //A boolean to check whether the player is on the ground or not
+
+    bool slideActive; //A bool to check of the player is currently sliding
     float maxSpeedChange; //Amount that the velocity will change per update
     float acceleration; //The player's current acceleration 
     float minGroundDotProduct; //The Dot Product of maxGroundAngle
@@ -42,6 +44,7 @@ public class PlayerControllerRigid : MonoBehaviour
     float dynFriction; //The Dynamic Friction of the Physics Material
     float statFriction; //The Static Friction of the Physics Material
     Collider col; //The player's collider
+    public float targetTime; //the amount of time that the slide will go for.
 
     Vector2 playerInput; //Vector2 to read the player input
     Vector3 desiredVelocity; //The desired velocity of the player
@@ -91,9 +94,38 @@ public class PlayerControllerRigid : MonoBehaviour
     }
 
     void Update()
-    {
-        playerInput.x = Input.GetAxis("Horizontal"); //Gets the Input Axis from the player (Horizontal (A, D Keys))
-        playerInput.y = Input.GetAxis("Vertical"); //Gets the Input Axis from the player (Vertical (W, S Keys))
+    {   
+        targetTime -= Time.deltaTime; //if applicable, the time will count down
+
+        if(targetTime <= 0.0f)
+        {
+        slideActive = false;
+        maxSpeed = 4.0f;
+        } 
+
+        if(slideActive != true)
+        {
+            playerInput.x = Input.GetAxis("Horizontal"); //Gets the Input Axis from the player (Horizontal (A, D Keys))
+            playerInput.y = Input.GetAxis("Vertical"); //Gets the Input Axis from the player (Vertical (W, S Keys))
+        }
+        if(onGround == true && Input.GetKeyDown(KeyCode.LeftControl)) //Checks to see if the player is on the ground to initiate the slide && Checks to see if the player is holding down the left control button
+        {   
+            if(slideActive != true && velocity.z > 0.0f) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
+            {
+                
+                targetTime = 5.0f; //sets the target time, which will stop the slide at the end of the duration
+                velocity.z = 15.0f; //sets the max speed high, initiating the slide
+                maxSpeed = 15.0f;
+                slideActive = true; //sets slide active to true, which stops the player from stacking slides              
+
+
+
+            }    
+
+        }
+
+        
+        
 
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
 
@@ -101,7 +133,7 @@ public class PlayerControllerRigid : MonoBehaviour
         {
             maxSpeed = 6.0f; //Changes the Maximum Speed to 6.0f (Run Speed)
         }
-        else
+        else if(slideActive != true)
             maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
 
         if (playerInputSpace) //If a Player Input Space is present, run this If Statement
