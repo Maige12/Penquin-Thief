@@ -31,7 +31,6 @@ public class OrbitCameraController : MonoBehaviour
     float rotationSpeed = 90.0f; //The speed at which the camera rotates around the player (In degrees per-second)
     [SerializeField, Range(-89.0f, 89.0f)] //Clamps the value from a range of -89 to 89
     float minVerticalAngle = -10.0f, maxVerticalAngle = 60f; //The minimum and maximum values that the camera can rotate vertically
-
     [SerializeField]
     bool invertX; //Inverts the X Axis of lookRotation
     [SerializeField]
@@ -40,6 +39,8 @@ public class OrbitCameraController : MonoBehaviour
     Vector2 orbitAngles = new Vector2(45f, 0f); //Vertical (Pitch) angle, Horizontal (Yaw) angle
     Vector3 focusPoint; //The point that the camera will focus on
 
+    PlayerControllerRigid playerControl; //An object representing the PlayerControllerRigid.cs script
+
     void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked; //Locks the cursor to the centre of the screen
@@ -47,6 +48,9 @@ public class OrbitCameraController : MonoBehaviour
 
         invertX = false; //Sets the Invert value to False (Default State of camera's X-Rotation)
         invertY = false; //Sets the Invert value to False (Default State of camera's Y-Rotation)
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player"); //Finds a GameObject with the tag 'Player'
+        playerControl = player.GetComponent<PlayerControllerRigid>(); //Sets playerControl Equal to the Script attached to the attached to the 'player' GameObject
     }
 
     void OnValidate() //This function is called when the script is loaded or a value is changed in the Inspector (Called in the editor only).
@@ -124,11 +128,14 @@ public class OrbitCameraController : MonoBehaviour
 
         const float e = 0.001f; //The limit for how much  of an input the script can recieve before it starts moving the camera
 
-        if (input.x < -e || input.x > e || input.y < -e || input.y > e) //Checks to see if the inputs are less than or greater than the limit
+        if(playerControl.slideActive == false)
         {
-            orbitAngles += rotationSpeed * Time.unscaledDeltaTime * input; //Makes the orbit angles equal to the speed of the rotation, multiplied by unscaled delta time, multiplied by the player's input
+            if (input.x < -e || input.x > e || input.y < -e || input.y > e) //Checks to see if the inputs are less than or greater than the limit
+            {
+                orbitAngles += rotationSpeed * Time.unscaledDeltaTime * input; //Makes the orbit angles equal to the speed of the rotation, multiplied by unscaled delta time, multiplied by the player's input
 
-            return true; //Returns true if there is an input
+                return true; //Returns true if there is an input
+            }
         }
 
         return false; //Returns false if there isn't an input

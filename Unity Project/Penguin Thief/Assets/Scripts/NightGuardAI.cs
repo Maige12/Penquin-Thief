@@ -17,7 +17,6 @@ public static class HelperMethods
     }
 }
 
-
 public class NightGuardAI : MonoBehaviour
 {
     Transform player;
@@ -35,6 +34,9 @@ public class NightGuardAI : MonoBehaviour
     public int currentPoint = 0;
     public Vector3 lastKnownPosition;
     public bool hasSeenPlayer = false;
+
+    [SerializeField]
+    GameObject visionMesh; //The mesh used for the vision of the Night Guard
 
     public bool alertSound; //A Boolean to control whether the Nigh Guard can play his Alert/Unalert sound
 
@@ -65,7 +67,6 @@ public class NightGuardAI : MonoBehaviour
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>()); //Stops collision between the Night Guard and Locked Doors
         }
     }
-
 
     // Update is called once per frame
     void Update()

@@ -28,14 +28,14 @@ public class PlayerControllerRigid : MonoBehaviour
     [SerializeField, Range(0.0f, 10.0f)] //Clamps the range of the players Jump Height from 0 to 10
     float jumpHeight = 0.5f; //The maximum height that the player can jump
     [SerializeField, Range(0.0f, 90.0f)] //Clamps the range of the degrees maximum scalable ramp from 0 to 90
-    float maxGroundAngle = 25.0f; //The maximum angle of a slope that the player can jump from (Degrees)
+    float maxGroundAngle = 25.0f; //Thse maximum angle of a slope that the player can jump from (Degrees)
     [SerializeField] //Allows it to be seen in the inspector
     Transform playerInputSpace = default; //Teh transform relative to the player's movement
 
     bool desiredJump; //A boolean to detect whether or not the player wants to jump
     bool onGround; //A boolean to check whether the player is on the ground or not
 
-    bool slideActive; //A bool to check of the player is currently sliding
+    public bool slideActive; //A bool to check of the player is currently sliding
     float maxSpeedChange; //Amount that the velocity will change per update
     float acceleration; //The player's current acceleration 
     float minGroundDotProduct; //The Dot Product of maxGroundAngle
@@ -98,7 +98,7 @@ public class PlayerControllerRigid : MonoBehaviour
         targetTime -= Time.deltaTime; //if applicable, the time will count down
 
         if(targetTime <= 0.0f)
-        {
+        { 
             slideActive = false;
             maxSpeed = 4.0f;
         } 
@@ -111,27 +111,34 @@ public class PlayerControllerRigid : MonoBehaviour
 
         if(onGround == true && Input.GetKeyDown(KeyCode.LeftControl)) //Checks to see if the player is on the ground to initiate the slide && Checks to see if the player is holding down the left control button
         {   
-            if((slideActive != true) && (velocity.z > 0.0f)) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
+            if((slideActive != true) && ((velocity.z > 0.0f) || (velocity.x > 0.0f))) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
             {
-                targetTime = 5.0f; //sets the target time, which will stop the slide at the end of the duration
-                velocity.z = 15.0f; //sets the max speed high, initiating the slide
-                maxSpeed = 10.0f;
+                targetTime = 2.0f; //sets the target time, which will stop the slide at the end of the duration
+                maxSpeed = 8.0f;
 
                 slideActive = true; //sets slide active to true, which stops the player from stacking slides              
-            }    
+            }
+
+            if ((slideActive != true) && ((velocity.z < 0.0f) || (velocity.x < 0.0f))) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
+            {
+                targetTime = 2.0f; //sets the target time, which will stop the slide at the end of the duration
+                maxSpeed = 8.0f;
+
+                slideActive = true; //sets slide active to true, which stops the player from stacking slides              
+            }
         }
 
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
 
-        if(Input.GetKey(KeyCode.LeftShift)) //Checks to see if the player is holding Left SHift (Run)
+        if(slideActive != true)
         {
-            maxSpeed = 6.0f; //Changes the Maximum Speed to 6.0f (Run Speed)
-        }
-        else 
-            if(slideActive != true)
+            if (Input.GetKey(KeyCode.LeftShift)) //Checks to see if the player is holding Left SHift (Run)
             {
-                maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
+                maxSpeed = 6.0f; //Changes the Maximum Speed to 6.0f (Run Speed)
             }
+            else
+                maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
+        }
 
         if (playerInputSpace) //If a Player Input Space is present, run this If Statement
         {
