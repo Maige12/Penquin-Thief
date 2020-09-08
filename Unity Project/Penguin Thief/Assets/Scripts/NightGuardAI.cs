@@ -23,17 +23,17 @@ public class NightGuardAI : MonoBehaviour
 
     NavMeshAgent nav;
 
-    public bool canSeePlayer = false;
-    public LayerMask layerMask;
-    public float fieldOfViewRange;
-    public float hearingRange;
+    public bool canSeePlayer = false; //This detects if the ai is able to detect the player
+    public LayerMask layerMask; //The layer that the walls will be on. Ai cannot see player if raycast hits these walls
+    public float fieldOfViewRange; //The angle in front of the Ai that can see the player
+    public float hearingRange; //A bubble around the Ai that can detect the player
 
-    public bool isPatrolling = true;
-    public List<GameObject> myPathPoints;
-    public GameObject myPath;
-    public int currentPoint = 0;
-    public Vector3 lastKnownPosition;
-    public bool hasSeenPlayer = false;
+    public bool isPatrolling = true; //Ai will continue following patrol points if ==true
+    public List<GameObject> myPathPoints; //These are the Patrol points. Ai will follow them one by one, top to bottom
+    public GameObject myPath; 
+    public int currentPoint = 0; //Where the first point is
+    public Vector3 lastKnownPosition; //Last known position of the player
+    
 
     [SerializeField]
     GameObject visionMesh; //The mesh used for the vision of the Night Guard
@@ -43,8 +43,8 @@ public class NightGuardAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
-        nav = GetComponent<NavMeshAgent>();
+        player = GameObject.FindWithTag("Player").transform; //Find the location of the player
+        nav = GetComponent<NavMeshAgent>(); //Activate Navmesh component
 
         //initialise the path points
         myPathPoints = new List<GameObject>();
@@ -57,6 +57,7 @@ public class NightGuardAI : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //This is what happens when the nightguard collides with the player
         if (collision.gameObject.tag == "Player")
         {
             GameOverScript.OpenGameOver(); //Opens Game Over Screen (Controlled by GameOverScript.cs Script)
@@ -74,19 +75,21 @@ public class NightGuardAI : MonoBehaviour
         // Can the player be seen?
         CheckPOV();
 
+        //if the ai can see the player, go to the player's transform position
         if (canSeePlayer == true)
         {
             nav.isStopped = false;
-            nav.SetDestination(player.position);
-            lastKnownPosition = player.position;
+            nav.SetDestination(player.position); //Sets the destination at where the player is
+            lastKnownPosition = player.position; //updates the last known location to the players current location
         }
         else
         {
+            //If player can't be seen, continue patrolling
             if (isPatrolling)
             {
                 //Head to next path point
                 nav.isStopped = false;
-                nav.SetDestination(myPathPoints[currentPoint].transform.position);
+                nav.SetDestination(myPathPoints[currentPoint].transform.position); //sets the destination to the pathpoints
 
                 // Check range  to current path point and jump to next if close enough
                 if (Vector3.Distance(transform.position, myPathPoints[currentPoint].transform.position) < 2)
@@ -103,20 +106,32 @@ public class NightGuardAI : MonoBehaviour
         }
     }
 
-    void CheckPOV()
+
+    
+
+    void CheckPOV() //Checks the detection range of the Ai
     {
         //Direction to Player
         Vector3 direction = player.position - transform.position;
+
+        // ------------------------
+        //Grab the cone mesh
+        //Is the player inside the cone?
+        // ------------------------
+
         //ray to player
         Ray ray = new Ray(transform.position, direction);
+
         //distance to the player
         float distance = Vector3.Distance(player.position, transform.position);
+
         //draw a line to the player
         Debug.DrawRay(transform.position, direction);
+
         //If the line is not hitting the wall - the player must be visible
         if (!Physics.Raycast(ray, distance, layerMask))
         {
-            if ((Vector3.Angle(ray.direction, transform.forward)) < fieldOfViewRange)
+            if ((Vector3.Angle(ray.direction, transform.forward)) < fieldOfViewRange) //if the player is not obstructed by a wall, canSeePlayer = true
             {
                 canSeePlayer = true;
 
@@ -136,10 +151,10 @@ public class NightGuardAI : MonoBehaviour
         //Can the enemy hear the player?
         if (canSeePlayer == false)
         {
-            if (Vector3.Distance(transform.position, player.position) < hearingRange)
-                canSeePlayer = true;
+            if (Vector3.Distance(transform.position, player.position) < hearingRange) //If the ai can hear the player, sai will chase the player
+                canSeePlayer = true; //This changes destination to player transform
 
-            if(alertSound == false)
+            if(alertSound == false) //If ai cant hear the player, continue patrolling
             {
                 FindObjectOfType<AudioManager>().Play("Guard Unalerted"); //Plays the 'Guard Unalerted' SFX
 
