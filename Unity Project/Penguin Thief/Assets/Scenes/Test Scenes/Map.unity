@@ -1027,37 +1027,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!1 &80688336 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: b65a56d22b051184aaafede3fe3c7391,
-    type: 3}
-  m_PrefabInstance: {fileID: 2054394900}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &80688338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 80688336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86d56592b7d4d7c43b369223c4c16e49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canSeePlayer: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 2048
-  fieldOfViewRange: 45
-  hearingRange: 0.2
-  isPatrolling: 0
-  myPathPoints: []
-  myPath: {fileID: 136870618}
-  currentPoint: 0
-  lastKnownPosition: {x: 0, y: 0, z: 0}
-  visionMesh: {fileID: 0}
-  alertSound: 0
 --- !u!4 &80688341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b65a56d22b051184aaafede3fe3c7391,
@@ -31155,7 +31124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b65a56d22b051184aaafede3fe3c7391, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b65a56d22b051184aaafede3fe3c7391, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31163,7 +31132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b65a56d22b051184aaafede3fe3c7391, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b65a56d22b051184aaafede3fe3c7391, type: 3}
       propertyPath: m_LocalRotation.x
