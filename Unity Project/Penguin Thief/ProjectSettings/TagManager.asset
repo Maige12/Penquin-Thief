@@ -37,6 +37,7 @@ TagManager:
   - Collectable Large
   - Deposit
   - Locked Door
+  - Canvas
   layers:
   - Default
   - TransparentFX

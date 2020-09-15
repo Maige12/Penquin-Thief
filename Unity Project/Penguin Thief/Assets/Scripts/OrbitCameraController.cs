@@ -40,6 +40,7 @@ public class OrbitCameraController : MonoBehaviour
     Vector3 focusPoint; //The point that the camera will focus on
 
     PlayerControllerRigid playerControl; //An object representing the PlayerControllerRigid.cs script
+    MenuManager menuManage; //An object representing the MenuManager.cs script
 
     void Awake()
     {
@@ -50,7 +51,10 @@ public class OrbitCameraController : MonoBehaviour
         invertY = false; //Sets the Invert value to False (Default State of camera's Y-Rotation)
 
         GameObject player = GameObject.FindGameObjectWithTag("Player"); //Finds a GameObject with the tag 'Player'
-        playerControl = player.GetComponent<PlayerControllerRigid>(); //Sets playerControl Equal to the Script attached to the attached to the 'player' GameObject
+        GameObject canvas = GameObject.Find("Canvas"); //Finds a GameObject with the name 'Canvas'
+
+        playerControl = player.GetComponent<PlayerControllerRigid>(); //Sets playerControl Equal to the Script attached to the 'player' GameObject
+        menuManage = canvas.GetComponent<MenuManager>(); //Sets menuManage Equal to the Script attached to the 'canvas' GameObject
     }
 
     void OnValidate() //This function is called when the script is loaded or a value is changed in the Inspector (Called in the editor only).
@@ -128,7 +132,7 @@ public class OrbitCameraController : MonoBehaviour
 
         const float e = 0.001f; //The limit for how much  of an input the script can recieve before it starts moving the camera
 
-        if(playerControl.slideActive == false)
+        if((playerControl.slideActive == false) && (menuManage.inGame == true))
         {
             if (input.x < -e || input.x > e || input.y < -e || input.y > e) //Checks to see if the inputs are less than or greater than the limit
             {
