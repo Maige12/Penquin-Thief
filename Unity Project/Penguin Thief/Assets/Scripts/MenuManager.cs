@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField]
-    GameObject[] mainMenu;
-
-    [SerializeField]
-    GameObject[] gameMenu;
-
     public bool inGame;
+
+    GameObject currentMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +24,17 @@ public class MenuManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void DeactivateInfo()
+    {
+        Time.timeScale = 1; //Freezes time so game freezes
+
+        currentMenu = GameObject.Find("Level Info");
+        Cursor.visible = false; //Hides Cursor
+        inGame = true;
+
+        currentMenu.SetActive(false);
     }
 
     void ActivateMenu()

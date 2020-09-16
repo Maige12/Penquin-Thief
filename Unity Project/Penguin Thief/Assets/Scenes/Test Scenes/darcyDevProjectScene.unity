@@ -2101,8 +2101,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -116.100006, y: 98.100006}
-  m_SizeDelta: {x: 200, y: 120}
+  m_AnchoredPosition: {x: -116.100006, y: 98.8}
+  m_SizeDelta: {x: 200, y: 91.03912}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &447357002
 MonoBehaviour:
@@ -2159,7 +2159,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 20
@@ -2169,7 +2169,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 114
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5002,7 +5002,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: []
-  gameMenu: []
+  gameMenu:
+  - {fileID: 617955437}
   inGame: 0
 --- !u!1001 &1121325753
 PrefabInstance:
@@ -5263,8 +5264,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -116.1, y: -56.699997}
-  m_SizeDelta: {x: 200, y: 120}
+  m_AnchoredPosition: {x: -116.1, y: -56.999996}
+  m_SizeDelta: {x: 200, y: 74.8551}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133370561
 MonoBehaviour:
@@ -5321,7 +5322,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 20
@@ -7250,7 +7251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6303145, g: 0.6273585, b: 1, a: 0.392}
+  m_Color: {r: 0.049150232, g: 0.044855822, b: 0.4528302, a: 0.392}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8847,7 +8848,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1816406276}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1115699993}
+        m_MethodName: DeactivateInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1816406276
 MonoBehaviour:
   m_ObjectHideFlags: 0
