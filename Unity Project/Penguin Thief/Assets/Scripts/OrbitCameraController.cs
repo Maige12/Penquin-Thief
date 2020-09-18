@@ -132,7 +132,7 @@ public class OrbitCameraController : MonoBehaviour
 
         const float e = 0.001f; //The limit for how much  of an input the script can recieve before it starts moving the camera
 
-        if((playerControl.slideActive == false) && (menuManage.inGame == true))
+        if((playerControl.slideActive == false) && (menuManage.menuOpen == false))
         {
             if (input.x < -e || input.x > e || input.y < -e || input.y > e) //Checks to see if the inputs are less than or greater than the limit
             {
