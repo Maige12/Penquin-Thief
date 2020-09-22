@@ -137,8 +137,6 @@ public class NightGuardAI : MonoBehaviour
 
                 if(alertSound == true)
                 {
-                    FindObjectOfType<AudioManager>().Play("Guard Alerted"); //Plays the 'Guard Alerted' SFX
-
                     alertSound = false;
                 }
             }
@@ -156,8 +154,6 @@ public class NightGuardAI : MonoBehaviour
 
             if(alertSound == false) //If ai cant hear the player, continue patrolling
             {
-                FindObjectOfType<AudioManager>().Play("Guard Unalerted"); //Plays the 'Guard Unalerted' SFX
-
                 alertSound = true;
             }
         }
