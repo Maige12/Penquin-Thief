@@ -19,6 +19,18 @@ public static class HelperMethods
 
 public class NightGuardAI : MonoBehaviour
 {
+
+    private Vector3 origin;//A private Vector3 which is set to the players position at all time, this allows the sphere to follow them
+    public float sphereRadius;// The size of the sphere which is attached to the player, this is public to allow for balance testing and tweaking without having to manually access the code
+    public float maxDistance;// The max distance script allows for the sphere to cast in a direction, in which case this variable decides how far it is cast, this can have potential uses later on, but is an artifact from the tutorial I followed
+    private Vector3 direction;// This Vector 3 is used for orientation, it has no current use in the current iteraction of our sphere and is an artefact
+    public LayerMask layermask;//This layermask allows us to hide certain objects from the raycast and make it so we only collide with certain items within the map.
+    public GameObject CurrentObject;// A public "GameObject" using for testing and debugging which allows us to see what we are currently colliding with
+
+    private float currentHitDistance;//The distance between the the raycast hit and the object it is colliding with, this is partially inused with our current iteracion
+
+    public NightGuardAI _nightguardAI;
+    // Start is called before the first frame update
     Transform player;
 
     NavMeshAgent nav;
@@ -72,7 +84,14 @@ public class NightGuardAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        origin = transform.position;// Sets the origin to the players current transform
+        direction = transform.forward;//sets the transform of the sphere to the players direction
+        RaycastHit hit;//the structure used to get information back from the spherecast
         // Can the player be seen?
+        
+        
+        
         CheckPOV();
 
         //if the ai can see the player, go to the player's transform position
@@ -104,6 +123,38 @@ public class NightGuardAI : MonoBehaviour
                 nav.isStopped = true; // Same as nav.enabled = false;
             }
         }
+
+
+
+
+        if(Physics.SphereCast(origin, sphereRadius, direction, out hit, maxDistance, layermask, QueryTriggerInteraction.UseGlobal))//the main code used to cast the ray and give it the properties we want, the "Use Global", allows us to create collisions globally.
+        {
+            CurrentObject = hit.transform.gameObject;//Sets the window in the menu to current object
+            currentHitDistance = hit.distance;//updates current hit distance to be as accurate as possible    
+            if(CurrentObject.tag == "Player")
+            {
+                canSeePlayer = true;       
+            }
+            else
+            {
+                canSeePlayer = false;
+            }
+        }
+        else
+        {
+            currentHitDistance = maxDistance;//if the current hitdistance doesnt return anything, then it will display a default value set to the max value
+            CurrentObject = null;//if the raycast doesn't hit anything, then the menu will return a null state
+
+        }
+
+
+
+
+
+
+
+
+
     }
 
 
@@ -158,4 +209,32 @@ public class NightGuardAI : MonoBehaviour
             }
         }
     }
+
+
+
+
+
+
+
+
+   
+
+
+
+
+    private void OnDrawGizmosSelected()//this void creates the physical representation of the sphere we can see, this will be turned off outside of testing
+    {
+        Gizmos.color = Color.red;
+        Debug.DrawLine(origin, origin +direction * currentHitDistance);
+        Gizmos.DrawWireSphere(origin + direction * currentHitDistance, sphereRadius);
+    }
 }
+
+
+
+
+
+
+
+
+
