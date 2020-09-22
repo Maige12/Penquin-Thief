@@ -6,6 +6,9 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField]
     GameObject infoScreenObj;
+    [SerializeField]
+    GameObject pauseScreenObj;
+
     GameObject currentMenu;
 
     [HideInInspector]
@@ -15,13 +18,25 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(pauseScreenObj == null)
+        {
+            pauseScreenObj = GameObject.Find("Pause Screen");
+
+            infoScreenObj.SetActive(false);
+        }
+        
         if(infoScreenObj == null)
         {
             infoScreenObj = GameObject.Find("Level Info");
 
             infoScreenObj.SetActive(false); //Sets the Info Screen to be inactive
+        }
 
-            menuOpen = false;
+        menuOpen = false;
+
+        if(pauseScreenObj == true)
+        {
+            pauseScreenObj.SetActive(false);
         }
 
         if (infoScreen == true)
@@ -60,11 +75,25 @@ public class MenuManager : MonoBehaviour
                 case false:
                     Debug.Log("ESC Key has been pressed. Opening Menu");
 
-                    DeactivateScene();
+                    PauseGame();
 
                     break;
             }
         }
+    }
+
+    public void PauseGame()
+    {
+        if(pauseScreenObj == null)
+        {
+            currentMenu = GameObject.Find("Pause Screen");
+        }
+        else
+            currentMenu = pauseScreenObj;
+
+        currentMenu.SetActive(true);
+
+        DeactivateScene();
     }
 
     public void DeactivateScene()
@@ -94,5 +123,14 @@ public class MenuManager : MonoBehaviour
         {
             currentMenu.SetActive(false);
         }
+
+        currentMenu = null;
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quitting Game");
+
+        Application.Quit();
     }
 }
