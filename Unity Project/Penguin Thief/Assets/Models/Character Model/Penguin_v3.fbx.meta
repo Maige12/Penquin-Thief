@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b03af97d53848a9409d3a1eda8b47e52
+guid: 9cbdbc68ce9c0af46b8c5285e489915e
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,13 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: albedoMat
-    second: {fileID: 2100000, guid: 9071f0a758e2f4649ad91dbd279bacda, type: 2}
+      name: penguin_Body_mat
+    second: {fileID: 2100000, guid: e61eaa6eb5886334ca71f3eee5d9bff7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: emmisionMat
-    second: {fileID: 2100000, guid: 089b57c9931bfa7499e6cfd091cfee5a, type: 2}
+      name: penguin_Eyes_mat
+    second: {fileID: 2100000, guid: fe6eed62ded8abc4d820cffb5b21bf8b, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: penguin_Body_Albedo
+    second: {fileID: 2800000, guid: 6e1ea7d100289ba439e2983e656a5738, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: penguin_Eyes_Albedo
+    second: {fileID: 2800000, guid: 9b432864dbc0ee542841fc4b993e71b3, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
