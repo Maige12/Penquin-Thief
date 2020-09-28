@@ -3,7 +3,12 @@ guid: 983f738aded245e4bbf27f4663de20a2
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: wrench_Albedo
+    second: {fileID: 2800000, guid: 2c5b56c0d24e3b949be66eca511e965b, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

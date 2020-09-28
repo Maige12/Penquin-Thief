@@ -3,7 +3,12 @@ guid: 8088a3f15567c3b488756b1a1b833f4b
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lure_Mackerel_Albedo
+    second: {fileID: 2800000, guid: 882efca56bcc80049b8ec3328b505f38, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

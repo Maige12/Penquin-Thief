@@ -3,7 +3,12 @@ guid: c83fb3e5900cc2b4ba135c4e1fa5c4f6
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: screwDriver_Albedo
+    second: {fileID: 2800000, guid: 64f91c60f218010469dec75d41e359f0, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

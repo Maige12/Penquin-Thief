@@ -3,7 +3,12 @@ guid: 930b6eb223461824b9e0b863e9f4249f
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lollyWrapper_Green_Albedo
+    second: {fileID: 2800000, guid: a7d31a81401585b44bc2f500ad27b507, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

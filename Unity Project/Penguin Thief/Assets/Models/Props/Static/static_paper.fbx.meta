@@ -3,7 +3,12 @@ guid: a632a090862128748b5aab0bd7846a86
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: paperStack_Albedo
+    second: {fileID: 2800000, guid: 0188e69d1d6acd048aac818e0e9350e0, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

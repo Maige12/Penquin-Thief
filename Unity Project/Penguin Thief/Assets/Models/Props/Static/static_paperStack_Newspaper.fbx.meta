@@ -3,7 +3,12 @@ guid: f21e413082a370743aa2e2e1dfa13057
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: paperStack_Newspaper_Albedo
+    second: {fileID: 2800000, guid: 9aa71f8e6827a9f4095a3fa81ecfd461, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
