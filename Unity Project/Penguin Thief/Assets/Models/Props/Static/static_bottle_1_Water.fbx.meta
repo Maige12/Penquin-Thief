@@ -3,7 +3,17 @@ guid: af2ebcd2e1fbef1429cde6ae72844749
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bottle_Water_mat
+    second: {fileID: 2100000, guid: 28cbf12a8f91de84d9cf2351aea1fa34, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bottle_Water_Albedo
+    second: {fileID: 2800000, guid: 02100e8bb9034f14a8d06b3339e818e0, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -3,7 +3,17 @@ guid: 66744929b412a4e45918730c3ae7c9cd
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fishingLine_mat
+    second: {fileID: 2100000, guid: b538b2d442862ab429167ee14769712c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fishingLine_Albedo
+    second: {fileID: 2800000, guid: e46395756f33cb7488af17c6d2272e99, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

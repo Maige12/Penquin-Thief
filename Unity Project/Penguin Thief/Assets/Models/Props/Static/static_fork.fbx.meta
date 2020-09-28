@@ -3,7 +3,17 @@ guid: 6e0236fbc2bf0544cbc40f1ce44fd474
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cutlery_mat
+    second: {fileID: 2100000, guid: 17a228495d39d724e9093d7a5a2ba743, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cutlery_Albedo
+    second: {fileID: 2800000, guid: 28d143affe8d7df46aec512ecb751fcc, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

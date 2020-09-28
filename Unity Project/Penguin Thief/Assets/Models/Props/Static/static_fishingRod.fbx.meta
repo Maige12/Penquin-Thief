@@ -3,7 +3,17 @@ guid: 85c50008683f6274682c86254ce27229
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fishingRod_mat
+    second: {fileID: 2100000, guid: a1824add6a678de4c81ec9c78d20df48, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fishingRod_Albedo
+    second: {fileID: 2800000, guid: fe73d7de0417ff74cbc2570825dc97a6, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

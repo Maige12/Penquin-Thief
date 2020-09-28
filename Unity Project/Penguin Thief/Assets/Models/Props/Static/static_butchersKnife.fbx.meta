@@ -3,7 +3,17 @@ guid: fccc4941afb869d4aac8fa711d8719c3
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: butchersKnife_mat
+    second: {fileID: 2100000, guid: 6df05f8d7312e7a4d9a10b105ec427b3, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: butchersKnife_Albedo
+    second: {fileID: 2800000, guid: 5873e2a43b0bad247ba5b866d257a6f0, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

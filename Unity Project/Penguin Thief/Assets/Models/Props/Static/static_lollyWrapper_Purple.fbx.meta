@@ -3,7 +3,17 @@ guid: 9603f037853b53f479059320abc4f8ff
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lollyWrapper_Purple_mat
+    second: {fileID: 2100000, guid: 75633346b6e56f74b9ae711eb2f441f9, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lollyWrapper_Purple_Albedo
+    second: {fileID: 2800000, guid: aa3b4104af0a77742a7148324304712a, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

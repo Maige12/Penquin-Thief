@@ -3,7 +3,17 @@ guid: 7fdc093e238782b4986fc78a16e35cea
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ball_Basketball_mat
+    second: {fileID: 2100000, guid: 97d56df488d43204eaf0d3c4a85d0aa2, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ball_Basketball_Albedo
+    second: {fileID: 2800000, guid: 627a2b623034b064ea877bda6ef095a9, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

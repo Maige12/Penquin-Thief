@@ -3,7 +3,17 @@ guid: 0170a5ea35ea013438e81f20491ded4c
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: packet_Chips_mat
+    second: {fileID: 2100000, guid: 0092ef60410a6104da12ab505b94d722, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: packet_Chips_Albedo
+    second: {fileID: 2800000, guid: e2d54313a7cf35548bffa189bf7b5020, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -3,7 +3,17 @@ guid: ce9558c017bc67a4dbba9094a5fa217d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lollyPop_Pink_mat
+    second: {fileID: 2100000, guid: 0b671a565ecb0a447b301600e5982195, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lollypop_Pink_Albedo
+    second: {fileID: 2800000, guid: def2fa7a4c2669849aa727238842ca36, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

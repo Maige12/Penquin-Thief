@@ -3,7 +3,17 @@ guid: 856dc8d9e231b6a4f8d08767b77f92ea
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fish_2_mat
+    second: {fileID: 2100000, guid: 10d5b68885e126f46a6b0db68c84e2db, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: fish_Green_Albedo
+    second: {fileID: 2800000, guid: 8153fd3084dbd3d47ae62132a66b1df7, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
