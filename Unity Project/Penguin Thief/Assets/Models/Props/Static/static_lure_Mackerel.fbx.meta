@@ -5,6 +5,11 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lure_Mackerel_mat
+    second: {fileID: 2100000, guid: bc81c251b162aa3449bb235b180c1a24, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: lure_Mackerel_Albedo

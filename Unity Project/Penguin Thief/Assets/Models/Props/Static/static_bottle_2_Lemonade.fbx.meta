@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bottle_Lemonade_mat
-    second: {fileID: 2100000, guid: 3449c509d850c6840a4f00f10406b757, type: 2}
+    second: {fileID: 2100000, guid: a67974c8ac264f3408f9f23238a92e86, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule

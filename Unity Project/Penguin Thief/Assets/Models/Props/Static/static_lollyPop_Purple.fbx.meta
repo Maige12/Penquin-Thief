@@ -5,6 +5,11 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lollypop_Purple_mat
+    second: {fileID: 2100000, guid: e63766b8db7739c4bb4101327d2c5bb1, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: lollypop_Purple_Albedo

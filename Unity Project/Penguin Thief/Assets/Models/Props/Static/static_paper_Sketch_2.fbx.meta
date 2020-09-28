@@ -5,6 +5,11 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: paperStack_Sketch_2_mat
+    second: {fileID: 2100000, guid: bda8984bdd398f44d8b00ba5ec8bd046, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: paperStack_Sketch_2_Albedo

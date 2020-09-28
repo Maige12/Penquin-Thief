@@ -5,6 +5,11 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lollyWrapper_Green_mat
+    second: {fileID: 2100000, guid: bd913585a5af30c45a9f494354edb119, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: lollyWrapper_Green_Albedo
