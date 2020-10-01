@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: ff053a75eaecc9f4486d820f8cfa8da4
+guid: e4a8de92aa00a8b4dbbdbfc9ddef6745
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mintTin_mat
+    second: {fileID: 2100000, guid: ac17d9cc3e15feb40838ccac9a7d2597, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: mintTin_Albedo
+    second: {fileID: 2800000, guid: 5a5a0a7eb431fc1488c184e715425993, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
