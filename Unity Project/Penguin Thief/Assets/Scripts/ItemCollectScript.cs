@@ -25,12 +25,25 @@ public class ItemCollectScript : MonoBehaviour
     [HideInInspector] //Hides the value from the Inspector
     public int score; //Player's total score points
 
+    public GameObject[] collectLarge;
+    public GameObject canvas; 
+    public int totalLarge;
+
+    MenuManager menuManagerScript;
+
     void Awake()
     {
         keys = 0; //Starts keys at 0
         collectableSmall = 0; //Starts small collectables at 0
         collectableLarge = 0; //Starts large collectables at 0
         score = 0; //Starts score at 0
+
+        menuManagerScript = canvas.GetComponent<MenuManager>();
+
+        collectLarge = GameObject.FindGameObjectsWithTag("Collectable Large");
+        totalLarge = collectLarge.Length;
+
+        Debug.Log("Total Large Collectables is " + totalLarge);
     }
 
     void OnCollisionEnter(Collision collision) //Will only activate when entering collision
@@ -135,7 +148,14 @@ public class ItemCollectScript : MonoBehaviour
 
                         collectableLarge = 0; //Removes all small objects from player inventory
 
+                        totalLarge -= 1;
+
                         Debug.Log("Current Score: " + score); //Prints out the new score
+
+                        if (totalLarge == 0)
+                        {
+                            menuManagerScript.ResultsScreen(score);
+                        }
                     }
                 }
                 else

@@ -1,18 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro; //Adds the Text Mesh Pro Library
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField]
-    GameObject infoScreenObj;
-    [SerializeField]
-    GameObject pauseScreenObj;
+    [SerializeField] //Allows me to set the object through the Inspector
+    GameObject infoScreenObj; //The Info Screen canvcas object
+    [SerializeField] //Allows me to set the object through the Inspector
+    GameObject pauseScreenObj; //The Pause Screen canvcas object
+    [SerializeField] //Allows me to set the object through the Inspector
+    GameObject resultScreenObj; //The Result Screen canvcas object
 
-    GameObject currentMenu;
+    [SerializeField] //Allows me to set the object through the Inspector
+    TextMeshProUGUI finalPoints; //The final point total that the player has
 
-    [HideInInspector]
-    public bool menuOpen;
+    GameObject currentMenu; //The current menu that the player is on
+
+    [HideInInspector] //Hides the value from the Inspector
+    public bool menuOpen; //Checks to see if the Menu is Open
+    [HideInInspector] //Hides the value from the Inspector
+    public bool gameWin; //Checks to see if the Game has been won (Used to stop inputs for Pausing)
     public bool infoScreen;
 
     // Start is called before the first frame update
@@ -32,7 +40,15 @@ public class MenuManager : MonoBehaviour
             infoScreenObj.SetActive(false); //Sets the Info Screen to be inactive
         }
 
+        if(resultScreenObj == null)
+        {
+            resultScreenObj = GameObject.Find("Results Screen");
+
+            resultScreenObj.SetActive(false);
+        }
+
         menuOpen = false;
+        gameWin = false;
 
         if(pauseScreenObj == true)
         {
@@ -62,7 +78,7 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if((Input.GetKeyDown(KeyCode.Escape)) && (gameWin == false))
         {
             switch(menuOpen)
             {
@@ -93,10 +109,21 @@ public class MenuManager : MonoBehaviour
 
         currentMenu.SetActive(true);
 
-        DeactivateScene();
+        DeactivateScene(); //Deactivates Player functions
     }
 
-    public void DeactivateScene()
+    public void ResultsScreen(int total)
+    {
+        DeactivateScene(); //Deactivates Player functions
+
+        gameWin = true;
+
+        resultScreenObj.SetActive(true);
+
+        finalPoints.SetText(total.ToString());
+    }
+
+    public void DeactivateScene() //Deactivates Player Movement, Physics and Animation
     {
         Debug.Log("Deactivating Scene");
 
@@ -105,10 +132,10 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined; //Locks cursor to the game view
         Cursor.visible = true; //Shows Cursor
 
-        menuOpen = true;
+        menuOpen = true; //Tells the system the player is in a Menu
     }
 
-    public void ActivateScene()
+    public void ActivateScene() //Reactivates Player Movement, Physics and Animation
     {
         Debug.Log("Reactivating Scene");
 
@@ -117,20 +144,20 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked; //Locks the cursor to the center of the screen
         Cursor.visible = false; //Hides Cursor from the player
 
-        menuOpen = false;
+        menuOpen = false; //Tells the system the player is no longer in a Menu
 
-        if(currentMenu != null)
+        if(currentMenu != null) //Checks to see if the current menu is set to Null
         {
-            currentMenu.SetActive(false);
+            currentMenu.SetActive(false); //Seys the current menu to Inactive
         }
 
-        currentMenu = null;
+        currentMenu = null; //Clears out the current meny value
     }
 
     public void QuitGame()
     {
         Debug.Log("Quitting Game");
 
-        Application.Quit();
+        Application.Quit(); //Quits the game
     }
 }
