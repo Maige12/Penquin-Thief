@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: albedoMat
-    second: {fileID: 2100000, guid: 9071f0a758e2f4649ad91dbd279bacda, type: 2}
+    second: {fileID: 2100000, guid: a78756c6b25d2cb4c936b89c41c9d480, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
