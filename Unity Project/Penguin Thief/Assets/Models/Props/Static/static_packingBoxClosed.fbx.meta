@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 6bec448c24300c64785b13d230bffaea
+guid: e9f5778cbead71546bdcce4b6f0fbe07
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: closedBox_Tex
+    second: {fileID: 2100000, guid: 0680e973fdbb6e644b6fde65005e7737, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
