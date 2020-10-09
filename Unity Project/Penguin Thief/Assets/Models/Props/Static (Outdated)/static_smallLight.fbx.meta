@@ -3,7 +3,17 @@ guid: 99bb4fbf0fff64e48beaa57a6ecacc88
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: albedoMat
+    second: {fileID: 2100000, guid: 9ee9456ef9e90b848839237fd86dd4dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: emmisionMat
+    second: {fileID: 2100000, guid: 089b57c9931bfa7499e6cfd091cfee5a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
