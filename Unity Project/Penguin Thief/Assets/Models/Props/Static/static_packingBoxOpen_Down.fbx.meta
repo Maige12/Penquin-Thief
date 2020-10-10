@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: e9f5778cbead71546bdcce4b6f0fbe07
+guid: 274c4eab85638d1459a18733e0015d28
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: closedBoxDown_Tex
+    second: {fileID: 2100000, guid: 9bada64dc3318b747a1f1262a04af7b6, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: packingBox_upsideDown_Open_128
+    second: {fileID: 2800000, guid: 441f16ad506cff446ba385dd5ad21836, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

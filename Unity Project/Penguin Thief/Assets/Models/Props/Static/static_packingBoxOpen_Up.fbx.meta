@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 274c4eab85638d1459a18733e0015d28
+guid: 6bec448c24300c64785b13d230bffaea
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: openBoxUp_Tex
+    second: {fileID: 2100000, guid: da9a546939784b344a1fb91bd79ec77d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
