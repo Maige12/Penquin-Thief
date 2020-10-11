@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b94a15f6178a3b84b9afd8290c2ed99f
+guid: e271b11256acf764697bcfc99a7a8189
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -14,26 +14,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: nightGuard_mat
     second: {fileID: 2100000, guid: a9d970ff4cde7b2469c68d1a61c4fc7c, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: nightGuard_Albedo
-    second: {fileID: 2800000, guid: 457c20304155ac6428618eb108807aa3, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: nightGuard_Emission
-    second: {fileID: 2800000, guid: 0aeb9efb71802a04cad772a64f210b8e, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: nightGuard_Torch_Albedo
-    second: {fileID: 2800000, guid: 3bdca4f665410694eaebd782845167f1, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: nightGuard_Torch_Emission
-    second: {fileID: 2800000, guid: 282cf757d56392b47a778e0bab007d77, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
