@@ -94,7 +94,8 @@ public class PlayerControllerRigid : MonoBehaviour
     }
 
     void Update()
-    {   
+    {
+        /*
         targetTime -= Time.deltaTime; //if applicable, the time will count down
 
         if (targetTime <= 0.0f)
@@ -129,6 +130,23 @@ public class PlayerControllerRigid : MonoBehaviour
                 slideActive = true; //sets slide active to true, which stops the player from stacking slides              
             }
         }
+        */
+
+        if (slideActive != true) //Checks to see if the player is NOT sliding
+        {
+            playerInput.x = Input.GetAxis("Horizontal"); //Gets the Input Axis from the player (Horizontal (A, D Keys))
+            playerInput.y = Input.GetAxis("Vertical"); //Gets the Input Axis from the player (Vertical (W, S Keys))
+        }
+
+        if (onGround == true && Input.GetKey(KeyCode.LeftControl)) //Checks to see if the player is on the ground to initiate the slide && Checks to see if the player is holding down the left control button
+        {
+            Slide(); //Runs the Slide function
+        }
+        else
+        {
+            slideActive = false; //Sets Slide Active to false when not holding in the Left Control Key
+            maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
+        }
 
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
 
@@ -139,7 +157,7 @@ public class PlayerControllerRigid : MonoBehaviour
                 maxSpeed = 6.0f; //Changes the Maximum Speed to 6.0f (Run Speed)
             }
             else
-                if(Input.GetKeyUp(KeyCode.LeftShift))
+                if(Input.GetKeyUp(KeyCode.LeftShift)) //Checks to see if the player has released Left SHift (Run)
                 {
                     maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
                 }
@@ -236,6 +254,25 @@ public class PlayerControllerRigid : MonoBehaviour
             }
 
             velocity += contactNormal * jumpSpeed; //The Y Velocity is set to the current contact normal scaled by the Jump Speed
+        }
+    }
+
+    void Slide() //This function controls the Sliding of the Penguin
+    {
+        slideActive = true; //Sets the Slideing to be active (Controls some inputs)
+
+        if ((slideActive == true) && ((velocity.z > 2.0f) || (velocity.x > 2.0f))) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
+        {
+            maxSpeed = 8.0f; //Changes the Maximum Speed to 8.0f (Slide Speed)
+
+            slideActive = true; //sets slide active to true, which stops the player from stacking slides              
+        }
+
+        if ((slideActive == true) && ((velocity.z < -2.0f) || (velocity.x < -2.0f))) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
+        {
+            maxSpeed = 8.0f; //Changes the Maximum Speed to 8.0f (Slide Speed)
+
+            slideActive = true; //sets slide active to true, which stops the player from stacking slides              
         }
     }
 }
