@@ -45,7 +45,6 @@ public class NightGuardAI : MonoBehaviour
     public GameObject myPath; 
     public int currentPoint = 0; //Where the first point is
     public Vector3 lastKnownPosition; //Last known position of the player
-    
 
     [SerializeField]
     GameObject visionMesh; //The mesh used for the vision of the Night Guard
@@ -90,8 +89,6 @@ public class NightGuardAI : MonoBehaviour
         RaycastHit hit;//the structure used to get information back from the spherecast
         // Can the player be seen?
         
-        
-        
         CheckPOV();
 
         //if the ai can see the player, go to the player's transform position
@@ -132,7 +129,8 @@ public class NightGuardAI : MonoBehaviour
         if(Physics.SphereCast(origin, sphereRadius, direction, out hit, maxDistance, layermask, QueryTriggerInteraction.UseGlobal))//the main code used to cast the ray and give it the properties we want, the "Use Global", allows us to create collisions globally.
         {
             CurrentObject = hit.transform.gameObject;//Sets the window in the menu to current object
-            currentHitDistance = hit.distance;//updates current hit distance to be as accurate as possible    
+            currentHitDistance = hit.distance;//updates current hit distance to be as accurate as possible  
+            
             if(CurrentObject.tag == "Player")
             {
                 canSeePlayer = true;       
@@ -146,17 +144,7 @@ public class NightGuardAI : MonoBehaviour
         {
             currentHitDistance = maxDistance;//if the current hitdistance doesnt return anything, then it will display a default value set to the max value
             CurrentObject = null;//if the raycast doesn't hit anything, then the menu will return a null state
-
         }
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -211,18 +199,6 @@ public class NightGuardAI : MonoBehaviour
             }
         }
     }
-
-
-
-
-
-
-
-
-   
-
-
-
 
     private void OnDrawGizmosSelected()//this void creates the physical representation of the sphere we can see, this will be turned off outside of testing
     {
