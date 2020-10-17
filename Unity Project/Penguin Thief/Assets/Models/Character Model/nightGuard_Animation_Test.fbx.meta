@@ -1,0 +1,793 @@
+fileFormatVersion: 2
+guid: 1ed35a8f2ea2dbe45bfbe2357ea1c2ed
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      74: 6434143793170969083
+    second: ng_Test_1
+  - first:
+      74: -8420731904843802236
+    second: ng_Test_2
+  - first:
+      74: 1555902723201402482
+    second: ng_Test_3
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nightGuard_Rig_nightGuard_Collar_mat
+    second: {fileID: 2100000, guid: 047ded5b533cf2d4b83d8efe7619b7c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nightGuard_Rig_nightGuard_Torch_mat
+    second: {fileID: 2100000, guid: 89ec0bd8c4c90074198b75974c027fef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nightGuard_Rig_nightGuard_mat
+    second: {fileID: 2100000, guid: a9d970ff4cde7b2469c68d1a61c4fc7c, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 1
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ng_Test_1
+      takeName: ng_Test_1
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ng_Test_2
+      takeName: ng_Test_2
+      internalID: 0
+      firstFrame: 25
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ng_Test_3
+      takeName: ng_Test_3
+      internalID: 0
+      firstFrame: 49
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: nightGuard_Animation_Test(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:nightGuard_Controllers_GRP
+      parentName: nightGuard_Animation_Test(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:master_Ctrl
+      parentName: nightGuard_Rig:nightGuard_Controllers_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:hip_Ctrl
+      parentName: nightGuard_Rig:master_Ctrl
+      position: {x: -0, y: 0.933859, z: -0.19359213}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_spine_1_Ctrl_GRP
+      parentName: nightGuard_Rig:hip_Ctrl
+      position: {x: -0, y: 0.10158264, z: 0.009877911}
+      rotation: {x: 5.937919e-17, y: 0.9697357, z: 0.24415722, w: 1.4950318e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_spine_1_Ctrl
+      parentName: nightGuard_Rig:RK_spine_1_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_chest_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_spine_1_Ctrl
+      position: {x: -0, y: 0.16034412, z: -0.0019077404}
+      rotation: {x: -0.22949111, y: -0.22949111, z: -0.6688302, w: 0.6688302}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:chest_Ctrl
+      parentName: nightGuard_Rig:RK_chest_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_neck_Ctrl_GRP
+      parentName: nightGuard_Rig:chest_Ctrl
+      position: {x: -0.20159595, y: 0, z: 0}
+      rotation: {x: 0, y: -0.0006059155, z: -0, w: 0.9999998}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_neck_Ctrl
+      parentName: nightGuard_Rig:RK_neck_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_head_Base_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_neck_Ctrl
+      position: {x: -0.10782799, y: 0, z: 0}
+      rotation: {x: 0, y: 0.4939939, z: -0, w: 0.86946535}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_head_Base_Ctrl
+      parentName: nightGuard_Rig:RK_head_Base_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_tie_2_Ctrl_GRP
+      parentName: nightGuard_Rig:chest_Ctrl
+      position: {x: -0.17599294, y: 0, z: -0.123739935}
+      rotation: {x: 0.38469636, y: 0.5933032, z: 0.5933032, w: -0.38469636}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_tie_2_Ctrl
+      parentName: nightGuard_Rig:RK_tie_2_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_tie_3_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_tie_2_Ctrl
+      position: {x: -0.07359907, y: -0.00028526704, z: 0}
+      rotation: {x: 0.49903008, y: 0.50096804, z: -0.49903008, w: 0.50096804}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_tie_3_Ctrl
+      parentName: nightGuard_Rig:RK_tie_3_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_clavicle_Ctrl_GRP
+      parentName: nightGuard_Rig:chest_Ctrl
+      position: {x: -0.05278484, y: 0.143619, z: 0.023790497}
+      rotation: {x: 0.587302, y: -0.587302, z: -0.3937973, w: 0.3937973}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_clavicle_Ctrl
+      parentName: nightGuard_Rig:RK_L_clavicle_Ctrl_GRP
+      position: {x: 4.538301e-10, y: 0.000000029928003, z: 7.49876e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_R_clavicle_Ctrl_GRP
+      parentName: nightGuard_Rig:chest_Ctrl
+      position: {x: -0.05278484, y: -0.143619, z: 0.023790497}
+      rotation: {x: 0.3937973, y: 0.3937973, z: 0.587302, w: 0.587302}
+      scale: {x: 1, y: 1, z: -1}
+    - name: nightGuard_Rig:RK_R_clavicle_Ctrl
+      parentName: nightGuard_Rig:RK_R_clavicle_Ctrl_GRP
+      position: {x: 4.538301e-10, y: 0.000000029928003, z: 7.49876e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_hump_Base_Ctrl_GRP
+      parentName: nightGuard_Rig:chest_Ctrl
+      position: {x: -0.023041464, y: 0, z: 0.14737357}
+      rotation: {x: 0, y: 0.56743675, z: -0, w: 0.823417}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_hump_Base_Ctrl
+      parentName: nightGuard_Rig:RK_hump_Base_Ctrl_GRP
+      position: {x: -0.00000005357782, y: 0, z: -0.0000000059120517}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_wrist_Ctrl_GRP
+      parentName: nightGuard_Rig:chest_Ctrl
+      position: {x: 0.06824365, y: -0.8098628, z: -0.15643448}
+      rotation: {x: 0.5925566, y: -0.5925566, z: -0.38584545, w: 0.38584545}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_wrist_Ctrl
+      parentName: nightGuard_Rig:IK_R_wrist_Ctrl_GRP
+      position: {x: 0.0000007856158, y: -0.0000003054932, z: 0.000000054831947}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_R_wrist_Pivot
+      parentName: nightGuard_Rig:IK_R_wrist_Ctrl
+      position: {x: -0.0000007629394, y: 0.00000030517577, z: -0.000000057220458}
+      rotation: {x: 0.97746754, y: -0.15845053, z: 0.13906084, w: -0.010621701}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_R_thumb_1_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_R_wrist_Pivot
+      position: {x: 0.05104416, y: 0.024846572, z: -0.05931093}
+      rotation: {x: 0.45687518, y: -0.08374132, z: 0.8752406, w: 0.13493083}
+      scale: {x: 1, y: 1, z: -1}
+    - name: nightGuard_Rig:RK_R_thumb_1_Ctrl
+      parentName: nightGuard_Rig:RK_R_thumb_1_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_R_thumb_2_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_R_thumb_1_Ctrl
+      position: {x: -0.0450418, y: -0.032274958, z: 0.00074361}
+      rotation: {x: -0.52967334, y: -0.31524262, z: 0.2207373, w: 0.75587255}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_R_thumb_2_Ctrl
+      parentName: nightGuard_Rig:RK_R_thumb_2_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_R_fingers_1_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_R_wrist_Pivot
+      position: {x: 0.10652831, y: -0.009813589, z: -0.0019375131}
+      rotation: {x: 0.0023943186, y: -0.012181535, z: 0.98730713, w: 0.15833673}
+      scale: {x: 1, y: 1, z: -1}
+    - name: nightGuard_Rig:RK_R_fingers_1_Ctrl
+      parentName: nightGuard_Rig:RK_R_fingers_1_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_fingers_2_Ctrl_GRP 1
+      parentName: nightGuard_Rig:RK_R_fingers_1_Ctrl
+      position: {x: -0.068229474, y: -0.037723262, z: 0.0031685466}
+      rotation: {x: -0.24611726, y: -0.023641862, z: 0.44455117, w: 0.8609539}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_fingers_2_Ctrl 1
+      parentName: nightGuard_Rig:RK_L_fingers_2_Ctrl_GRP 1
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_wrist
+      parentName: nightGuard_Rig:IK_R_wrist_Ctrl
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_elbow_Ctrl_GRP
+      parentName: nightGuard_Rig:chest_Ctrl
+      position: {x: 0.37855142, y: 0, z: -1.1182044}
+      rotation: {x: 0.5925566, y: -0.5925566, z: -0.38584545, w: 0.38584545}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_elbow_Ctrl
+      parentName: nightGuard_Rig:IK_R_elbow_Ctrl_GRP
+      position: {x: 0.5679878, y: 1.0884137, z: -0.27703217}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_wrist_GRP
+      parentName: nightGuard_Rig:chest_Ctrl
+      position: {x: 0.06824337, y: 0.8098592, z: -0.15643318}
+      rotation: {x: 0.5925566, y: -0.5925566, z: -0.38584545, w: 0.38584545}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_wrist_Ctrl
+      parentName: nightGuard_Rig:IK_L_wrist_GRP
+      position: {x: -0.0000043714313, y: -0.0000016024902, z: 0.00000032186074}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_wrist
+      parentName: nightGuard_Rig:IK_L_wrist_Ctrl
+      position: {x: 0.0000036621093, y: 0.000001373291, z: -0.0000002670288}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_wrist_Pivot
+      parentName: nightGuard_Rig:IK_L_wrist_Ctrl
+      position: {x: 0.000004348755, y: 0.0000016021728, z: -0.00000032424927}
+      rotation: {x: 0.010616591, y: 0.13908254, z: 0.15844187, w: 0.97746587}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_fingers_1_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_L_wrist_Pivot
+      position: {x: -0.1065316, y: 0.009811765, z: 0.0019328905}
+      rotation: {x: 0.01218488, y: 0.0023759257, z: -0.15832852, w: 0.98730844}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_fingers_1_Ctrl
+      parentName: nightGuard_Rig:RK_L_fingers_1_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_fingers_2_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_L_fingers_1_Ctrl
+      position: {x: -0.068229474, y: -0.037723262, z: 0.0031685466}
+      rotation: {x: -0.24611726, y: -0.023641862, z: 0.44455117, w: 0.8609539}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_fingers_2_Ctrl
+      parentName: nightGuard_Rig:RK_L_fingers_2_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_thumb_1_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_L_wrist_Pivot
+      position: {x: -0.05104904, y: -0.024847545, z: 0.059308365}
+      rotation: {x: 0.08374051, y: 0.45685947, z: -0.134922, w: 0.8752503}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_thumb_1_Ctrl
+      parentName: nightGuard_Rig:RK_L_thumb_1_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_thumb_2_Ctrl_GRP
+      parentName: nightGuard_Rig:RK_L_thumb_1_Ctrl
+      position: {x: -0.0450418, y: -0.032274958, z: 0.00074361}
+      rotation: {x: -0.52967334, y: -0.31524262, z: 0.2207373, w: 0.75587255}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:RK_L_thumb_2_Ctrl
+      parentName: nightGuard_Rig:RK_L_thumb_2_Ctrl_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_elbow_Ctrl_GRP
+      parentName: nightGuard_Rig:chest_Ctrl
+      position: {x: 0.19165279, y: 0.56506956, z: -0.010747757}
+      rotation: {x: 0.5925566, y: -0.5925566, z: -0.38584545, w: 0.38584545}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_elbow_Ctrl
+      parentName: nightGuard_Rig:IK_L_elbow_Ctrl_GRP
+      position: {x: -0, y: 4.2632563e-16, z: -1.0658141e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_foot_Ctrl
+      parentName: nightGuard_Rig:master_Ctrl
+      position: {x: 0.118214995, y: 0, z: -0.18608606}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_ankle_Pivot
+      parentName: nightGuard_Rig:IK_R_foot_Ctrl
+      position: {x: -0.000000019073486, y: 0.0942191, z: 7.105427e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_toeTip_Pivot
+      parentName: nightGuard_Rig:R_ankle_Pivot
+      position: {x: 0.000666008, y: -0.0942191, z: 0.19794051}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_swivel_Pivot
+      parentName: nightGuard_Rig:R_toeTip_Pivot
+      position: {x: -0.000088005065, y: 0.033264633, z: -0.09958715}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_toeTap_Pivot
+      parentName: nightGuard_Rig:R_swivel_Pivot
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_ball
+      parentName: nightGuard_Rig:R_toeTap_Pivot
+      position: {x: -0, y: -0.000000028610229, z: 0.000000047683713}
+      rotation: {x: 0.6809817, y: -0.19043094, z: 0.67914546, w: -0.19687922}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_toe
+      parentName: nightGuard_Rig:R_toeTap_Pivot
+      position: {x: 0.000088005065, y: -0.009325826, z: 0.07616434}
+      rotation: {x: 0.6809817, y: -0.19043094, z: 0.67914546, w: -0.19687922}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_heelLift_Pivot
+      parentName: nightGuard_Rig:R_swivel_Pivot
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_ankle
+      parentName: nightGuard_Rig:R_heelLift_Pivot
+      position: {x: -0.0005779934, y: 0.060954366, z: -0.098353356}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_R_knee_Ctrl
+      parentName: nightGuard_Rig:IK_R_foot_Ctrl
+      position: {x: -0.0038691137, y: 0.49027765, z: 0.18728778}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_foot_Ctrl
+      parentName: nightGuard_Rig:master_Ctrl
+      position: {x: -0.118215054, y: 0.000000019073486, z: -0.18608598}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_ankle_Pivot
+      parentName: nightGuard_Rig:IK_L_foot_Ctrl
+      position: {x: 0.000000009536743, y: 0.0942189, z: 1.4210854e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_toeTip_Pivot
+      parentName: nightGuard_Rig:L_ankle_Pivot
+      position: {x: -0.0006664085, y: -0.09421892, z: 0.19794044}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_swivel_Pivot
+      parentName: nightGuard_Rig:L_toeTip_Pivot
+      position: {x: 0.000088424684, y: 0.033264425, z: -0.099587165}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_toeTap_Pivot
+      parentName: nightGuard_Rig:L_swivel_Pivot
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_toe
+      parentName: nightGuard_Rig:L_toeTap_Pivot
+      position: {x: -0.000088424684, y: -0.0093258405, z: 0.07616429}
+      rotation: {x: 0.19687924, y: 0.67914546, z: 0.19043094, w: 0.6809817}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_ball
+      parentName: nightGuard_Rig:L_toeTap_Pivot
+      position: {x: -0, y: -0.000000028610229, z: 0.000000047683713}
+      rotation: {x: 0.19687924, y: 0.67914546, z: 0.19043094, w: 0.6809817}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_heelLift_Pivot
+      parentName: nightGuard_Rig:L_swivel_Pivot
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_ankle
+      parentName: nightGuard_Rig:L_heelLift_Pivot
+      position: {x: 0.00057798385, y: 0.06095439, z: -0.09835328}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:IK_L_knee_Ctrl
+      parentName: nightGuard_Rig:IK_L_foot_Ctrl
+      position: {x: 0.0038689708, y: 0.49027765, z: 0.1872877}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:nightGuard_Skeleton_GRP
+      parentName: nightGuard_Animation_Test(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:pelvis_J
+      parentName: nightGuard_Rig:nightGuard_Skeleton_GRP
+      position: {x: 0, y: 0.933859, z: -0.00581266}
+      rotation: {x: 0.025325887, y: -0, z: -0, w: 0.99967927}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_hip_J
+      parentName: nightGuard_Rig:pelvis_J
+      position: {x: -0.091362916, y: -0.06883703, z: 0.009310339}
+      rotation: {x: 0.44654107, y: 0.5667235, z: 0.39347118, w: 0.5697421}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_knee_J
+      parentName: nightGuard_Rig:L_hip_J
+      position: {x: -0.38940445, y: 0, z: 0}
+      rotation: {x: 0.9652113, y: 0.260156, z: -0.026192369, w: 0.00011246293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_ankle_J
+      parentName: nightGuard_Rig:L_knee_J
+      position: {x: -0.4092519, y: 0, z: 0}
+      rotation: {x: 0.797006, y: 0.6035842, z: -0.008299283, w: 0.019965004}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_ball_J
+      parentName: nightGuard_Rig:L_ankle_J
+      position: {x: -0.1157115, y: 0, z: 0}
+      rotation: {x: -7.0913544e-13, y: 0.000000010999595, z: -0.00000022304557, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_toe_J
+      parentName: nightGuard_Rig:L_ball_J
+      position: {x: -0.06965174, y: 0.032196365, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:spine_1_J
+      parentName: nightGuard_Rig:pelvis_J
+      position: {x: 2.0051242e-25, y: 0.101952516, z: 0.004721553}
+      rotation: {x: 0.00000002112024, y: 0.9996256, z: 0.027362661, w: 0.0000000058902225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:spine_2_J
+      parentName: nightGuard_Rig:spine_1_J
+      position: {x: -1.1662302e-15, y: 0.16034412, z: -0.0019077404}
+      rotation: {x: -0.22949111, y: -0.22949111, z: -0.6688302, w: 0.6688302}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_clavicle_J
+      parentName: nightGuard_Rig:spine_2_J
+      position: {x: -0.05278484, y: 0.143619, z: 0.023790497}
+      rotation: {x: 0.6412252, y: -0.5255988, z: -0.3340997, w: 0.4482784}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_shoulder_J
+      parentName: nightGuard_Rig:L_clavicle_J
+      position: {x: -0.12785788, y: -0.01572565, z: -0.07716776}
+      rotation: {x: 0.0945724, y: -0.092350416, z: 0.05706872, w: 0.98958105}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_elbow_J
+      parentName: nightGuard_Rig:L_shoulder_J
+      position: {x: -0.31936526, y: -0.006531612, z: -0.002190028}
+      rotation: {x: 0.061752737, y: 0.0024372858, z: -0.006404029, w: 0.998068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_wrist_J
+      parentName: nightGuard_Rig:L_elbow_J
+      position: {x: -0.26691416, y: 0.008767392, z: 0.00426815}
+      rotation: {x: -0.08838635, y: -0.0013312849, z: -0.018963417, w: 0.99590486}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_fingers_1_J
+      parentName: nightGuard_Rig:L_wrist_J
+      position: {x: -0.1065316, y: 0.009811765, z: 0.0019328905}
+      rotation: {x: 0.0140899075, y: -0.004739657, z: -0.17418095, w: 0.98460144}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_fingers_2_J
+      parentName: nightGuard_Rig:L_fingers_1_J
+      position: {x: -0.068229474, y: -0.037723262, z: 0.0031685466}
+      rotation: {x: -0.25104532, y: -0.041390896, z: 0.27810082, w: 0.92624134}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_fingers_3_J
+      parentName: nightGuard_Rig:L_fingers_2_J
+      position: {x: -0.07264091, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_thumb_1_J
+      parentName: nightGuard_Rig:L_wrist_J
+      position: {x: -0.05104904, y: -0.024847545, z: 0.059308365}
+      rotation: {x: 0.07789843, y: 0.43421844, z: -0.17979938, w: 0.87923735}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_thumb_2_J
+      parentName: nightGuard_Rig:L_thumb_1_J
+      position: {x: -0.0450418, y: -0.032274958, z: 0.00074361}
+      rotation: {x: -0.5682761, y: -0.21451223, z: 0.2409197, w: 0.75697064}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:L_thumb_3_J
+      parentName: nightGuard_Rig:L_thumb_2_J
+      position: {x: -0.040442795, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:hump_Base_J
+      parentName: nightGuard_Rig:spine_2_J
+      position: {x: -0.023041464, y: 1.0878599e-15, z: 0.14737357}
+      rotation: {x: 0, y: 0.56743675, z: -0, w: 0.823417}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:hump_Top_J
+      parentName: nightGuard_Rig:hump_Base_J
+      position: {x: -0.31870207, y: 0, z: -0.0000000028962344}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_clavicle_J
+      parentName: nightGuard_Rig:spine_2_J
+      position: {x: -0.052783623, y: -0.143619, z: 0.023787515}
+      rotation: {x: -0.33409837, y: 0.4482801, z: -0.64121914, w: 0.5256057}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_shoulder_J
+      parentName: nightGuard_Rig:R_clavicle_J
+      position: {x: 0.127858, y: 0.01572, z: 0.0771674}
+      rotation: {x: 0.09773885, y: -0.092045836, z: 0.057384066, w: 0.9892835}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_elbow_J
+      parentName: nightGuard_Rig:R_shoulder_J
+      position: {x: 0.31936678, y: 0.006537029, z: 0.0021908917}
+      rotation: {x: 0.061762072, y: 0.0021700258, z: -0.0062825116, w: 0.9980688}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_wrist_J
+      parentName: nightGuard_Rig:R_elbow_J
+      position: {x: 0.26691294, y: -0.008773371, z: -0.0042687464}
+      rotation: {x: -0.09160382, y: -0.0014336423, z: -0.019614255, w: 0.9956013}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_fingers_1_J
+      parentName: nightGuard_Rig:R_wrist_J
+      position: {x: 0.10652941, y: -0.009816283, z: -0.0019413132}
+      rotation: {x: 0.014035457, y: -0.004519738, z: -0.1736906, w: 0.98468995}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_fingers_2_J
+      parentName: nightGuard_Rig:R_fingers_1_J
+      position: {x: 0.06822973, y: 0.03772298, z: -0.0031685196}
+      rotation: {x: -0.27809745, y: 0.9262422, z: -0.2510464, w: 0.04139031}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_fingers_3_J
+      parentName: nightGuard_Rig:R_fingers_2_J
+      position: {x: -0.07263965, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_thumb_1_J
+      parentName: nightGuard_Rig:R_wrist_J
+      position: {x: 0.051045008, y: 0.024844328, z: -0.059314556}
+      rotation: {x: 0.07795433, y: 0.43444327, z: -0.1794049, w: 0.87920195}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_thumb_2_J
+      parentName: nightGuard_Rig:R_thumb_1_J
+      position: {x: 0.04504176, y: 0.032274, z: -0.0007437915}
+      rotation: {x: -0.24091512, y: 0.75697374, z: -0.568276, w: 0.21450691}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_thumb_3_J
+      parentName: nightGuard_Rig:R_thumb_2_J
+      position: {x: -0.040443253, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:tie_1_J
+      parentName: nightGuard_Rig:spine_2_J
+      position: {x: -0.19793548, y: 0, z: -0.074128814}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:tie_2_J
+      parentName: nightGuard_Rig:tie_1_J
+      position: {x: 0.02194255, y: 9.436533e-16, z: -0.049611125}
+      rotation: {x: 0.38469633, y: 0.59330326, z: 0.59330326, w: -0.38469633}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:tie_3_J
+      parentName: nightGuard_Rig:tie_2_J
+      position: {x: -0.07359907, y: -0.00028526704, z: 3.6651227e-16}
+      rotation: {x: 0.49903008, y: 0.50096804, z: -0.49903008, w: 0.50096804}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:tie_4_J
+      parentName: nightGuard_Rig:tie_3_J
+      position: {x: -0, y: -0.11197485, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:neck_J
+      parentName: nightGuard_Rig:spine_2_J
+      position: {x: -0.20159595, y: 4.4111006e-16, z: 4.2632563e-16}
+      rotation: {x: -0.000000014901158, y: 0.1401593, z: -0.000000026077027, w: 0.99012893}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:head_Base_J
+      parentName: nightGuard_Rig:neck_J
+      position: {x: -0.10782799, y: 7.1849543e-16, z: -1.4210854e-16}
+      rotation: {x: 0, y: 0.4939939, z: -0, w: 0.86946535}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:head_Top_J
+      parentName: nightGuard_Rig:head_Base_J
+      position: {x: -0.2030856, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_hip_J
+      parentName: nightGuard_Rig:pelvis_J
+      position: {x: 0.09136289, y: -0.06883702, z: 0.009310063}
+      rotation: {x: 0.5697422, y: -0.39347163, z: 0.56672305, w: -0.44654098}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_knee_J
+      parentName: nightGuard_Rig:R_hip_J
+      position: {x: 0.38940462, y: -0.0000002074932, z: -0.00000021542917}
+      rotation: {x: 0.96521103, y: 0.26015687, z: -0.026192475, w: 0.00011237691}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_ankle_J
+      parentName: nightGuard_Rig:R_knee_J
+      position: {x: 0.4092518, y: -0.00000007441673, z: -0.00000017210732}
+      rotation: {x: 0.79700536, y: 0.6035852, z: -0.008299149, w: 0.01996435}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_ball_J
+      parentName: nightGuard_Rig:R_ankle_J
+      position: {x: 0.115711555, y: -0.000000056922943, z: 0.000000021398899}
+      rotation: {x: -2.3558512e-12, y: 0.000000011004433, z: -0.00000022316979, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:R_toe_J
+      parentName: nightGuard_Rig:R_ball_J
+      position: {x: 0.069651775, y: -0.03219641, z: -0.00000042980835}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:nightGuard_Geometry_GRP
+      parentName: nightGuard_Animation_Test(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:nightGuard
+      parentName: nightGuard_Rig:nightGuard_Geometry_GRP
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:nightGuard_Torch_GRP
+      parentName: nightGuard_Animation_Test(Clone)
+      position: {x: 0.80986357, y: 1.0050951, z: -0.105240114}
+      rotation: {x: 3.851086e-16, y: 8.326673e-17, z: -1.6653345e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: nightGuard_Rig:nightGuard_Torch
+      parentName: nightGuard_Rig:nightGuard_Torch_GRP
+      position: {x: -0, y: 1.4210854e-16, z: -1.7763568e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
