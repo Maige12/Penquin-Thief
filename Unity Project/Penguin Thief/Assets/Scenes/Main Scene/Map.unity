@@ -238,6 +238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -247,6 +252,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -397,6 +407,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -406,6 +421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -526,6 +546,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -535,6 +560,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -640,6 +670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -755,6 +790,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -764,6 +804,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -884,6 +929,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -893,6 +943,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -1008,6 +1063,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1017,6 +1077,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -1132,6 +1197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1141,6 +1211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -1261,6 +1336,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1270,6 +1350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -1400,6 +1485,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1409,6 +1499,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -1528,6 +1623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -1658,6 +1758,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1667,6 +1772,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -1786,6 +1896,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
@@ -1931,6 +2046,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1940,6 +2060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -2060,6 +2185,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2069,6 +2199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -2219,6 +2354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2228,6 +2368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -2344,6 +2489,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2353,6 +2503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -2462,6 +2617,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -2577,6 +2737,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2586,6 +2751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -2687,6 +2857,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2696,6 +2871,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -2782,6 +2962,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2791,6 +2976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -2921,6 +3111,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2930,6 +3125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -3045,6 +3245,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3054,6 +3259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -3174,6 +3384,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3183,6 +3398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -3303,6 +3523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3312,6 +3537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -3354,7 +3584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 427971538}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Long Modern Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3493,6 +3723,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!1 &441551514 stripped
@@ -3611,6 +3846,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -3731,6 +3971,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
 --- !u!4 &473311726 stripped
@@ -3845,6 +4090,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3854,6 +4104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -3969,6 +4224,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3978,6 +4238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -4093,6 +4358,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4102,6 +4372,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -4237,6 +4512,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
@@ -4444,6 +4724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Short Standing Shelves (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 72e72dfbd9f7cf1429a3a990ac83d155,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4756149001718578693, guid: 72e72dfbd9f7cf1429a3a990ac83d155,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4453,6 +4738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756149001718578693, guid: 72e72dfbd9f7cf1429a3a990ac83d155,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e72dfbd9f7cf1429a3a990ac83d155, type: 3}
@@ -4579,6 +4869,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4588,6 +4883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -4694,6 +4994,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!1 &625679073 stripped
@@ -4793,6 +5098,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4802,6 +5112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -4917,6 +5232,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4926,6 +5246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -5046,6 +5371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5055,6 +5385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -5200,6 +5535,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5209,6 +5549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -5369,6 +5714,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5378,6 +5728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -5478,6 +5833,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5487,6 +5847,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -5597,6 +5962,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5606,6 +5976,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -5721,6 +6096,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5730,6 +6110,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -5850,6 +6235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5859,6 +6249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -5955,6 +6350,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5964,6 +6364,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -6073,6 +6478,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -6188,6 +6598,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6197,6 +6612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -6302,6 +6722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6311,6 +6736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -6426,6 +6856,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6435,6 +6870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -6540,6 +6980,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -6655,6 +7100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6664,6 +7114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -6784,6 +7239,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6793,6 +7253,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -6913,6 +7378,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Short Standing Shelves (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 72e72dfbd9f7cf1429a3a990ac83d155,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4756149001718578693, guid: 72e72dfbd9f7cf1429a3a990ac83d155,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6922,6 +7392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756149001718578693, guid: 72e72dfbd9f7cf1429a3a990ac83d155,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e72dfbd9f7cf1429a3a990ac83d155, type: 3}
@@ -7018,6 +7493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7027,6 +7507,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -7113,6 +7598,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7122,6 +7612,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -7237,6 +7732,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7246,6 +7746,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -7347,6 +7852,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7356,6 +7866,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -7506,6 +8021,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7515,6 +8035,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -7557,7 +8082,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 964391084}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7715,6 +8240,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!1 &969098465 stripped
@@ -7824,6 +8354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7833,6 +8368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -7949,6 +8489,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7958,6 +8503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -8098,6 +8648,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8107,6 +8662,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -8391,6 +8951,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!1 &1055681773 stripped
@@ -8505,6 +9070,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8514,6 +9084,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -8634,6 +9209,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8643,6 +9223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -8749,6 +9334,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8758,6 +9348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -8863,6 +9458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
@@ -8978,6 +9578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8987,6 +9592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -9030,7 +9640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1111974133}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Short Standing Shelves (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9135,6 +9745,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
 --- !u!1 &1115520685 stripped
@@ -9187,7 +9802,7 @@ PrefabInstance:
     - target: {fileID: 4380638599661270643, guid: 08cadacf940bad2469e888ab986fd902,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0000052452087
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 4380638599661270643, guid: 08cadacf940bad2469e888ab986fd902,
         type: 3}
@@ -9329,6 +9944,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9338,6 +9958,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -9463,6 +10088,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!1 &1154341077 stripped
@@ -9581,6 +10211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
@@ -9726,6 +10361,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9735,6 +10375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -9777,7 +10422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203444294}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Long Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9884,6 +10529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9893,6 +10543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -10008,6 +10663,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10017,6 +10677,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -10122,6 +10787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -10242,6 +10912,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!1 &1305539282 stripped
@@ -10356,6 +11031,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10365,6 +11045,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -10485,6 +11170,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10494,6 +11184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -10600,6 +11295,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10609,6 +11309,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -10719,6 +11424,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10728,6 +11438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -10843,6 +11558,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10852,6 +11572,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -10972,6 +11697,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10981,6 +11711,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -11077,6 +11812,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f091788e1e62aed4e8078cf8ca050f6c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f091788e1e62aed4e8078cf8ca050f6c, type: 3}
 --- !u!1 &1362707361 stripped
@@ -11116,7 +11856,7 @@ GameObject:
   - component: {fileID: 1392485909}
   - component: {fileID: 1392485911}
   - component: {fileID: 1392485910}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_standing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11269,6 +12009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11278,6 +12023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -11459,6 +12209,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11468,6 +12223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -11564,6 +12324,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
 --- !u!1 &1441597142 stripped
@@ -11601,7 +12366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1450418985}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Short Standing Shelves (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11635,6 +12400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Short Standing Shelves (6) Variant 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 273900910365635332, guid: 8e472f6291f1a4c4b9154c1a3e217404,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 614398034604698046, guid: 8e472f6291f1a4c4b9154c1a3e217404,
         type: 3}
@@ -11705,6 +12475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9805023
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552167504642666576, guid: 8e472f6291f1a4c4b9154c1a3e217404,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e472f6291f1a4c4b9154c1a3e217404, type: 3}
@@ -11789,6 +12564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -11909,6 +12689,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
 --- !u!4 &1481221340 stripped
@@ -12028,6 +12813,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!4 &1493737431 stripped
@@ -12136,6 +12926,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -12251,6 +13046,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (46)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12260,6 +13060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -12355,6 +13160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f091788e1e62aed4e8078cf8ca050f6c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f091788e1e62aed4e8078cf8ca050f6c, type: 3}
@@ -12470,6 +13280,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12479,6 +13294,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -12604,6 +13424,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!1 &1543324581 stripped
@@ -12718,6 +13543,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12727,6 +13557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -12828,6 +13663,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12837,6 +13677,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -12967,6 +13812,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12976,6 +13826,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -13081,6 +13936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
@@ -13279,6 +14139,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13288,6 +14153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -13453,6 +14323,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f091788e1e62aed4e8078cf8ca050f6c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f091788e1e62aed4e8078cf8ca050f6c, type: 3}
 --- !u!1 &1669257368 stripped
@@ -13552,6 +14427,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13561,6 +14441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -13670,6 +14555,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -13785,6 +14675,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13794,6 +14689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -13895,6 +14795,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13904,6 +14809,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -14005,6 +14915,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14014,6 +14929,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -14115,6 +15035,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14124,6 +15049,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -14219,6 +15149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -14334,6 +15269,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14343,6 +15283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -14463,6 +15408,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14472,6 +15422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -14568,6 +15523,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14577,6 +15537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -14697,6 +15662,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
 --- !u!1 &1837588541 stripped
@@ -14796,6 +15766,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14805,6 +15780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -14842,7 +15822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1860687699}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shelves and Tables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14952,6 +15932,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
 --- !u!1 &1865197300 stripped
@@ -15051,6 +16036,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15060,6 +16050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563195829068290362, guid: 520b76b81ca63aa41a20e2703565a6bc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 520b76b81ca63aa41a20e2703565a6bc, type: 3}
@@ -15180,6 +16175,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!4 &1866176023 stripped
@@ -15216,7 +16216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1867301078}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Clothes Rack on Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15346,6 +16346,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15355,6 +16360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -15378,7 +16388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1887290159}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Clothes Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15472,7 +16482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1914269494}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Short Standing Shelves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15585,6 +16595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15594,6 +16609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -15714,6 +16734,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15723,6 +16748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -15843,6 +16873,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15852,6 +16887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -15972,6 +17012,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15981,6 +17026,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -16116,6 +17166,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf16b4bc0ee659498d51b3bfbd269b1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf16b4bc0ee659498d51b3bfbd269b1, type: 3}
 --- !u!1 &2006129550 stripped
@@ -16155,7 +17210,7 @@ GameObject:
   - component: {fileID: 2012188221}
   - component: {fileID: 2012188223}
   - component: {fileID: 2012188222}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_standing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16313,6 +17368,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16322,6 +17382,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -16437,6 +17502,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
 --- !u!1 &2053000002 stripped
@@ -16551,6 +17621,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16560,6 +17635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -16680,6 +17760,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16689,6 +17774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -16804,6 +17894,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
 --- !u!1 &2073538625 stripped
@@ -16912,6 +18007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -17027,6 +18127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Shelf (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17036,6 +18141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5067928266459274271, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
@@ -17161,6 +18271,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1ee8c8312b6fbd41b6d64a26bbe68ee, type: 3}
@@ -17316,6 +18431,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Short Standing Shelves (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097063354405084229, guid: 37b2f0fa2faaf5d408067f46cd323ae6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4754069262705319697, guid: 37b2f0fa2faaf5d408067f46cd323ae6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37b2f0fa2faaf5d408067f46cd323ae6, type: 3}
@@ -17473,13 +18598,28 @@ GameObject:
   - component: {fileID: 6735537798721365656}
   - component: {fileID: 2804989828988275992}
   - component: {fileID: 5256601433413943367}
-  m_Layer: 0
+  - component: {fileID: 654926211982508385}
+  m_Layer: 11
   m_Name: loadingBay_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &654926211982508385
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654926211982508384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6036514690827526757, guid: 36dbacbf4fb01bf44976e0b39e0dd31f, type: 3}
 --- !u!1 &759352225115168687
 GameObject:
   m_ObjectHideFlags: 0
@@ -17491,7 +18631,7 @@ GameObject:
   - component: {fileID: 8381440360818085639}
   - component: {fileID: 4891155009468392926}
   - component: {fileID: 5333078893458938348}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: loadingBay_parking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17577,7 +18717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652921561199}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Short Standing Shelves (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17699,7 +18839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8588495683524666060}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mainRoom_alcove_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17717,7 +18857,7 @@ GameObject:
   - component: {fileID: 3993248960233080738}
   - component: {fileID: 4057636284010657068}
   - component: {fileID: 4371746930695583005}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: alcove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17823,10 +18963,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1914269494}
     m_Modifications:
+    - target: {fileID: 3187871204261310932, guid: b9fbd8fc3d637214d9d0716309277c04,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7133071209134011008, guid: b9fbd8fc3d637214d9d0716309277c04,
         type: 3}
       propertyPath: m_Name
       value: Short Standing Shelves (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133071209134011008, guid: b9fbd8fc3d637214d9d0716309277c04,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7617296522615449658, guid: b9fbd8fc3d637214d9d0716309277c04,
         type: 3}
@@ -17902,7 +19052,7 @@ GameObject:
   - component: {fileID: 1206589263191178820}
   - component: {fileID: 4604911018754611629}
   - component: {fileID: 8538974228159494118}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: entrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17920,7 +19070,7 @@ GameObject:
   - component: {fileID: 3954564013495317923}
   - component: {fileID: 6938828976353845430}
   - component: {fileID: 3489945212578436026}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: loadingBay_gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18117,7 +19267,7 @@ GameObject:
   - component: {fileID: 2444256570736247808}
   - component: {fileID: 9128958144065504285}
   - component: {fileID: 3102061837341374033}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mainRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18155,7 +19305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6779254170154608846}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: entrance_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18243,7 +19393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 90092344996385497}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: loadingBay_gate_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18355,6 +19505,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Modern Shelf (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4057205395750624153, guid: 981090fc122838542ada3e656175f408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041837713801773042, guid: 981090fc122838542ada3e656175f408,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 981090fc122838542ada3e656175f408, type: 3}
 --- !u!33 &3833102564390977975
@@ -18376,13 +19536,28 @@ GameObject:
   - component: {fileID: 1902115970408271712}
   - component: {fileID: 7885841559324109015}
   - component: {fileID: 813161449749671669}
-  m_Layer: 0
+  - component: {fileID: 3910954435269447941}
+  m_Layer: 11
   m_Name: loadingBay_room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &3910954435269447941
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3910954435269447940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 559992633038993702, guid: 36dbacbf4fb01bf44976e0b39e0dd31f, type: 3}
 --- !u!4 &3954564013495317923
 Transform:
   m_ObjectHideFlags: 0
@@ -18452,7 +19627,7 @@ GameObject:
   - component: {fileID: 2572003030043657928}
   - component: {fileID: 1266388426860204658}
   - component: {fileID: 7822849396192257986}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: loadingBay_roller_closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18538,6 +19713,11 @@ PrefabInstance:
       propertyPath: myPath
       value: 
       objectReference: {fileID: 136870618}
+    - target: {fileID: 6617404953671253325, guid: 37d68e7b40481d240acc488c4848d9f9,
+        type: 3}
+      propertyPath: layermask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
     - target: {fileID: 8555082816274985679, guid: 37d68e7b40481d240acc488c4848d9f9,
         type: 3}
       propertyPath: m_Name
@@ -18681,7 +19861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3429972855813399741}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mainRoom_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18724,7 +19904,7 @@ GameObject:
   - component: {fileID: 4439996871750522564}
   - component: {fileID: 5546054215654278771}
   - component: {fileID: 7308297720423285510}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_standing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18764,7 +19944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225259759881271591}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: loadingBay_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18790,6 +19970,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: table_short (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068467507226672307, guid: 5d6c36cac6358c64c8a7dc237de9e541,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5068467507226672318, guid: 5d6c36cac6358c64c8a7dc237de9e541,
         type: 3}
@@ -18859,7 +20044,7 @@ GameObject:
   - component: {fileID: 439429932984598128}
   - component: {fileID: 3833102564390977975}
   - component: {fileID: 7273978364041064285}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: entrance_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18877,7 +20062,7 @@ GameObject:
   - component: {fileID: 1847343072761110783}
   - component: {fileID: 5047830305550533233}
   - component: {fileID: 4240501988001173263}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: loadingBay_roller_open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19081,10 +20266,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1914269494}
     m_Modifications:
+    - target: {fileID: 1048565976213551669, guid: b3d1cd05cd8614e4d9a7e02689c749d1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4633382353376016737, guid: b3d1cd05cd8614e4d9a7e02689c749d1,
         type: 3}
       propertyPath: m_Name
       value: Short Standing Shelves (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633382353376016737, guid: b3d1cd05cd8614e4d9a7e02689c749d1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5406224041121555419, guid: b3d1cd05cd8614e4d9a7e02689c749d1,
         type: 3}
@@ -19316,6 +20511,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clothes Rack on Wheels
       objectReference: {fileID: 0}
+    - target: {fileID: 5932219116133780222, guid: b8762aa018aadb54287a54a0dd24a29f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6420067599536607300, guid: b8762aa018aadb54287a54a0dd24a29f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19462,6 +20662,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Long Table (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7793537689725386008, guid: 85d5f8378c6f56048add1db5c36b0598,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85d5f8378c6f56048add1db5c36b0598, type: 3}
 --- !u!4 &6983214870316342565 stripped
@@ -19510,7 +20715,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7146574902809855971}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: loadingBay_roller_GRP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19567,7 +20772,7 @@ GameObject:
   - component: {fileID: 6983024883851509668}
   - component: {fileID: 2687978369030911888}
   - component: {fileID: 9107867537645748940}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: loadingBay_gate1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19625,7 +20830,7 @@ GameObject:
   - component: {fileID: 3421316207984828276}
   - component: {fileID: 5337903679534627127}
   - component: {fileID: 7731378252913427202}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mainRoom_skylight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19821,7 +21026,7 @@ GameObject:
   - component: {fileID: 1657416592848740997}
   - component: {fileID: 3143640600146549707}
   - component: {fileID: 507431373911684388}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: doorSmall_closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19839,13 +21044,28 @@ GameObject:
   - component: {fileID: 3749076095870470156}
   - component: {fileID: 1037916503920598988}
   - component: {fileID: 1218463666079502396}
-  m_Layer: 0
+  - component: {fileID: 8152107177401102732}
+  m_Layer: 11
   m_Name: ramp_doorLarge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &8152107177401102732
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8152107177401102731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5570088401937489776, guid: 36dbacbf4fb01bf44976e0b39e0dd31f, type: 3}
 --- !u!4 &8174619740846987050
 Transform:
   m_ObjectHideFlags: 0
@@ -19873,7 +21093,7 @@ GameObject:
   - component: {fileID: 2053555842521456240}
   - component: {fileID: 3685065740584886939}
   - component: {fileID: 1532398733630688788}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: doorSmall_closed 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20096,7 +21316,7 @@ GameObject:
   - component: {fileID: 6582754688058933250}
   - component: {fileID: 2369268786528557689}
   - component: {fileID: 5308281177881418451}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: loadingBay_roller_closed1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
