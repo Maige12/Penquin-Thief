@@ -51,6 +51,11 @@ public class NightGuardAI : MonoBehaviour
 
     public bool alertSound; //A Boolean to control whether the Nigh Guard can play his Alert/Unalert sound
 
+    [SerializeField]
+    float walkSpeed = 3.5f;
+    [SerializeField]
+    float runSpeed = 6.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,7 +99,7 @@ public class NightGuardAI : MonoBehaviour
         //if the ai can see the player, go to the player's transform position
         if (canSeePlayer == true)
         {
-            GetComponent<NavMeshAgent>().speed = 10.0f;
+            GetComponent<NavMeshAgent>().speed = runSpeed;
             nav.isStopped = false;
             nav.SetDestination(player.position); //Sets the destination at where the player is
             lastKnownPosition = player.position; //updates the last known location to the players current location
@@ -104,7 +109,7 @@ public class NightGuardAI : MonoBehaviour
             //If player can't be seen, continue patrolling
             if (isPatrolling)
             {
-                GetComponent<NavMeshAgent>().speed = 3.5f;
+                GetComponent<NavMeshAgent>().speed = walkSpeed;
                 //Head to next path point
                 nav.isStopped = false;
                 nav.SetDestination(myPathPoints[currentPoint].transform.position); //sets the destination to the pathpoints
