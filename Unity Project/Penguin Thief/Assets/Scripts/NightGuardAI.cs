@@ -74,7 +74,7 @@ public class NightGuardAI : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //This is what happens when the nightguard collides with the player
-        if (collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
             GameOverScript.OpenGameOver(); //Opens Game Over Screen (Controlled by GameOverScript.cs Script)
         }
@@ -128,9 +128,6 @@ public class NightGuardAI : MonoBehaviour
             }
         }
 
-
-
-
         if(Physics.SphereCast(origin, sphereRadius, direction, out hit, maxDistance, layermask, QueryTriggerInteraction.UseGlobal))//the main code used to cast the ray and give it the properties we want, the "Use Global", allows us to create collisions globally.
         {
             CurrentObject = hit.transform.gameObject;//Sets the window in the menu to current object
@@ -138,7 +135,9 @@ public class NightGuardAI : MonoBehaviour
             
             if(CurrentObject.tag == "Player")
             {
-                canSeePlayer = true;       
+                canSeePlayer = true;
+
+                lastKnownPosition = player.position;
             }
             else
             {
@@ -151,9 +150,6 @@ public class NightGuardAI : MonoBehaviour
             CurrentObject = null;//if the raycast doesn't hit anything, then the menu will return a null state
         }
     }
-
-
-    
 
     void CheckPOV() //Checks the detection range of the Ai
     {
