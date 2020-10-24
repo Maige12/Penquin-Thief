@@ -19,48 +19,62 @@ public static class HelperMethods
 
 public class NightGuardAI : MonoBehaviour
 {
+    Vector3 origin;//A private Vector3 which is set to the players position at all time, this allows the sphere to follow them
+    Vector3 direction;// This Vector 3 is used for orientation, it has no current use in the current iteraction of our sphere and is an artefact
+    Vector3 lastKnownPosition; //Last known position of the player
 
-    private Vector3 origin;//A private Vector3 which is set to the players position at all time, this allows the sphere to follow them
-    public float sphereRadius;// The size of the sphere which is attached to the player, this is public to allow for balance testing and tweaking without having to manually access the code
-    public float maxDistance;// The max distance script allows for the sphere to cast in a direction, in which case this variable decides how far it is cast, this can have potential uses later on, but is an artifact from the tutorial I followed
-    private Vector3 direction;// This Vector 3 is used for orientation, it has no current use in the current iteraction of our sphere and is an artefact
-    public LayerMask layermask;//This layermask allows us to hide certain objects from the raycast and make it so we only collide with certain items within the map.
-    public GameObject CurrentObject;// A public "GameObject" using for testing and debugging which allows us to see what we are currently colliding with
+    float sphereRadius;// The size of the sphere which is attached to the player, this is public to allow for balance testing and tweaking without having to manually access the code
+    float currentHitDistance;//The distance between the the raycast hit and the object it is colliding with, this is partially inused with our current iteracion
 
-    private float currentHitDistance;//The distance between the the raycast hit and the object it is colliding with, this is partially inused with our current iteracion
+    int currentPoint = 0; //The current Patrol Point the Night Guard is travelling to
 
-    public NightGuardAI _nightguardAI;
-    // Start is called before the first frame update
+    bool isPatrolling = true; //Ai will continue following patrol points if == true
+    bool alertSound; //A Boolean to control whether the Nigh Guard can play his Alert/Unalert sound
+
+    GameObject CurrentObject;// A public "GameObject" using for testing and debugging which allows us to see what we are currently colliding with
+
     Transform player;
 
     NavMeshAgent nav;
 
-    public bool canSeePlayer = false; //This detects if the ai is able to detect the player
-    public LayerMask layerMask; //The layer that the walls will be on. Ai cannot see player if raycast hits these walls
-    public float fieldOfViewRange; //The angle in front of the Ai that can see the player
-    public float hearingRange; //A bubble around the Ai that can detect the player
-
-    public bool isPatrolling = true; //Ai will continue following patrol points if ==true
-    public List<GameObject> myPathPoints; //These are the Patrol points. Ai will follow them one by one, top to bottom
-    public GameObject myPath; 
-    public int currentPoint = 0; //Where the first point is
-    public Vector3 lastKnownPosition; //Last known position of the player
+    PlayerControllerRigid playerController;
 
     [SerializeField]
-    GameObject visionMesh; //The mesh used for the vision of the Night Guard
+    LayerMask layermask;//This layermask allows us to hide certain objects from the raycast and make it so we only collide with certain items within the map.
+    [SerializeField]
+    LayerMask layerMask; //The layer that the walls will be on. Ai cannot see player if raycast hits these walls
 
-    public bool alertSound; //A Boolean to control whether the Nigh Guard can play his Alert/Unalert sound
-
+    [SerializeField]
+    float fieldOfViewRange; //The angle in front of the Ai that can see the player
+    [SerializeField]
+    float hearingRange; //A bubble around the Ai that can detect the player
+    [SerializeField]
+    float maxDistance; // The max distance script allows for the sphere to cast in a direction, in which case this variable decides how far it is cast
     [SerializeField]
     float walkSpeed = 3.5f;
     [SerializeField]
     float runSpeed = 6.0f;
+
+    [SerializeField]
+    GameObject visionMesh; //The mesh used for the vision of the Night Guard
+    [SerializeField]
+    GameObject myPath; //The Patrol Path that the Night Guard will follow
+    [SerializeField]
+    GameObject playerObject; //The player Game Object
+
+    [SerializeField]
+    List<GameObject> myPathPoints; //These are the Patrol points. Ai will follow them one by one, top to bottom
+
+    [HideInInspector]
+    public bool canSeePlayer = false; //This detects if the ai is able to detect the player
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform; //Find the location of the player
         nav = GetComponent<NavMeshAgent>(); //Activate Navmesh component
+
+        playerController = playerObject.GetComponent<PlayerControllerRigid>();
 
         //initialise the path points
         myPathPoints = new List<GameObject>();
@@ -76,22 +90,27 @@ public class NightGuardAI : MonoBehaviour
         //This is what happens when the nightguard collides with the player
         if(collision.gameObject.tag == "Player")
         {
-            GameOverScript.OpenGameOver(); //Opens Game Over Screen (Controlled by GameOverScript.cs Script)
+            //GameOverScript.OpenGameOver(); //Opens Game Over Screen (Controlled by GameOverScript.cs Script)
+
+            playerController.ResetPlayer();
+
+            canSeePlayer = false;
         }
 
+        /*
         if(collision.gameObject.layer == 8) //Checks to see if the Night Guard is colliding with Layer 8 (Locked Doors)
         {
             Physics.IgnoreCollision(collision.collider, GetComponent<Collider>()); //Stops collision between the Night Guard and Locked Doors
         }
+        */
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        origin = transform.position;// Sets the origin to the players current transform
-        direction = transform.forward;//sets the transform of the sphere to the players direction
-        RaycastHit hit;//the structure used to get information back from the spherecast
+        origin = transform.position; // Sets the origin to the players current transform
+        direction = transform.forward; //sets the transform of the sphere to the players direction
+        RaycastHit hit; //the structure used to get information back from the spherecast
         // Can the player be seen?
         
         CheckPOV();
@@ -137,11 +156,16 @@ public class NightGuardAI : MonoBehaviour
             {
                 canSeePlayer = true;
 
-                lastKnownPosition = player.position;
+                lastKnownPosition = player.transform.position;
             }
             else
             {
-                canSeePlayer = false;
+                nav.SetDestination(lastKnownPosition);
+
+                if ((gameObject.transform.position == lastKnownPosition) && (CurrentObject.tag != "Player"))
+                {
+                    canSeePlayer = false;
+                }
             }
         }
         else

@@ -46,10 +46,13 @@ public class PlayerControllerRigid : MonoBehaviour
     Collider col; //The player's collider
     public float targetTime; //the amount of time that the slide will go for.
 
+    ItemCollectScript itemCollect;
+
     Vector2 playerInput; //Vector2 to read the player input
     Vector3 desiredVelocity; //The desired velocity of the player
     Vector3 velocity; //The current velocity of the player
     Vector3 contactNormal; //The current Normal Vector of the object the player is in contact with
+    Vector3 initPosition; //The inital position of the player at the start of the game
     Vector3 ProjectOnContactPlane(Vector3 vector) //This is to store a Vector projected along the plane that the player is walking along
     {
         return vector - contactNormal * Vector3.Dot(vector, contactNormal); //This returns a Vector which is equal to the current Contactr Normal Vector, multiplied by the dot product of an inputted Vector and Contact Normal
@@ -67,11 +70,15 @@ public class PlayerControllerRigid : MonoBehaviour
         playerRigid = GetComponent<Rigidbody>(); //Finds the Rigidbody Component attached to the player
         col = GetComponent<Collider>(); //Finds the collider attached to the GameObject
 
+        itemCollect = GetComponent<ItemCollectScript>(); //Finds the Item Collection script attached to the player
+
         dynFriction = col.material.dynamicFriction; //Sets dynFriction to be equal to the current Dynamic Friction Value
         statFriction = col.material.staticFriction; //Sets statFriction to be equal to the current Static Friction Value
 
         playerInput.x = 0.0f; //Left/Right (X) Movement
         playerInput.y = 0.0f; //Forward/Back (Y) Movement
+
+        initPosition = transform.position; //Gets the initial position of the player
 
         OnValidate(); //Calls the OnValidate() Function
     }
@@ -274,6 +281,13 @@ public class PlayerControllerRigid : MonoBehaviour
 
             slideActive = true; //sets slide active to true, which stops the player from stacking slides              
         }
+    }
+
+    public void ResetPlayer() //This will reset the players position to the inital spawn position and reset their current inventory
+    {
+        itemCollect.CaughtReset();
+
+        transform.position = initPosition; //Sets the current position of the player to the player's initial spawn position
     }
 }
 

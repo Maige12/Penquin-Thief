@@ -4766,6 +4766,7 @@ GameObject:
   - component: {fileID: 8895364347414192259}
   - component: {fileID: 6671618817021236297}
   - component: {fileID: 6453912184115134004}
+  - component: {fileID: 8088924116346481872}
   m_Layer: 0
   m_Name: testPickupLarge
   m_TagString: Collectable Large
@@ -4780,7 +4781,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5158492423914223004}
-  m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 3.8568025, y: 0.6843, z: -1.5537388}
   m_LocalScale: {x: 0.024089, y: 0.024089, z: 0.024089}
   m_Children:
@@ -4848,3 +4849,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 26.949648, y: 4.481434, z: 12.50404}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8088924116346481872
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5158492423914223004}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f593deb329729a74f8dea17de130fee1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

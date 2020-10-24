@@ -36,7 +36,7 @@ public class OrbitCameraController : MonoBehaviour
     [SerializeField]
     bool invertY; //Inverts the Y Axis of lookRotation
 
-    Vector2 orbitAngles = new Vector2(45f, 180f); //Vertical (Pitch) angle, Horizontal (Yaw) angle
+    Vector2 orbitAngles = new Vector2(25f, 180f); //Vertical (Pitch) angle, Horizontal (Yaw) angle
     Vector3 focusPoint; //The point that the camera will focus on
 
     PlayerControllerRigid playerControl; //An object representing the PlayerControllerRigid.cs script

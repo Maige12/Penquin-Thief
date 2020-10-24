@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro; //Adds the Text Mesh Pro Library
+using UnityEngine.SceneManagement; //Adds functionality so we can Load Scenes
 
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] //Allows me to set the object through the Inspector
-    GameObject infoScreenObj; //The Info Screen canvcas object
+    GameObject infoScreenObj; //The Info Screen canvas object
     [SerializeField] //Allows me to set the object through the Inspector
-    GameObject pauseScreenObj; //The Pause Screen canvcas object
+    GameObject pauseScreenObj; //The Pause Screen canvas object
     [SerializeField] //Allows me to set the object through the Inspector
-    GameObject resultScreenObj; //The Result Screen canvcas object
+    GameObject resultScreenObj; //The Result Screen canvas object
+    [SerializeField] //Allows me to set the object through the Inspector
+    GameObject inGameScreenObj; //The In-Game Screen canvas object 
 
     [SerializeField] //Allows me to set the object through the Inspector
     TextMeshProUGUI finalPoints; //The final point total that the player has
@@ -47,10 +50,20 @@ public class MenuManager : MonoBehaviour
             resultScreenObj.SetActive(false);
         }
 
+        if(inGameScreenObj == null)
+        {
+            inGameScreenObj = GameObject.Find("In Game");
+        }
+
         menuOpen = false;
         gameWin = false;
 
-        if(pauseScreenObj == true)
+        if (inGameScreenObj == true)
+        {
+            inGameScreenObj.SetActive(false);
+        }
+
+        if (pauseScreenObj == true)
         {
             pauseScreenObj.SetActive(false);
         }
@@ -132,6 +145,8 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined; //Locks cursor to the game view
         Cursor.visible = true; //Shows Cursor
 
+        inGameScreenObj.SetActive(false);
+
         menuOpen = true; //Tells the system the player is in a Menu
     }
 
@@ -151,7 +166,16 @@ public class MenuManager : MonoBehaviour
             currentMenu.SetActive(false); //Seys the current menu to Inactive
         }
 
+        inGameScreenObj.SetActive(true);
+
         currentMenu = null; //Clears out the current meny value
+    }
+
+    public void RestartGame() 
+    {
+        Debug.Log("Restarting Game");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); //Restarts the game by grabbing the currently active scene
     }
 
     public void QuitGame()

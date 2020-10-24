@@ -26,7 +26,8 @@ public class ItemCollectScript : MonoBehaviour
     public int score; //Player's total score points
 
     public GameObject[] collectLarge;
-    public GameObject canvas; 
+    public GameObject currentLargeObj;
+    public GameObject canvas;
     public int totalLarge;
 
     MenuManager menuManagerScript;
@@ -51,7 +52,7 @@ public class ItemCollectScript : MonoBehaviour
         switch (collision.gameObject.tag) //Checks the collision tag
         {
             case "Key": //Checks if the tag was 'Key' (Usable Keys)
-                if(keys < 0) //Checks to see if the current value is less than 0
+                if (keys < 0) //Checks to see if the current value is less than 0
                 {
                     Debug.Log("Error: Value of 'keys' below 0, value equal to " + keys + ", resetting to 0"); //Warns the developer that the value is less than 0
 
@@ -73,37 +74,48 @@ public class ItemCollectScript : MonoBehaviour
                     collectableSmall = 0; //Resets the value if it is less than 0
                 }
 
-                collectableSmall++; //Increments the value by 1
+                if (collectableSmall < 5) //Checks to see if the number of collectables the player has is less then 5 (The Maximum)
+                {
+                    collectableSmall++; //Increments the value by 1
 
-                Debug.Log("'collectableSmall' value incremented by 1, value is now " + collectableSmall); //Outputs the current amount of collectableSmall objects to the developer console
+                    Debug.Log("'collectableSmall' value incremented by 1, value is now " + collectableSmall); //Outputs the current amount of collectableSmall objects to the developer console
 
-                Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
+                    Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
+                }
+                else
+                {
+                    Debug.Log("The player is collecting the Maximum amount of Small Objects and must deposit them"); //Tells the developer that the player is st the max limit for Small Objects
+                }
 
                 break;
             case "Collectable Large": //Checks if the tag was 'Collectable Large' (Collectable Items (Large objects, player can only carry one at a time))
-                if((collectableLarge < 0) || (collectableLarge > 1)) //Checks to see if the current value is less than 0
+                if ((collectableLarge < 0) || (collectableLarge > 1)) //Checks to see if the current value is less than 0
                 {
                     Debug.Log("Error: Value of 'collectableLarge' outisde of range, value equal to " + collectableLarge + ", resetting to 0"); //Warns the developer that the value is less than 0
 
                     collectableLarge = 0; //Resets the value if it is less than 0
                 }
 
-                if(collectableLarge == 0) //Checks to see if the current value is equal to 0
+                if (collectableLarge == 0) //Checks to see if the current value is equal to 0
                 {
                     collectableLarge++; //Increments the value by 1
 
                     Debug.Log("'collectableLarge' value incremented by 1, value is now " + collectableLarge); //Outputs the current amount of collectableLarge objects to the developer console
 
-                    Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
+                    currentLargeObj = collision.gameObject;
+
+                    currentLargeObj.SetActive(false); //Sets the currently picked up Large Object to be Inactive
+
+                    //Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
                 }
                 else
-                    {
-                        Debug.Log("The player is already carrying a Large Object and must deposit it"); //Tells the developer that the player is already carrying a large object
-                    }
+                {
+                    Debug.Log("The player is already carrying a Large Object and must deposit it"); //Tells the developer that the player is already carrying a large object
+                }
 
                 break;
             case "Locked Door": //Checks if the tag was 'Locked Door' (Locked Doors)
-                if(keys > 0)
+                if (keys > 0)
                 {
                     Debug.Log("The player has a key, unlocking door"); //Tells the developer that the player is opening a door
 
@@ -114,9 +126,9 @@ public class ItemCollectScript : MonoBehaviour
                     Debug.Log("The player has used a key, they now have " + keys + " keys left"); //Tells the developer that the player has used a key and how many keys they have left
                 }
                 else
-                    {
-                        Debug.Log("The Player has no keys to open the door"); //Tells the developer that the player has no keys
-                    }
+                {
+                    Debug.Log("The Player has no keys to open the door"); //Tells the developer that the player has no keys
+                }
 
                 break;
         }
@@ -127,7 +139,7 @@ public class ItemCollectScript : MonoBehaviour
         switch (collider.gameObject.tag) //Checks the collider tag
         {
             case "Deposit": //Checks if the tag was 'Deposit' (Deposit Point)
-                if((collectableSmall > 0) || (collectableLarge > 0)) //If the player has any items to deposit, run this If Statement
+                if ((collectableSmall > 0) || (collectableLarge > 0)) //If the player has any items to deposit, run this If Statement
                 {
                     if (collectableSmall > 0)
                     {
@@ -146,7 +158,9 @@ public class ItemCollectScript : MonoBehaviour
 
                         score += 500; //Adds to the total score
 
-                        collectableLarge = 0; //Removes all small objects from player inventory
+                        collectableLarge = 0; //Removes all large objects from player inventory
+
+                        Destroy(currentLargeObj);
 
                         totalLarge -= 1;
 
@@ -159,11 +173,24 @@ public class ItemCollectScript : MonoBehaviour
                     }
                 }
                 else
-                    {
-                        Debug.Log("The Player has no items, please collect some"); //Tells the developer that the player has no items to deposit
+                {
+                    Debug.Log("The Player has no items, please collect some"); //Tells the developer that the player has no items to deposit
                 }
 
                 break;
         }
+    }
+
+    public void CaughtReset() //This function is called when being caught by the Night Guard. It resets values so you lose your collected objects
+    {
+        if(currentLargeObj != null)
+        {
+            currentLargeObj.SetActive(true); //Sets the currently picked up Large Object to be Active so it can be picked up again 
+
+            currentLargeObj = null;
+        }
+
+        collectableLarge = 0; //Removes all large objects from player inventory
+        collectableSmall = 0; //Removes all small objects from player inventory
     }
 }
