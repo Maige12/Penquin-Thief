@@ -16,3 +16,8 @@ public class Sound
     [HideInInspector] //Hides it from the Inspector
     public AudioSource source; //Audio Source that is stored
 }
+
+/*
+ * References:
+ *      - https://youtu.be/6OT43pvUyfY
+*/

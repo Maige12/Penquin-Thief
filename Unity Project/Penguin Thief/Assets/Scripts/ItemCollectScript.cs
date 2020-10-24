@@ -63,6 +63,8 @@ public class ItemCollectScript : MonoBehaviour
 
                 Debug.Log("'keys' value incremented by 1, value is now " + keys); //Outputs the current amount of keys objects to the developer console
 
+                FindObjectOfType<AudioManager>().Play("ItemCollect"); //Uses the Audio Manager object to play the Item Collect SFX
+
                 Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
 
                 break;
@@ -79,6 +81,8 @@ public class ItemCollectScript : MonoBehaviour
                     collectableSmall++; //Increments the value by 1
 
                     Debug.Log("'collectableSmall' value incremented by 1, value is now " + collectableSmall); //Outputs the current amount of collectableSmall objects to the developer console
+
+                    FindObjectOfType<AudioManager>().Play("ItemCollect"); //Uses the Audio Manager object to play the Item Collect SFX
 
                     Destroy(collision.gameObject); //Destroys the Game Object which the collision is based from
                 }
@@ -103,6 +107,8 @@ public class ItemCollectScript : MonoBehaviour
                     Debug.Log("'collectableLarge' value incremented by 1, value is now " + collectableLarge); //Outputs the current amount of collectableLarge objects to the developer console
 
                     currentLargeObj = collision.gameObject;
+
+                    FindObjectOfType<AudioManager>().Play("ItemCollect"); //Uses the Audio Manager object to play the Item Collect SFX
 
                     currentLargeObj.SetActive(false); //Sets the currently picked up Large Object to be Inactive
 
@@ -171,6 +177,8 @@ public class ItemCollectScript : MonoBehaviour
                             menuManagerScript.ResultsScreen(score);
                         }
                     }
+
+                    FindObjectOfType<AudioManager>().Play("ItemDeposit"); //Uses the Audio Manager object to play the Item Deposit SFX
                 }
                 else
                 {

@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        foreach(Sound s in sounds) //Adds an Audio SOurce for each sound
+        foreach(Sound s in sounds) //Adds an Audio Source for each sound
         {
             s.source = gameObject.AddComponent<AudioSource>(); //Adds AudioSource component to gameObject
             s.source.clip = s.clip;
@@ -32,3 +32,8 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Sound file '" + name + "' not found!");
     }
 }
+
+/*
+ * References:
+ *      - https://youtu.be/6OT43pvUyfY
+*/

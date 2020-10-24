@@ -1242,9 +1242,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4380638599661270643}
   - component: {fileID: 3999468273369148621}
+  - component: {fileID: 3999468273369148616}
   - component: {fileID: 3999468273369148622}
   - component: {fileID: 3999468273369148623}
-  - component: {fileID: 3999468273369148616}
+  - component: {fileID: 228806744352233588}
   m_Layer: 12
   m_Name: playerPenguin_final
   m_TagString: Player
@@ -1290,6 +1291,26 @@ MonoBehaviour:
   playerInputSpace: {fileID: 0}
   slideActive: 0
   targetTime: 0
+--- !u!114 &3999468273369148616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999468273369148617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27722073c92a0914b85b8ef7ca787a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys: 0
+  collectableSmall: 0
+  collectableLarge: 0
+  score: 0
+  collectLarge: []
+  currentLargeObj: {fileID: 0}
+  canvas: {fileID: 0}
+  totalLarge: 0
 --- !u!136 &3999468273369148622
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1320,26 +1341,14 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3999468273369148616
-MonoBehaviour:
+--- !u!81 &228806744352233588
+AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3999468273369148617}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27722073c92a0914b85b8ef7ca787a39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keys: 0
-  collectableSmall: 0
-  collectableLarge: 0
-  score: 0
-  collectLarge: []
-  currentLargeObj: {fileID: 0}
-  canvas: {fileID: 0}
-  totalLarge: 0
 --- !u!1 &4150879364612649681
 GameObject:
   m_ObjectHideFlags: 0
