@@ -159,6 +159,21 @@ public class OrbitCameraController : MonoBehaviour
                 orbitAngles.y -= 360.0f; //If the angle is more than or equal to 360, it will take 360 degrees
             }
     }
+
+    void ClearVision() //Detects if there is something in the way and clears the vision of the player
+    {
+        RaycastHit hit;
+        float previousDist;
+
+        if(Physics.Raycast(ray, distance, layerMask))
+        {
+            
+        }
+        else
+        {
+            
+        }
+    }
 }
 
 /*
