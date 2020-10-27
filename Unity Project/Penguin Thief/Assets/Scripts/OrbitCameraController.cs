@@ -22,7 +22,7 @@ public class OrbitCameraController : MonoBehaviour
     [SerializeField] //Allows it to show up in the inspector
     Transform focus = default; //The object that the camera will focus on
     [SerializeField, Range(1f, 20f)] //Clamps the camera distance to the player from 1 to 20
-    float distance = 3.0f; //The distance the camera can be from the player
+    float maxDistance = 3.0f; //The Maximum distance the camera can be from the player 
     [SerializeField, Min(0.0f)] //Clamps the value so it cannot go below 0
     float focusRadius = 1.0f; //The radius in which the camera will start moving if its focus point differs from the radius
     [SerializeField, Range(0.0f, 1.0f)] //Clamps the value from a range of 0 to 1
@@ -31,13 +31,19 @@ public class OrbitCameraController : MonoBehaviour
     float rotationSpeed = 90.0f; //The speed at which the camera rotates around the player (In degrees per-second)
     [SerializeField, Range(-89.0f, 89.0f)] //Clamps the value from a range of -89 to 89
     float minVerticalAngle = -10.0f, maxVerticalAngle = 60f; //The minimum and maximum values that the camera can rotate vertically
+    [SerializeField, Range(0.0f, 1.0f)] //Clamps the value from a range of 0 to 1
+    float smoothTime; //Used to smooth out the movement of the camera during raycast
     [SerializeField]
     bool invertX; //Inverts the X Axis of lookRotation
     [SerializeField]
     bool invertY; //Inverts the Y Axis of lookRotation
+    [SerializeField]
+    LayerMask interactMask; //This layer mask is used to set the specific layer that the Raycast will interact with 
 
     Vector2 orbitAngles = new Vector2(25f, 180f); //Vertical (Pitch) angle, Horizontal (Yaw) angle
     Vector3 focusPoint; //The point that the camera will focus on
+
+    float distance; //The distance the camera is currently from the player
 
     PlayerControllerRigid playerControl; //An object representing the PlayerControllerRigid.cs script
     MenuManager menuManage; //An object representing the MenuManager.cs script
@@ -49,6 +55,8 @@ public class OrbitCameraController : MonoBehaviour
 
         invertX = false; //Sets the Invert value to False (Default State of camera's X-Rotation)
         invertY = false; //Sets the Invert value to False (Default State of camera's Y-Rotation)
+
+        distance = maxDistance;
 
         GameObject player = GameObject.FindGameObjectWithTag("Player"); //Finds a GameObject with the tag 'Player'
         GameObject canvas = GameObject.Find("Canvas"); //Finds a GameObject with the name 'Canvas'
@@ -69,6 +77,7 @@ public class OrbitCameraController : MonoBehaviour
     {
         UpdateFocusPoint(); //Runs the function to adjust the focus point of the camera
         ManualRotation(); //Runs the function to adjust the cameras rotation manually
+        ClearVision();
 
         Quaternion lookRotation; //The current rotation the camera is at from the focus point
 
@@ -162,16 +171,32 @@ public class OrbitCameraController : MonoBehaviour
 
     void ClearVision() //Detects if there is something in the way and clears the vision of the player
     {
-        RaycastHit hit;
-        float previousDist;
+        Ray ray = new Ray(focus.position, -transform.forward);
+        RaycastHit hitInfo;
 
-        if(Physics.Raycast(ray, distance, layerMask))
+        if(Physics.Raycast(ray, out hitInfo, maxDistance, interactMask))
         {
-            
+            Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
+
+            if(hitInfo.distance > 0.5f)
+            {
+                distance = Mathf.Lerp(distance, hitInfo.distance, smoothTime);
+            }
+            else
+            {
+                distance = 0.5f;
+            }
+
+            //distance = hitInfo.distance;
         }
         else
         {
-            
+            if(hitInfo.distance < maxDistance)
+            {
+                Debug.DrawLine(ray.origin, ray.origin + ray.direction * 100.0f, Color.blue);
+
+                distance = maxDistance;
+            }
         }
     }
 }
