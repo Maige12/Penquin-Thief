@@ -80,6 +80,8 @@ public class ItemCollectScript : MonoBehaviour
                 {
                     collectableSmall++; //Increments the value by 1
 
+                    menuManagerScript.UICollectToggle(collectableSmall - 1, true, false);
+
                     Debug.Log("'collectableSmall' value incremented by 1, value is now " + collectableSmall); //Outputs the current amount of collectableSmall objects to the developer console
 
                     FindObjectOfType<AudioManager>().Play("ItemCollect"); //Uses the Audio Manager object to play the Item Collect SFX
@@ -103,6 +105,8 @@ public class ItemCollectScript : MonoBehaviour
                 if (collectableLarge == 0) //Checks to see if the current value is equal to 0
                 {
                     collectableLarge++; //Increments the value by 1
+
+                    menuManagerScript.UICollectToggle(collectableLarge - 1, false, false);
 
                     Debug.Log("'collectableLarge' value incremented by 1, value is now " + collectableLarge); //Outputs the current amount of collectableLarge objects to the developer console
 
@@ -151,6 +155,8 @@ public class ItemCollectScript : MonoBehaviour
                     {
                         Debug.Log("You have deposited " + collectableSmall + " Small Object(s)"); //Prints the amount of small objects deposited
 
+                        menuManagerScript.UICollectToggle(0, true, true);
+
                         score += 100 * collectableSmall; //Adds to the total score
 
                         collectableSmall = 0; //Removes all small objects from player inventory
@@ -161,6 +167,8 @@ public class ItemCollectScript : MonoBehaviour
                     if (collectableLarge > 0)
                     {
                         Debug.Log("You have deposited " + collectableLarge + " Large Object"); //Prints the amount of large objects deposited
+
+                        menuManagerScript.UICollectToggle(0, false, true);
 
                         score += 500; //Adds to the total score
 

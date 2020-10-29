@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro; //Adds the Text Mesh Pro Library
 using UnityEngine.SceneManagement; //Adds functionality so we can Load Scenes
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -14,6 +15,14 @@ public class MenuManager : MonoBehaviour
     GameObject resultScreenObj; //The Result Screen canvas object
     [SerializeField] //Allows me to set the object through the Inspector
     GameObject inGameScreenObj; //The In-Game Screen canvas object 
+
+    List<GameObject> smallCol; //A list of UI GameObjects for Small Collectables
+    [SerializeField]
+    GameObject smallCollect; //The object which is connected to the list of Small Collectable UI Objects
+
+    List<GameObject> largeCol; //A list of UI GameObjects for Large Collectables
+    [SerializeField]
+    GameObject largeCollect; //The object which is connected to the list of Large Collectable UI Objects
 
     [SerializeField] //Allows me to set the object through the Inspector
     TextMeshProUGUI finalPoints; //The final point total that the player has
@@ -29,7 +38,13 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(pauseScreenObj == null)
+        smallCol = new List<GameObject>();
+        smallCol = smallCollect.GetChildren();
+
+        largeCol = new List<GameObject>();
+        largeCol = largeCollect.GetChildren();
+
+        if (pauseScreenObj == null)
         {
             pauseScreenObj = GameObject.Find("Pause Screen");
 
@@ -134,6 +149,41 @@ public class MenuManager : MonoBehaviour
         resultScreenObj.SetActive(true);
 
         finalPoints.SetText(total.ToString());
+    }
+
+    public void UICollectToggle(int i, bool largeSmallToggle, bool turnOff) //This will toggle all of the small objects on or off (i = item number, largeSmallToggle (True is Large, False is Small), turnOff will reset values if true)
+    {
+        switch(largeSmallToggle) //Checks to see if a Large or Small object is being toggled
+        {
+            case true: //If true, toggle Small objects 
+                if (turnOff == true)
+                {
+                    for (int y = 0; y < smallCol.Count; y++)
+                    {
+                        smallCol[y].GetComponent<Image>().color = new Color32(136, 124, 255, 80); //Untints the image Colour and turns the the opacity back on
+                    }
+                }
+                else
+                {
+                    smallCol[i].GetComponent<Image>().color = new Color32(255, 255, 255, 255); //Untints the image Colour and turns the the opacity back on
+                }
+
+                break;
+            case false: //If false, toggle Large objects
+                if (turnOff == true)
+                {
+                    for (int y = 0; y < largeCol.Count; y++)
+                    {
+                        largeCol[y].GetComponent<Image>().color = new Color32(136, 124, 255, 80); //Untints the image Colour and turns the the opacity back on
+                    }
+                }
+                else
+                {
+                    largeCol[i].GetComponent<Image>().color = new Color32(255, 255, 255, 255); //Untints the image Colour and turns the the opacity back on
+                }
+
+                break;
+        }
     }
 
     public void DeactivateScene() //Deactivates Player Movement, Physics and Animation
