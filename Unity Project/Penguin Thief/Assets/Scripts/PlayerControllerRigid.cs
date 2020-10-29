@@ -161,26 +161,7 @@ public class PlayerControllerRigid : MonoBehaviour
             maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
         }
 
-        if(Input.GetKey(KeyCode.W)) //This will rotate the player to face away from the camera at all times when moving forward (Only rotates when holding W)
-        {
-            curentRot = Quaternion.Euler(0.0f, playerInputSpace.eulerAngles.y, 0.0f); //Changes the rotation to be equal to the camera's current rotation
-
-            transform.rotation = Quaternion.Lerp(transform.rotation, curentRot, Time.deltaTime * rotSmoothSpeed); //Lerps from the current rotation to the new rotation by a set speed
-        }
-        else
-            if(Input.GetKey(KeyCode.S)) //This will rotate the player to face towards the camera at all times when moving backwards (Only rotates when holding S)
-            {
-                if((-playerInputSpace.eulerAngles.y - 180.0f) < 0.0f) //Checks to see if the inverse if the current camera's y rotation take 180 is less then 0
-                {
-                    curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y + 180.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, plus 180 degrees
-                }
-                else
-                {
-                    curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y - 180.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, minus 180 degrees
-                }
-
-                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Inverse(curentRot), Time.deltaTime * rotSmoothSpeed); //Lerps from the current rotation to the new rotation by a set speed
-            }
+        RotatePlayermodel();
 
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
 
@@ -307,6 +288,58 @@ public class PlayerControllerRigid : MonoBehaviour
             maxSpeed = 8.0f; //Changes the Maximum Speed to 8.0f (Slide Speed)
 
             slideActive = true; //sets slide active to true, which stops the player from stacking slides              
+        }
+    }
+
+    void RotatePlayermodel() //This function handles rotating the Playermodel
+    {
+        if (Input.GetKey(KeyCode.W)) //This will rotate the player to face away from the camera at all times when moving forward (Only rotates when holding W)
+        {
+            curentRot = Quaternion.Euler(0.0f, playerInputSpace.eulerAngles.y, 0.0f); //Changes the rotation to be equal to the camera's current rotation
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, curentRot, Time.deltaTime * rotSmoothSpeed); //Lerps from the current rotation to the new rotation by a set speed
+        }
+
+        if (Input.GetKey(KeyCode.S)) //This will rotate the player to face towards the camera at all times when moving backwards (Only rotates when holding S)
+        {
+            if ((-playerInputSpace.eulerAngles.y - 180.0f) < 0.0f) //Checks to see if the inverse if the current camera's y rotation take 180 is less then 0
+            {
+                curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y + 180.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, plus 180 degrees
+            }
+            else
+            {
+                curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y - 180.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, minus 180 degrees
+            }
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Inverse(curentRot), Time.deltaTime * rotSmoothSpeed); //Lerps from the current rotation to the new rotation by a set speed
+        }
+
+        if(Input.GetKey(KeyCode.A)) //This will rotate the player to face left from the camera at all times when moving forward (Only rotates when holding A)
+        {
+            if ((-playerInputSpace.eulerAngles.y - 90.0f) < 0.0f) //Checks to see if the inverse if the current camera's y rotation take 90 is less then 0
+            {
+                curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y + 90.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, plus 90 degrees
+            }
+            else
+            {
+                curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y - 90.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, minus 90 degrees
+            }
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Inverse(curentRot), Time.deltaTime * rotSmoothSpeed); //Lerps from the current rotation to the new rotation by a set speed
+        }
+
+        if (Input.GetKey(KeyCode.D)) //This will rotate the player to face right from the camera at all times when moving forward (Only rotates when holding D)
+        {
+            if ((-playerInputSpace.eulerAngles.y - 90.0f) < 0.0f) //Checks to see if the inverse if the current camera's y rotation take 90 is less then 0
+            {
+                curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y - 90.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, minus 90 degrees
+            }
+            else
+            {
+                curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y + 90.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, plus 90 degrees
+            }
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Inverse(curentRot), Time.deltaTime * rotSmoothSpeed); //Lerps from the current rotation to the new rotation by a set speed
         }
     }
 
