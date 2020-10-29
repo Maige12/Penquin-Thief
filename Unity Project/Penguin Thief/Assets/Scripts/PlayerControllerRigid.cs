@@ -28,9 +28,11 @@ public class PlayerControllerRigid : MonoBehaviour
     [SerializeField, Range(0.0f, 10.0f)] //Clamps the range of the players Jump Height from 0 to 10
     float jumpHeight = 0.5f; //The maximum height that the player can jump
     [SerializeField, Range(0.0f, 90.0f)] //Clamps the range of the degrees maximum scalable ramp from 0 to 90
-    float maxGroundAngle = 25.0f; //Thse maximum angle of a slope that the player can jump from (Degrees)
+    float maxGroundAngle = 25.0f; //The maximum angle of a slope that the player can jump from (Degrees)
+    [SerializeField, Range(0.0f, 20.0f)] //Clamps the range of the degrees maximum scalable ramp from 0 to 20
+    float rotSmoothSpeed = 4.0f; //The speed at which the player character will rotate
     [SerializeField] //Allows it to be seen in the inspector
-    Transform playerInputSpace = default; //Teh transform relative to the player's movement
+    Transform playerInputSpace = default; //The transform relative to the player's movements
 
     bool desiredJump; //A boolean to detect whether or not the player wants to jump
     bool onGround; //A boolean to check whether the player is on the ground or not
@@ -53,6 +55,8 @@ public class PlayerControllerRigid : MonoBehaviour
     Vector3 velocity; //The current velocity of the player
     Vector3 contactNormal; //The current Normal Vector of the object the player is in contact with
     Vector3 initPosition; //The inital position of the player at the start of the game
+
+    Quaternion curentRot; //Current rotation of the player character
     Vector3 ProjectOnContactPlane(Vector3 vector) //This is to store a Vector projected along the plane that the player is walking along
     {
         return vector - contactNormal * Vector3.Dot(vector, contactNormal); //This returns a Vector which is equal to the current Contactr Normal Vector, multiplied by the dot product of an inputted Vector and Contact Normal
@@ -77,6 +81,8 @@ public class PlayerControllerRigid : MonoBehaviour
 
         playerInput.x = 0.0f; //Left/Right (X) Movement
         playerInput.y = 0.0f; //Forward/Back (Y) Movement
+
+        curentRot = transform.rotation;
 
         initPosition = transform.position; //Gets the initial position of the player
 
@@ -154,6 +160,27 @@ public class PlayerControllerRigid : MonoBehaviour
             slideActive = false; //Sets Slide Active to false when not holding in the Left Control Key
             maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
         }
+
+        if(Input.GetKey(KeyCode.W)) //This will rotate the player to face away from the camera at all times when moving forward (Only rotates when holding W)
+        {
+            curentRot = Quaternion.Euler(0.0f, playerInputSpace.eulerAngles.y, 0.0f); //Changes the rotation to be equal to the camera's current rotation
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, curentRot, Time.deltaTime * rotSmoothSpeed); //Lerps from the current rotation to the new rotation by a set speed
+        }
+        else
+            if(Input.GetKey(KeyCode.S)) //This will rotate the player to face towards the camera at all times when moving backwards (Only rotates when holding S)
+            {
+                if((-playerInputSpace.eulerAngles.y - 180.0f) < 0.0f) //Checks to see if the inverse if the current camera's y rotation take 180 is less then 0
+                {
+                    curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y + 180.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, plus 180 degrees
+                }
+                else
+                {
+                    curentRot = Quaternion.Euler(0.0f, -playerInputSpace.eulerAngles.y - 180.0f, 0.0f); //Changes the rotation to be equal to the inverse of the camera's current rotation, minus 180 degrees
+                }
+
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Inverse(curentRot), Time.deltaTime * rotSmoothSpeed); //Lerps from the current rotation to the new rotation by a set speed
+            }
 
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
 
