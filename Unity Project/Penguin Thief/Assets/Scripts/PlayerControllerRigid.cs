@@ -161,12 +161,12 @@ public class PlayerControllerRigid : MonoBehaviour
             maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
         }
 
-        RotatePlayermodel();
-
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
 
         if (slideActive != true)
         {
+            RotatePlayermodel(); 
+
             if (Input.GetKey(KeyCode.LeftShift)) //Checks to see if the player is holding Left SHift (Run)
             {
                 maxSpeed = 6.0f; //Changes the Maximum Speed to 6.0f (Run Speed)

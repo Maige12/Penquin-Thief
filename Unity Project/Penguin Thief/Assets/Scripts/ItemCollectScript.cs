@@ -203,6 +203,9 @@ public class ItemCollectScript : MonoBehaviour
         {
             currentLargeObj.SetActive(true); //Sets the currently picked up Large Object to be Active so it can be picked up again 
 
+            menuManagerScript.UICollectToggle(0, true, true); //Resets the Small Collectable UI Elements
+            menuManagerScript.UICollectToggle(0, false, true); //Resets the Large Collectable UI Elements
+
             currentLargeObj = null;
         }
 
