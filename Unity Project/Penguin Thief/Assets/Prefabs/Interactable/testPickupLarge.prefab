@@ -4765,8 +4765,8 @@ GameObject:
   - component: {fileID: 5538711947723353894}
   - component: {fileID: 8895364347414192259}
   - component: {fileID: 6671618817021236297}
-  - component: {fileID: 6453912184115134004}
-  - component: {fileID: 8088924116346481872}
+  - component: {fileID: 851386947}
+  - component: {fileID: 2845604759944031988}
   m_Layer: 0
   m_Name: testPickupLarge
   m_TagString: Collectable Large
@@ -4836,8 +4836,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6453912184115134004
-BoxCollider:
+--- !u!114 &851386947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5158492423914223004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1124d5663df6a514182f16ecfb2d403f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: 0.7
+  floatSpeed: 0.8
+  floatHeight: 0.1
+--- !u!135 &2845604759944031988
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4847,24 +4862,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 26.949648, y: 4.481434, z: 12.50404}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &8088924116346481872
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5158492423914223004}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f593deb329729a74f8dea17de130fee1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_Radius: 8.2
+  m_Center: {x: 0, y: -0.000061035156, z: 0}
