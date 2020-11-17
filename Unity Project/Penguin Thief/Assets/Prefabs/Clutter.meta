@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Unity Project/Penguin Thief/Assets/Prefabs/Clutter.meta
 guid: 89ee46fefbbc3dc48b592561f6aefeee
 folderAsset: yes
 DefaultImporter:
+=======
+guid: a55662957feb94245ad990769cd5e17c
+NativeFormatImporter:
+>>>>>>> 9b7bd5793b360be5c324cc2449780c43736a4ef3:Unity Project/Penguin Thief/Assets/Materials/Geometry/carpet_mat.mat.meta
   externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

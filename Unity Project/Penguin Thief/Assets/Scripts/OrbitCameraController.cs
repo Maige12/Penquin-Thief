@@ -21,6 +21,7 @@ public class OrbitCameraController : MonoBehaviour
 {
     [SerializeField] //Allows it to show up in the inspector
     Transform focus = default; //The object that the camera will focus on
+
     [SerializeField, Range(1f, 20f)] //Clamps the camera distance to the player from 1 to 20
     float maxDistance = 3.0f; //The Maximum distance the camera can be from the player 
     [SerializeField, Min(0.0f)] //Clamps the value so it cannot go below 0
@@ -33,20 +34,33 @@ public class OrbitCameraController : MonoBehaviour
     float minVerticalAngle = -10.0f, maxVerticalAngle = 60f; //The minimum and maximum values that the camera can rotate vertically
     [SerializeField, Range(0.0f, 1.0f)] //Clamps the value from a range of 0 to 1
     float smoothTime; //Used to smooth out the movement of the camera during raycast
+
     [SerializeField]
     bool invertX; //Inverts the X Axis of lookRotation
     [SerializeField]
     bool invertY; //Inverts the Y Axis of lookRotation
+
     [SerializeField]
     LayerMask interactMask; //This layer mask is used to set the specific layer that the Raycast will interact with 
 
     Vector2 orbitAngles = new Vector2(25f, 180f); //Vertical (Pitch) angle, Horizontal (Yaw) angle
+
     Vector3 focusPoint; //The point that the camera will focus on
+
+    Vector3[] nearClipPoints = new Vector3[4]; //The 4 points at the corners of the Near-Clip Plane of the Camera
 
     float distance; //The distance the camera is currently from the player
 
     PlayerControllerRigid playerControl; //An object representing the PlayerControllerRigid.cs script
     MenuManager menuManage; //An object representing the MenuManager.cs script
+
+    public struct ClipPlanePoints
+    {
+        public Vector3 upperLeft; //The Upper-Left Point of the Camera's Near Clip Plane
+        public Vector3 upperRight; //The Upper-Right Point of the Camera's Near Clip Plane
+        public Vector3 lowerLeft; //The Lower-Left Point of the Camera's Near Clip Plane
+        public Vector3 lowerRight; //The Lower-Right Point of the Camera's Near Clip Plane
+    }
 
     void Awake()
     {
@@ -169,12 +183,82 @@ public class OrbitCameraController : MonoBehaviour
             }
     }
 
+    ClipPlanePoints CameraClipPlanePoints(float distance) //Works out the Near Clip Plane Corners at any distance inside of a camera
+    {
+        ClipPlanePoints clipPlanePoints = new ClipPlanePoints();
+
+        Transform cameraTransform = transform; //The Camera's current Transform  
+        Vector3 camPos = transform.position; //The Camera's current Position
+        float halfFOV = (gameObject.GetComponent<Camera>().fieldOfView * 0.5f) * Mathf.Deg2Rad; //The Field of View of the camera, divided by 2
+        float aspect = gameObject.GetComponent<Camera>().aspect; //Aspect Ratio of the Camera
+
+        float height = Mathf.Tan(halfFOV) * distance;
+        float width = height * aspect;
+
+        //Lower-Right Clip Plane Point
+        clipPlanePoints.lowerRight = camPos + transform.forward * distance;
+        clipPlanePoints.lowerRight += transform.right * width;
+        clipPlanePoints.lowerRight -= transform.up * height;
+
+        //Lower-Left Clip Plane Point
+        clipPlanePoints.lowerLeft = camPos + transform.forward * distance;
+        clipPlanePoints.lowerLeft -= transform.right * width;
+        clipPlanePoints.lowerLeft -= transform.up * height;
+
+        //Upper-Right Clip Plane Point
+        clipPlanePoints.upperRight = camPos + transform.forward * distance;
+        clipPlanePoints.upperRight += transform.right * width;
+        clipPlanePoints.upperRight += transform.up * height;
+
+        //Upper-Left Clip Plane Point
+        clipPlanePoints.upperLeft = camPos + transform.forward * distance;
+        clipPlanePoints.upperLeft -= transform.right * width;
+        clipPlanePoints.upperLeft += transform.up * height;
+
+        nearClipPoints[0] = clipPlanePoints.lowerRight;
+        nearClipPoints[1] = clipPlanePoints.lowerLeft;
+        nearClipPoints[2] = clipPlanePoints.upperRight;
+        nearClipPoints[3] = clipPlanePoints.upperLeft;
+
+        return clipPlanePoints;
+    }
+
     void ClearVision() //Detects if there is something in the way and clears the vision of the player
     {
         Ray ray = new Ray(focus.position, -transform.forward);
         RaycastHit hitInfo;
+        /*
+        float newDist; 
 
-        if(Physics.Raycast(ray, out hitInfo, maxDistance, interactMask))
+        CameraClipPlanePoints(gameObject.GetComponent<Camera>().nearClipPlane);
+
+        for(int i = 0; i < 4; i++)
+        {
+            //Ray ray = new Ray(focus.position, -transform.forward);
+
+            if (Physics.Raycast(focus.position, nearClipPoints[i] - focus.position, out hitInfo, maxDistance, interactMask))
+            {
+                Debug.DrawLine(focus.position, nearClipPoints[i], Color.red);
+
+                if (hitInfo.distance > 0.5f)
+                {
+                    distance = Mathf.Lerp(distance, hitInfo.distance, smoothTime);
+                }
+                else
+                {
+                    distance = Mathf.Lerp(distance, 0.5f, smoothTime);
+                }
+            }
+            else
+            {
+                if (hitInfo.distance >= maxDistance)
+                {
+                    distance = Mathf.Lerp(distance, maxDistance, smoothTime);
+                }
+            }
+        }*/
+
+        if (Physics.Raycast(ray, out hitInfo, maxDistance, interactMask))
         {
             Debug.DrawLine(ray.origin, hitInfo.point, Color.red);
 
@@ -216,4 +300,6 @@ public class OrbitCameraController : MonoBehaviour
  *          - https://www.mathsisfun.com/geometry/radians.html
  *      Catlike Coding (Primary Tutorial):
  *          - https://catlikecoding.com/unity/tutorials/movement/orbit-camera/
+ *      YouTube:
+ *          - https://youtu.be/wFdvPuia5VM
 */

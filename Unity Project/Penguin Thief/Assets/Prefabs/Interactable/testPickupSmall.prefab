@@ -4765,7 +4765,8 @@ GameObject:
   - component: {fileID: 6226554690534028751}
   - component: {fileID: 7045583739864070762}
   - component: {fileID: 5053608728294411936}
-  - component: {fileID: 3373495114511104020}
+  - component: {fileID: 94005176}
+  - component: {fileID: 2480104689458491599}
   m_Layer: 0
   m_Name: testPickupSmall
   m_TagString: Collectable Small
@@ -4780,9 +4781,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6711201465066778485}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.00336, y: 0.5, z: -2.1382656}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.010000001, y: 0.01, z: 0.010000001}
   m_Children:
   - {fileID: 6127281844480794879}
   m_Father: {fileID: 0}
@@ -4835,8 +4836,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3373495114511104020
-BoxCollider:
+--- !u!114 &94005176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711201465066778485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1124d5663df6a514182f16ecfb2d403f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: 0.7
+  floatSpeed: 0.8
+  floatHeight: 0.1
+--- !u!135 &2480104689458491599
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4846,5 +4862,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.777383, y: 29.460648, z: 8.4674635}
-  m_Center: {x: 0, y: 14.730324, z: 0}
+  m_Radius: 5.99
+  m_Center: {x: -0.00012207031, y: 14.730331, z: 0.000061035156}

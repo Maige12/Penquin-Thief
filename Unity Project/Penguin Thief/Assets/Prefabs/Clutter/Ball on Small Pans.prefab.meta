@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Unity Project/Penguin Thief/Assets/Prefabs/Clutter/Ball on Small Pans.prefab.meta
 guid: 1e496f3eaa8430449835efc47e777b2e
 PrefabImporter:
+=======
+guid: 89be59444eb1adf4b98a570116bd2ebd
+NativeFormatImporter:
+>>>>>>> 9b7bd5793b360be5c324cc2449780c43736a4ef3:Unity Project/Penguin Thief/Assets/Materials/Props/Static/boardG_01_mat.mat.meta
   externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
