@@ -98,12 +98,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_Name
-      value: Clothes Shelf Variant
+      value: Clothes Shelf (Old)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36b0f3c07424dbf4fbf69973f837601d,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3543813203933521444, guid: 36b0f3c07424dbf4fbf69973f837601d,
         type: 3}
