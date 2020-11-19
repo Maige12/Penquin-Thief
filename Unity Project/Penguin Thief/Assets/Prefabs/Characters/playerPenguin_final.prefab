@@ -1288,6 +1288,7 @@ MonoBehaviour:
   maxAirAcceleration: 1
   jumpHeight: 0.5
   maxGroundAngle: 25
+  rotSmoothSpeed: 8
   playerInputSpace: {fileID: 0}
   slideActive: 0
   targetTime: 0
