@@ -69,6 +69,7 @@ public class NightGuardAI : MonoBehaviour
     public bool canSeePlayer = false; //This detects if the ai is able to detect the player
 
     Animator animator;
+    AudioSource guardSFX; 
 
     // Start is called before the first frame update
     void Awake()
@@ -76,6 +77,7 @@ public class NightGuardAI : MonoBehaviour
         canSeePlayer = false;
 
         animator = GetComponent<Animator>();
+        guardSFX = GetComponent<AudioSource>();
 
         player = GameObject.FindWithTag("Player").transform; //Find the location of the player
         nav = GetComponent<NavMeshAgent>(); //Activate Navmesh component
@@ -124,6 +126,8 @@ public class NightGuardAI : MonoBehaviour
         //if the ai can see the player, go to the player's transform position
         if (canSeePlayer == true)
         {
+            guardSFX.pitch = 1.25f;
+
             GetComponent<NavMeshAgent>().speed = runSpeed;
 
             animator.SetBool("isRunning", true);
@@ -139,6 +143,8 @@ public class NightGuardAI : MonoBehaviour
             //If player can't be seen, continue patrolling
             if (isPatrolling)
             {
+                guardSFX.pitch = 0.7f;
+
                 animator.SetBool("isWalking", true);
                 animator.SetBool("isRunning", false);
 

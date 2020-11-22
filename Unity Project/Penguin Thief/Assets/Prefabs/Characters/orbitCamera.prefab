@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5566158583918209859}
   - component: {fileID: 5566158583918209858}
   - component: {fileID: 5566158583918209860}
+  - component: {fileID: 6222690151408483944}
   m_Layer: 0
   m_Name: orbitCamera
   m_TagString: Untagged
@@ -100,3 +101,11 @@ MonoBehaviour:
   interactMask:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!81 &6222690151408483944
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566158583918209856}
+  m_Enabled: 1

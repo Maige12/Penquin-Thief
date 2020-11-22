@@ -1331,7 +1331,6 @@ GameObject:
   - component: {fileID: 3999468273369148616}
   - component: {fileID: 3999468273369148622}
   - component: {fileID: 3999468273369148623}
-  - component: {fileID: 228806744352233588}
   m_Layer: 12
   m_Name: playerPenguin_final
   m_TagString: Player
@@ -1447,14 +1446,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!81 &228806744352233588
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3999468273369148617}
-  m_Enabled: 1
 --- !u!1 &4006932232717684270
 GameObject:
   m_ObjectHideFlags: 0
