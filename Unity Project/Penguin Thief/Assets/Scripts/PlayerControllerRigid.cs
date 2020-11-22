@@ -48,6 +48,8 @@ public class PlayerControllerRigid : MonoBehaviour
     Collider col; //The player's collider
     public float targetTime; //the amount of time that the slide will go for.
 
+    Animator animator;
+
     ItemCollectScript itemCollect;
 
     Vector2 playerInput; //Vector2 to read the player input
@@ -73,6 +75,7 @@ public class PlayerControllerRigid : MonoBehaviour
     {
         playerRigid = GetComponent<Rigidbody>(); //Finds the Rigidbody Component attached to the player
         col = GetComponent<Collider>(); //Finds the collider attached to the GameObject
+        animator = GetComponent<Animator>(); //Finds the Animator attached to the Player
 
         itemCollect = GetComponent<ItemCollectScript>(); //Finds the Item Collection script attached to the player
 
@@ -151,6 +154,13 @@ public class PlayerControllerRigid : MonoBehaviour
             playerInput.y = Input.GetAxis("Vertical"); //Gets the Input Axis from the player (Vertical (W, S Keys))
         }
 
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("isWalking", true);
+        }
+        else
+            animator.SetBool("isWalking", false);
+
         if (onGround == true && Input.GetKey(KeyCode.LeftControl)) //Checks to see if the player is on the ground to initiate the slide && Checks to see if the player is holding down the left control button
         {
             Slide(); //Runs the Slide function
@@ -159,6 +169,8 @@ public class PlayerControllerRigid : MonoBehaviour
         {
             slideActive = false; //Sets Slide Active to false when not holding in the Left Control Key
             maxSpeed = 4.0f; //Changes the Maximum Speed to 4.0f (Walk Speed)
+
+            animator.SetBool("isSliding", false);
         }
 
         playerInput = Vector2.ClampMagnitude(playerInput, 1.0f); //Returns a copy of the playerInput vector with its magnitude clamped to maxLength. Allows for positions inside of a circle to be counted
@@ -218,6 +230,7 @@ public class PlayerControllerRigid : MonoBehaviour
         if (desiredJump) //Checks to see if the player wants to jump
         {
             desiredJump = false; //Sets the Jump back to False
+
             Jump(); //Moves to the Jump Function to perform the jump
         }
 
@@ -258,7 +271,7 @@ public class PlayerControllerRigid : MonoBehaviour
 
     void Jump()
     {
-        if(onGround) //Runs if the player is currently on the ground
+        if (onGround) //Runs if the player is currently on the ground
         {
             jumpSpeed = Mathf.Sqrt(-2.0f * Physics.gravity.y * jumpHeight); //Returns the Square Root of -2, multiplied by gravity, multiplied by the maximum height (Currently matches Earth's gravity)
             alignedSpeed = Vector3.Dot(velocity, contactNormal); //Gets the current jump speed aligned with the Normal Vector of the Contact Normal
@@ -275,6 +288,9 @@ public class PlayerControllerRigid : MonoBehaviour
     void Slide() //This function controls the Sliding of the Penguin
     {
         slideActive = true; //Sets the Slideing to be active (Controls some inputs)
+
+        animator.SetBool("isSliding", true);
+        animator.SetBool("isWalking", false);
 
         if ((slideActive == true) && ((velocity.z > 2.0f) || (velocity.x > 2.0f))) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
         {
@@ -314,7 +330,7 @@ public class PlayerControllerRigid : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Inverse(curentRot), Time.deltaTime * rotSmoothSpeed); //Lerps from the current rotation to the new rotation by a set speed
         }
 
-        if(Input.GetKey(KeyCode.A)) //This will rotate the player to face left from the camera at all times when moving forward (Only rotates when holding A)
+        if (Input.GetKey(KeyCode.A)) //This will rotate the player to face left from the camera at all times when moving forward (Only rotates when holding A)
         {
             if ((-playerInputSpace.eulerAngles.y - 90.0f) < 0.0f) //Checks to see if the inverse if the current camera's y rotation take 90 is less then 0
             {
