@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 6395993411599742802}
   - component: {fileID: 3002389481221040101}
   - component: {fileID: 13899690689798800}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shelf_standing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6395993411599742802
 Transform:
@@ -89,12 +89,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7122322701874962937}
   - component: {fileID: 1140869168121376233}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: standingShelves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7122322701874962937
 Transform:
@@ -103,7 +103,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7610030512278960963}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.612442, y: 1.6245761, z: 6.105839}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
