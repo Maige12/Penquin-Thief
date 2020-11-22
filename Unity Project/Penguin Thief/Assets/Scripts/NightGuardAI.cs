@@ -71,8 +71,10 @@ public class NightGuardAI : MonoBehaviour
     Animator animator;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        canSeePlayer = false;
+
         animator = GetComponent<Animator>();
 
         player = GameObject.FindWithTag("Player").transform; //Find the location of the player

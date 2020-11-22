@@ -952,7 +952,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 212b82e1f27e74f499bc3c29d64d9612, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -976,7 +976,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
-  fieldOfViewRange: 90
+  fieldOfViewRange: 70
   hearingRange: 0.5
   maxDistance: 0
   walkSpeed: 2
