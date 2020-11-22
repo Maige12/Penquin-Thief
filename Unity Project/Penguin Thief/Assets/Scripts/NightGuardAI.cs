@@ -68,9 +68,13 @@ public class NightGuardAI : MonoBehaviour
     [HideInInspector]
     public bool canSeePlayer = false; //This detects if the ai is able to detect the player
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
+
         player = GameObject.FindWithTag("Player").transform; //Find the location of the player
         nav = GetComponent<NavMeshAgent>(); //Activate Navmesh component
 
@@ -119,8 +123,13 @@ public class NightGuardAI : MonoBehaviour
         if (canSeePlayer == true)
         {
             GetComponent<NavMeshAgent>().speed = runSpeed;
+
+            animator.SetBool("isRunning", true);
+            animator.SetBool("isWalking", false);
+
             nav.isStopped = false;
             nav.SetDestination(player.position); //Sets the destination at where the player is
+
             lastKnownPosition = player.position; //updates the last known location to the players current location
         }
         else
@@ -128,6 +137,9 @@ public class NightGuardAI : MonoBehaviour
             //If player can't be seen, continue patrolling
             if (isPatrolling)
             {
+                animator.SetBool("isWalking", true);
+                animator.SetBool("isRunning", false);
+
                 GetComponent<NavMeshAgent>().speed = walkSpeed;
                 //Head to next path point
                 nav.isStopped = false;

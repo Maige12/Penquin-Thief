@@ -154,15 +154,29 @@ public class PlayerControllerRigid : MonoBehaviour
             playerInput.y = Input.GetAxis("Vertical"); //Gets the Input Axis from the player (Vertical (W, S Keys))
         }
 
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (slideActive == false))
         {
             animator.SetBool("isWalking", true);
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else
+                animator.SetBool("isRunning", false);
         }
         else
+        {
             animator.SetBool("isWalking", false);
+
+            animator.SetBool("isRunning", false);
+        }
 
         if (onGround == true && Input.GetKey(KeyCode.LeftControl)) //Checks to see if the player is on the ground to initiate the slide && Checks to see if the player is holding down the left control button
         {
+            animator.SetBool("isSliding", true);
+            animator.SetBool("isWalking", false);
+
             Slide(); //Runs the Slide function
         }
         else
@@ -227,7 +241,7 @@ public class PlayerControllerRigid : MonoBehaviour
 
         AdjustVelocity(); //Runs the AdjustVelocity() function to adjust the valocity based on different factors
 
-        if (desiredJump) //Checks to see if the player wants to jump
+        if ((desiredJump) && (slideActive == false)) //Checks to see if the player wants to jump
         {
             desiredJump = false; //Sets the Jump back to False
 
@@ -288,10 +302,7 @@ public class PlayerControllerRigid : MonoBehaviour
     void Slide() //This function controls the Sliding of the Penguin
     {
         slideActive = true; //Sets the Slideing to be active (Controls some inputs)
-
-        animator.SetBool("isSliding", true);
-        animator.SetBool("isWalking", false);
-
+        
         if ((slideActive == true) && ((velocity.z > 2.0f) || (velocity.x > 2.0f))) //A secondary check to make sure that the slide is not currently in progress to stop infinite slides from occuring 
         {
             maxSpeed = 8.0f; //Changes the Maximum Speed to 8.0f (Slide Speed)

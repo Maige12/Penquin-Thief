@@ -1370,7 +1370,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 00df7786af3d358428288effb67840ce, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1392,7 +1392,7 @@ MonoBehaviour:
   maxAcceleration: 10
   maxAirAcceleration: 1
   jumpHeight: 0.5
-  maxGroundAngle: 25
+  maxGroundAngle: 70
   rotSmoothSpeed: 8
   playerInputSpace: {fileID: 0}
   slideActive: 0
