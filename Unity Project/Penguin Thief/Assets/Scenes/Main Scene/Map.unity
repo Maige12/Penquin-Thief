@@ -43839,7 +43839,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh1852186
+  m_Name: pb_Mesh17710
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -86649,16 +86649,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 667971791}
     m_Modifications:
-    - target: {fileID: 2836168180065105943, guid: 417ff68a3dd047b4da43fd03b2f61288,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 2836168180065105943, guid: 417ff68a3dd047b4da43fd03b2f61288,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 7122322701874962937, guid: 417ff68a3dd047b4da43fd03b2f61288,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -86714,35 +86704,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7122322701874962937, guid: 417ff68a3dd047b4da43fd03b2f61288,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7122322701874962937, guid: 417ff68a3dd047b4da43fd03b2f61288,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7122322701874962937, guid: 417ff68a3dd047b4da43fd03b2f61288,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 7610030512278960963, guid: 417ff68a3dd047b4da43fd03b2f61288,
         type: 3}
       propertyPath: m_Name
       value: standingShelves (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7610030512278960963, guid: 417ff68a3dd047b4da43fd03b2f61288,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 7610030512278960963, guid: 417ff68a3dd047b4da43fd03b2f61288,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 417ff68a3dd047b4da43fd03b2f61288, type: 3}
