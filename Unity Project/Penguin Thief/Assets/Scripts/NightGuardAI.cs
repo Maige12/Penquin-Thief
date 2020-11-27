@@ -51,9 +51,9 @@ public class NightGuardAI : MonoBehaviour
     [SerializeField]
     float maxDistance; // The max distance script allows for the sphere to cast in a direction, in which case this variable decides how far it is cast
     [SerializeField]
-    float walkSpeed = 3.5f;
+    float walkSpeed = 6.0f;
     [SerializeField]
-    float runSpeed = 6.0f;
+    float runSpeed = 10.0f;
 
     [SerializeField]
     GameObject visionMesh; //The mesh used for the vision of the Night Guard
